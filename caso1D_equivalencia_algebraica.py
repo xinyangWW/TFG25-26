@@ -1,23 +1,14 @@
-import requests
+from query_model import query_model
 
-def query_model(prompt, model="llama3"):
-    response = requests.post(
-        "http://localhost:11434/api/generate",
-        json={
-            "model": model,
-            "prompt": prompt,
-            "stream": False
-        }
-    )
-    return response.json()["response"]
-
+PROVIDER = "gemini"            # "ollama" | "openai" | "gemini" | "grok"
+MODEL = "gemini-2.5-flash"    
 
 def run_case_1D():
     prompt_base = "Resuelve la ecuación: -2(x - 3) = 4"
     prompt_transformado = "Resuelve la ecuación: -2x + 6 = 4"
 
-    respuesta_base = query_model(prompt_base)
-    respuesta_transformada = query_model(prompt_transformado)
+    respuesta_base = query_model(prompt_base, provider=PROVIDER, model=MODEL)
+    respuesta_transformada = query_model(prompt_transformado, provider=PROVIDER, model=MODEL)
 
     print("=== CASO BASE (1D) ===")
     print(prompt_base)
