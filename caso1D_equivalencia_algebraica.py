@@ -1,7 +1,7 @@
 from query_model import query_model
 
-PROVIDER = "gemini"            # "ollama" | "openai" | "gemini" | "grok"
-MODEL = "gemini-2.5-flash"    
+PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
+MODEL = None
 
 def run_case_1D():
     prompt_base = "Resuelve la ecuación: -2(x - 3) = 4"
