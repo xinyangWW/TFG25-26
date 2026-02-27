@@ -87,11 +87,12 @@ def query_model(prompt, provider="ollama", model=None):
         return _query_openai(prompt, model or "gpt-4o-mini")
 
     elif provider == "gemini":
-    return _query_gemini(prompt, model or "models/gemini-2.5-flash")
+        return _query_gemini(prompt, model or "models/gemini-2.5-flash")
 
     elif provider == "grok":
         return _query_grok(prompt, model or "grok-2-latest")
 
     else:
         raise ValueError(f"Proveedor no soportado: {provider}")
+
 
