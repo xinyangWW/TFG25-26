@@ -1,3 +1,4 @@
+import sys
 from query_model import query_model
 
 PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
