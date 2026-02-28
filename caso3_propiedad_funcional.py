@@ -1,20 +1,8 @@
 import requests
+from query_model import query_model
 
-def query_model(prompt, model="llama3"):
-    """
-    Envía un prompt a un modelo de lenguaje ejecutado localmente mediante Ollama
-    y devuelve la respuesta generada por el modelo.
-    """
-    response = requests.post(
-        "http://localhost:11434/api/generate",
-        json={
-            "model": model,
-            "prompt": prompt,
-            "stream": False
-        }
-    )
-    return response.json()["response"]
-
+PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
+MODEL = None
 
 def run_case_3():
     # Definición de la función y evaluación en dos puntos simétricos
