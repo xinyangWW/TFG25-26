@@ -1,16 +1,8 @@
 import requests
+from query_model import query_model
 
-def query_model(prompt, model="llama3"):
-    response = requests.post(
-        "http://localhost:11434/api/generate",
-        json={
-            "model": model,
-            "prompt": prompt,
-            "stream": False
-        }
-    )
-    return response.json()["response"]
-
+PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
+MODEL = None
 
 def run_case_1():
     prompt_base = "Resuelve la ecuación: 2(x + 3) = 14"
