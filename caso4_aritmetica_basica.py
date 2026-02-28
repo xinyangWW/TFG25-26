@@ -1,11 +1,11 @@
-from query_model import query_model
+import sys
 from query_model import query_model
 
 PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
 MODEL = None
 
 def run_case_4():
-    # Misma operación, distinta formulación (conmutatividad/asociatividad)
+
     prompt_base = "Calcula: (7 + 5) * 2"
     prompt_transformado = "Calcula: 2 * (5 + 7)"
 
