@@ -1,7 +1,10 @@
+import sys
 from query_model import query_model
 
+PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
+MODEL = None
 def run_case_6():
-    # Misma expresión con elementos neutros y paréntesis redundantes
+
     prompt_base = "Calcula: 12 - 4 * 2"
     prompt_transformado = "Calcula: ((12 - 4 * 2) + 0) * 1"
 
