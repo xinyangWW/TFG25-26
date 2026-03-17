@@ -2,7 +2,7 @@ import sys
 from query_model import query_model
 
 PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
-MODEL = None  # si quieres fijarlo: "llama3", etc.
+MODEL = None  
 
 def caso_parametro_con_excepcion(a_value: int):
     # Base: forma factorizada (factor anulable)
@@ -32,8 +32,7 @@ def caso_parametro_con_excepcion(a_value: int):
     print("\n===============================\n")
 
 if __name__ == "__main__":
-    # Prueba un valor normal (debería dar x = -1)
+
     caso_parametro_con_excepcion(5)
 
-    # Prueba el caso especial (a = 2 debería dar infinitas soluciones / 0=0)
     caso_parametro_con_excepcion(2)
