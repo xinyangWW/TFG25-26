@@ -1,98 +1,41 @@
-import os
 import requests
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
-# OLLAMA (llama3)
-def _query_ollama(prompt, model="llama3"):
-    response = requests.post(
-        OLLAMA_URL,
-        json={
-            "model": model,
-            "prompt": prompt,
-            "stream": False
-        },
-        timeout=60
-    )
-    response.raise_for_status()
-    return response.json().get("response", "")
+AVAILABLE_MODELS = {
+    "chatgpt": "gpt-oss:20b",
+    "gemma": "gemma3:27b",
+    "deepseek": "deepseek-r1:8b",
+}
 
-# OPENAI (ChatGPT)
-def _query_openai(prompt, model="gpt-4o-mini"):
-    from openai import OpenAI
+def query_model(prompt: str, model: str = "chatgpt") -> str:
+    """
+    Envía un prompt a un modelo ejecutado localmente mediante Ollama
+    y devuelve la respuesta generada.
 
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        raise RuntimeError("Falta OPENAI_API_KEY en variables de entorno.")
+    Modelos disponibles:
+    - chatgpt -> gpt-oss:20b
+    - gemma  -> gemma3:27b
+    - deepseek    -> deepseek-r1:8b
+    """
 
-    client = OpenAI(api_key=api_key)
+    selected_model = AVAILABLE_MODELS.get(model.lower(), model)
 
-    response = client.responses.create(
-        model=model,
-        input=prompt
-    )
+    try:
+        response = requests.post(
+            OLLAMA_URL,
+            json={
+                "model": selected_model,
+                "prompt": prompt,
+                "stream": False,
+            },
+            timeout=120,
+        )
 
-    return response.output_text
+        response.raise_for_status()
+        data = response.json()
 
-# GEMINI (Google)
-def _query_gemini(prompt, model="models/gemini-2.5-flash"):
-    import os
-    from google import genai
+        return data.get("response", "").strip()
 
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        raise RuntimeError("Falta GEMINI_API_KEY en variables de entorno.")
-
-    client = genai.Client(api_key=api_key)
-
-    # Si el modelo no empieza por "models/", lo añadimos
-    if not model.startswith("models/"):
-        model = f"models/{model}"
-
-    response = client.models.generate_content(
-        model=model,
-        contents=prompt
-    )
-
-    return (response.text or "").strip()
-
-# GROK (xAI)
-def _query_grok(prompt, model="grok-2-latest"):
-    from openai import OpenAI
-
-    api_key = os.environ.get("XAI_API_KEY")
-    if not api_key:
-        raise RuntimeError("Falta XAI_API_KEY en variables de entorno.")
-
-    client = OpenAI(
-        api_key=api_key,
-        base_url="https://api.x.ai/v1"
-    )
-
-    response = client.responses.create(
-        model=model,
-        input=prompt
-    )
-
-    return response.output_text
-
-# FUNCIÓN PRINCIPAL con todas las IAs
-def query_model(prompt, provider="ollama", model=None):
-    provider = provider.lower()
-
-    if provider == "ollama":
-        return _query_ollama(prompt, model or "llama3")
-
-    elif provider == "openai":
-        return _query_openai(prompt, model or "gpt-4o-mini")
-
-    elif provider == "gemini":
-        return _query_gemini(prompt, model or "models/gemini-2.5-flash")
-
-    elif provider == "grok":
-        return _query_grok(prompt, model or "grok-2-latest")
-
-    else:
-        raise ValueError(f"Proveedor no soportado: {provider}")
-
-
+    except Exception as e:
+        return f"[ERROR con modelo {selected_model}] {str(e)}"
