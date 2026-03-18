@@ -1,8 +1,7 @@
 import sys
 from query_model import query_model
 
-PROVIDER = sys.argv[1] if len(sys.argv) > 1 else "ollama"
-MODEL = None
+MODEL = sys.argv[1] if len(sys.argv) > 1 else "ollama"
 
 def caso_diferencia_cuadrados(a_value: int):
     # Base: forma factorizada
