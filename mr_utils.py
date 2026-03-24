@@ -6,7 +6,14 @@ def normalizar_respuesta(respuesta: str) -> str:
         return ""
 
     r = respuesta.strip().lower()
+    
+    # eliminar etiquetas tipo </think>
+    r = re.sub(r"</?think>", "", r)
 
+    # eliminar símbolos latex
+    r = r.replace("\\(", "").replace("\\)", "")
+
+    # detectar reales
     if re.search(r"(x\s*[∈e]\s*[rℝ])|(todos los reales)|(números reales)|(numeros reales)", r):
         return "R"
 
