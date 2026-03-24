@@ -19,6 +19,7 @@ def inicializar_resultados() -> None:
                 "resultado_base",
                 "resultado_transformado",
                 "cumple_mr",
+                "error_tecnico",
                 "tiempo_segundos",
             ])
 
@@ -30,6 +31,7 @@ def guardar_resultado(
     resultado_base: Any,
     resultado_transformado: Any,
     cumple_mr: bool,
+    error_tecnico: bool,
     tiempo: float,
 ) -> None:
     """

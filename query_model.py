@@ -51,7 +51,6 @@ def query_model(
         # Útil para respuestas cortas y consistentes
         "options": {
             "temperature": 0,
-            "num_predict": 20,
         },
     }
 
@@ -83,17 +82,3 @@ def query_model(
         logging.error(f"Error con {selected_model}: {e}")
         return f"[ERROR con modelo {selected_model}] {e}"
 
-def unload_model(model: str = "chatgpt") -> None:
-    selected_model = AVAILABLE_MODELS.get(model.lower(), model)
-    try:
-        SESSION.post(
-            OLLAMA_URL,
-            json={
-                "model": selected_model,
-                "keep_alive": 0,
-            },
-            timeout=(5, 30),
-        ).raise_for_status()
-        logging.info(f"Modelo descargado: {selected_model}")
-    except Exception as e:
-        logging.warning(f"No se pudo descargar {selected_model}: {e}")
