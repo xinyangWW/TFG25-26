@@ -51,6 +51,7 @@ def query_model(
         # Útil para respuestas cortas y consistentes
         "options": {
             "temperature": 0,
+            "num_predict": 20,
         },
     }
 
