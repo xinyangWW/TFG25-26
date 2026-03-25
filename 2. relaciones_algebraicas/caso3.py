@@ -11,6 +11,7 @@ import time
 from query_model import query_model, preload_model
 from results_manager import guardar_resultado
 from mr_utils import evaluar_cumplimiento_mr
+from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 
@@ -39,22 +40,15 @@ def caso_factor_comun_con_excepcion(a_value: int):
         respuesta_transformada
     )
 
-    print("\n===== RESULTADO =====")
-    print(f"Modelo: {MODEL}")
-    print("Tipo de relación: Algebraica")
-    print(f"Caso: Factor común con excepción (a = {a_value})")
-
-    print("\nResultado base:")
-    print(respuesta_base)
-
-    print("\nResultado transformado:")
-    print(respuesta_transformada)
-
-    print("\nCumple relación metamórfica:")
-    print(cumple_mr)
-
-    print("\nTiempo total:")
-    print(f"{elapsed:.2f} segundos")
+    imprimir_resultados(
+        modelo=MODEL,
+        tipo="Algebraica",
+        caso=f"Factor común con excepción (a = {a_value})",
+        resultado_base=respuesta_base,
+        resultado_transformado=respuesta_transformada,
+        cumple_mr=cumple_mr,
+        tiempo=elapsed
+    )
 
     guardar_resultado(
         modelo=MODEL,
