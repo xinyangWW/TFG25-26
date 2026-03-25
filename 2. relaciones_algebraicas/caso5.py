@@ -15,14 +15,14 @@ from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 
-def run_case_4():
+def run_case_5():
     prompt_base = (
-        "Resuelve la ecuación: 2(x + 3) = 14. "
+        "Resuelve la ecuación: -2(x - 3) = 4. "
         "Responde solo con la solución."
     )
 
     prompt_transformado = (
-        "Resuelve la ecuación: 2x + 6 = 14. "
+        "Resuelve la ecuación: -2x + 6 = 4. "
         "Responde solo con la solución."
     )
 
@@ -45,10 +45,11 @@ def run_case_4():
         respuesta_base,
         respuesta_transformada
     )
+
     imprimir_resultados(
         modelo=MODEL,
         tipo="Algebraica",
-        caso=f"Distributiva básica",
+        caso=f"Distributiva con signo negativo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -58,7 +59,7 @@ def run_case_4():
     guardar_resultado(
         modelo=MODEL,
         tipo="Algebraica",
-        caso="Distributiva básica",
+        caso="Distributiva con signo negativo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -68,4 +69,4 @@ def run_case_4():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    run_case_4()
+    run_case_5()
