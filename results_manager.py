@@ -4,24 +4,23 @@ from typing import Any
 
 RESULTS_FILE = "resultados.csv"
 
+_CABECERA = [
+    "modelo",
+    "tipo_relacion",
+    "caso",
+    "resultado_base",
+    "resultado_transformado",
+    "cumple_mr",
+    "error_tecnico",
+    "tiempo_segundos",
+]
+
 
 def inicializar_resultados() -> None:
-    """
-    Crea el archivo CSV con cabecera si todavía no existe.
-    """
+    """Crea el archivo CSV con cabecera si todavía no existe."""
     if not os.path.exists(RESULTS_FILE):
         with open(RESULTS_FILE, mode="w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                "modelo",
-                "tipo_relacion",
-                "caso",
-                "resultado_base",
-                "resultado_transformado",
-                "cumple_mr",
-                "error_tecnico",
-                "tiempo_segundos",
-            ])
+            csv.writer(f).writerow(_CABECERA)
 
 
 def guardar_resultado(
@@ -34,19 +33,17 @@ def guardar_resultado(
     error_tecnico: bool,
     tiempo: float,
 ) -> None:
-    """
-    Añade una fila al archivo de resultados.
-    """
+    """Añade una fila al archivo de resultados."""
     inicializar_resultados()
 
     with open(RESULTS_FILE, mode="a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow([
+        csv.writer(f).writerow([
             modelo,
             tipo,
             caso,
             str(resultado_base),
             str(resultado_transformado),
             cumple_mr,
+            error_tecnico,
             round(tiempo, 2),
         ])
