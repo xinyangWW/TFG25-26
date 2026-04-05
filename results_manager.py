@@ -1,6 +1,7 @@
 import csv
 import os
 from typing import Any
+from mr_utils import normalizar_respuesta
 
 RESULTS_FILE = "resultados.csv"
 
@@ -41,8 +42,8 @@ def guardar_resultado(
             modelo,
             tipo,
             caso,
-            str(resultado_base),
-            str(resultado_transformado),
+            normalizar_respuesta(str(resultado_base)),
+            normalizar_respuesta(str(resultado_transformado)),
             cumple_mr,
             error_tecnico,
             round(tiempo, 2),
