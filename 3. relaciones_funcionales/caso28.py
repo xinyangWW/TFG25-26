@@ -16,43 +16,40 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_6_funcion_inversa():
+def caso_28_exponencial_logaritmo_inversas():
     """
-    MR: Aplicar una función y su inversa devuelve el valor original.
-    f(x) = 2x + 4  →  f^-1(y) = (y - 4) / 2.
-    f^-1(f(3)) debe ser igual a 3.
-    Formulación base: calcular f(3) y luego aplicar la inversa.
-    Formulación transformada: enunciado directo de f^-1(f(3)).
-    Resultado esperado: 3.
+    MR: La exponencial y el logaritmo son funciones inversas: e^(ln(x)) = x.
+    Evaluamos e^(ln(7)) directamente y el valor esperado 7.
+    También probamos ln(e^3) = 3.
+    Resultado esperado base: 7. Resultado esperado transformado: 3.
+    Ambos deben ser coherentes con la propiedad de función inversa.
     """
     prompt_base = (
-        "Sea f(x) = 2x + 4. Primero calcula f(3). "
-        "Luego, sabiendo que la función inversa es f^-1(y) = (y - 4) / 2, "
-        "aplica f^-1 al resultado anterior. "
+        "Calcula e elevado a ln(7), es decir, e^(ln(7)). "
         "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Sea f(x) = 2x + 4 y su función inversa f^-1(y) = (y - 4) / 2. "
-        "Calcula f^-1(f(3)). "
+        "Calcula el logaritmo natural de e^3, es decir, ln(e^3). "
         "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()
 
+    from mr_utils import normalizar_respuesta
     respuesta_base = query_model(prompt_base, model=MODEL, think=False)
     respuesta_transformada = query_model(prompt_transformado, model=MODEL, think=False)
 
     elapsed = time.perf_counter() - start
 
-    cumple_mr, error_tecnico = evaluar_cumplimiento_mr(
-        respuesta_base,
-        respuesta_transformada
-    )
+    base_norm   = normalizar_respuesta(respuesta_base)
+    transf_norm = normalizar_respuesta(respuesta_transformada)
+    cumple_mr   = (base_norm == "7" and transf_norm == "3")
+    error_tecnico = base_norm in ("", "ERROR") or transf_norm in ("", "ERROR")
 
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 28 Funcional: Exponencial y logaritmo inversas — e^ln(7)=7 y ln(e^3)=3",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -62,7 +59,7 @@ def caso_6_funcion_inversa():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 28 Funcional: Exponencial y logaritmo inversas — e^ln(7)=7 y ln(e^3)=3",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -73,4 +70,4 @@ def caso_6_funcion_inversa():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_6_funcion_inversa()
+    caso_28_exponencial_logaritmo_inversas()

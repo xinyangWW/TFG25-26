@@ -26,11 +26,11 @@ def caso_4_composicion_descripcion_vs_formula():
     prompt_base = (
         "Sea f(x) = 2x y g(x) = x + 3. "
         "Calcula el valor de f(g(4)). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
         "Sea h(x) = 2(x + 3). Calcula h(4). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

@@ -16,24 +16,21 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_6_funcion_inversa():
+def caso_29_composicion_no_conmutativa():
     """
-    MR: Aplicar una función y su inversa devuelve el valor original.
-    f(x) = 2x + 4  →  f^-1(y) = (y - 4) / 2.
-    f^-1(f(3)) debe ser igual a 3.
-    Formulación base: calcular f(3) y luego aplicar la inversa.
-    Formulación transformada: enunciado directo de f^-1(f(3)).
-    Resultado esperado: 3.
+    MR: La composición de funciones NO es conmutativa en general.
+    f(x) = x + 2, g(x) = x^2.
+    f(g(3)) = f(9) = 11.
+    g(f(3)) = g(5) = 25.
+    El modelo debe dar resultados distintos y coherentes con cada composición.
+    Usamos evaluación individual contra valor esperado.
     """
     prompt_base = (
-        "Sea f(x) = 2x + 4. Primero calcula f(3). "
-        "Luego, sabiendo que la función inversa es f^-1(y) = (y - 4) / 2, "
-        "aplica f^-1 al resultado anterior. "
+        "Sea f(x) = x + 2 y g(x) = x^2. Calcula f(g(3)). "
         "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Sea f(x) = 2x + 4 y su función inversa f^-1(y) = (y - 4) / 2. "
-        "Calcula f^-1(f(3)). "
+        "Sea f(x) = x + 2 y g(x) = x^2. Calcula g(f(3)). "
         "Responde solo con la respuesta, en español."
     )
 
@@ -44,15 +41,17 @@ def caso_6_funcion_inversa():
 
     elapsed = time.perf_counter() - start
 
-    cumple_mr, error_tecnico = evaluar_cumplimiento_mr(
-        respuesta_base,
-        respuesta_transformada
-    )
+    from mr_utils import normalizar_respuesta
+    base_norm   = normalizar_respuesta(respuesta_base)
+    transf_norm = normalizar_respuesta(respuesta_transformada)
+    # Ambas respuestas deben ser correctas pero distintas entre sí
+    cumple_mr   = (base_norm == "11" and transf_norm == "25")
+    error_tecnico = base_norm in ("", "ERROR") or transf_norm in ("", "ERROR")
 
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 29 Funcional: Composición no conmutativa — f(g(3))=11 y g(f(3))=25",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -62,7 +61,7 @@ def caso_6_funcion_inversa():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 29 Funcional: Composición no conmutativa — f(g(3))=11 y g(f(3))=25",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -73,4 +72,4 @@ def caso_6_funcion_inversa():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_6_funcion_inversa()
+    caso_29_composicion_no_conmutativa()

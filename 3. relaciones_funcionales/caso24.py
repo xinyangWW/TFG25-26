@@ -16,24 +16,19 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_6_funcion_inversa():
+def caso_24_horner_vs_estandar():
     """
-    MR: Aplicar una función y su inversa devuelve el valor original.
-    f(x) = 2x + 4  →  f^-1(y) = (y - 4) / 2.
-    f^-1(f(3)) debe ser igual a 3.
-    Formulación base: calcular f(3) y luego aplicar la inversa.
-    Formulación transformada: enunciado directo de f^-1(f(3)).
-    Resultado esperado: 3.
+    MR: La evaluación de un polinomio en forma estándar y en esquema de Horner
+    deben dar el mismo resultado.
+    f(x) = 2x^3 - 3x^2 + x - 5  →  forma de Horner: ((2x - 3)x + 1)x - 5.
+    Evaluamos en x = 4. Resultado esperado: 87.
     """
     prompt_base = (
-        "Sea f(x) = 2x + 4. Primero calcula f(3). "
-        "Luego, sabiendo que la función inversa es f^-1(y) = (y - 4) / 2, "
-        "aplica f^-1 al resultado anterior. "
+        "Sea f(x) = 2x^3 - 3x^2 + x - 5. Calcula f(4). "
         "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Sea f(x) = 2x + 4 y su función inversa f^-1(y) = (y - 4) / 2. "
-        "Calcula f^-1(f(3)). "
+        "Sea f(x) = ((2x - 3) * x + 1) * x - 5. Calcula f(4). "
         "Responde solo con la respuesta, en español."
     )
 
@@ -52,7 +47,7 @@ def caso_6_funcion_inversa():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 24 Funcional: Horner vs estándar — f(4)=2x^3-3x^2+x-5 vs forma de Horner",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -62,7 +57,7 @@ def caso_6_funcion_inversa():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 24 Funcional: Horner vs estándar — f(4)=2x^3-3x^2+x-5 vs forma de Horner",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -73,4 +68,4 @@ def caso_6_funcion_inversa():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_6_funcion_inversa()
+    caso_24_horner_vs_estandar()

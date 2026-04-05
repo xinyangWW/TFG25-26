@@ -16,24 +16,22 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_6_funcion_inversa():
+def caso_23_composicion_inversa_orden_inverso():
     """
-    MR: Aplicar una función y su inversa devuelve el valor original.
-    f(x) = 2x + 4  →  f^-1(y) = (y - 4) / 2.
-    f^-1(f(3)) debe ser igual a 3.
-    Formulación base: calcular f(3) y luego aplicar la inversa.
-    Formulación transformada: enunciado directo de f^-1(f(3)).
-    Resultado esperado: 3.
+    MR: Tanto f(f^-1(x)) como f^-1(f(x)) deben devolver x.
+    f(x) = x^3 + 1  →  f^-1(x) = (x - 1)^(1/3).
+    f(f^-1(9)) = 9  y  f^-1(f(2)) = 2.
+    Probamos ambos órdenes con valores distintos para detectar confusión del modelo.
+    Resultado esperado en ambos casos: el valor de entrada (9 y 2 respectivamente).
     """
     prompt_base = (
-        "Sea f(x) = 2x + 4. Primero calcula f(3). "
-        "Luego, sabiendo que la función inversa es f^-1(y) = (y - 4) / 2, "
-        "aplica f^-1 al resultado anterior. "
+        "Sea f(x) = x^3 + 1 y su inversa f^-1(x) = (x - 1)^(1/3). "
+        "Calcula f(f^-1(9)). "
         "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Sea f(x) = 2x + 4 y su función inversa f^-1(y) = (y - 4) / 2. "
-        "Calcula f^-1(f(3)). "
+        "Sea f(x) = x^3 + 1 y su inversa f^-1(x) = (x - 1)^(1/3). "
+        "Calcula f^-1(f(2)). "
         "Responde solo con la respuesta, en español."
     )
 
@@ -44,15 +42,19 @@ def caso_6_funcion_inversa():
 
     elapsed = time.perf_counter() - start
 
-    cumple_mr, error_tecnico = evaluar_cumplimiento_mr(
-        respuesta_base,
-        respuesta_transformada
-    )
+    # Nota: aquí NO comparamos base con transformada entre sí,
+    # sino que cada una debe devolver su propio valor de entrada.
+    # Usamos evaluar_cumplimiento_mr comparando contra el valor esperado manualmente.
+    from mr_utils import normalizar_respuesta
+    base_norm  = normalizar_respuesta(respuesta_base)
+    transf_norm = normalizar_respuesta(respuesta_transformada)
+    cumple_mr   = (base_norm == "9" and transf_norm == "2")
+    error_tecnico = base_norm in ("", "ERROR") or transf_norm in ("", "ERROR")
 
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 23 Funcional: Composición inversa ambos órdenes — f(f^-1(9))=9 y f^-1(f(2))=2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -62,7 +64,7 @@ def caso_6_funcion_inversa():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 23 Funcional: Composición inversa ambos órdenes — f(f^-1(9))=9 y f^-1(f(2))=2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -73,4 +75,4 @@ def caso_6_funcion_inversa():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_6_funcion_inversa()
+    caso_23_composicion_inversa_orden_inverso()

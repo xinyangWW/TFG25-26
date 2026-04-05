@@ -16,24 +16,19 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_6_funcion_inversa():
+def caso_22_funcion_implicita_explicita():
     """
-    MR: Aplicar una función y su inversa devuelve el valor original.
-    f(x) = 2x + 4  →  f^-1(y) = (y - 4) / 2.
-    f^-1(f(3)) debe ser igual a 3.
-    Formulación base: calcular f(3) y luego aplicar la inversa.
-    Formulación transformada: enunciado directo de f^-1(f(3)).
-    Resultado esperado: 3.
+    MR: Una relación implícita y su forma explícita equivalente deben dar
+    el mismo valor de y para un x dado.
+    Implícita: x^2 + y = 2x + 8. Explícita: y = -(x^2) + 2x + 8.
+    Evaluamos en x = 3. Resultado esperado: 5.
     """
     prompt_base = (
-        "Sea f(x) = 2x + 4. Primero calcula f(3). "
-        "Luego, sabiendo que la función inversa es f^-1(y) = (y - 4) / 2, "
-        "aplica f^-1 al resultado anterior. "
+        "Dada la ecuación x^2 + y = 2x + 8, despeja y y calcula su valor para x = 3. "
         "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Sea f(x) = 2x + 4 y su función inversa f^-1(y) = (y - 4) / 2. "
-        "Calcula f^-1(f(3)). "
+        "Sea y = -x^2 + 2x + 8. Calcula y para x = 3. "
         "Responde solo con la respuesta, en español."
     )
 
@@ -52,7 +47,7 @@ def caso_6_funcion_inversa():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 22 Funcional: Implícita vs explícita — x^2+y=2x+8 vs y=-x^2+2x+8 en x=3",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -62,7 +57,7 @@ def caso_6_funcion_inversa():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 22 Funcional: Implícita vs explícita — x^2+y=2x+8 vs y=-x^2+2x+8 en x=3",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -73,4 +68,4 @@ def caso_6_funcion_inversa():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_6_funcion_inversa()
+    caso_22_funcion_implicita_explicita()

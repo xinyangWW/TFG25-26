@@ -25,11 +25,11 @@ def caso_7_desplazamiento_horizontal():
     """
     prompt_base = (
         "Sea f(x) = x^2. Calcula f(3). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
         "Sea g(x) = (x - 2)^2. Calcula g(5). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

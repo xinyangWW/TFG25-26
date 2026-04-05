@@ -24,11 +24,11 @@ def caso_2_cambio_nombre_variable():
     """
     prompt_base = (
         "Sea f(x) = 3x + 2. Calcula f(4). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
         "Sea g(t) = 3t + 2. Calcula g(4). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

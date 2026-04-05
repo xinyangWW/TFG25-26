@@ -24,11 +24,11 @@ def caso_9_linealidad_escalado():
     """
     prompt_base = (
         "Sea f(x) = 5x. Calcula f(6). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
         "Sea f(x) = 5x. Calcula 3 × f(2). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

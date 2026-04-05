@@ -24,11 +24,11 @@ def caso_8_funcion_par():
     """
     prompt_base = (
         "Sea f(x) = x^2 + 1. Calcula f(4). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
         "Sea f(x) = x^2 + 1. Calcula f(-4). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

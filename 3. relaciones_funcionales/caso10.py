@@ -26,12 +26,12 @@ def caso_10_exponencial_verbal_vs_formula():
     """
     prompt_base = (
         "Sea f(x) = 2^x. Calcula f(4). "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
         "Una cantidad empieza en 1 y se duplica en cada paso. "
         "¿Cuánto vale después de 4 pasos? "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

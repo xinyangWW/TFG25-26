@@ -23,11 +23,11 @@ def caso_5_periodicidad_seno():
     """
     prompt_base = (
         "¿Cuánto vale sen(0)? "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
         "¿Cuánto vale sen(2π)? "
-        "Responde solo con el número, en español."
+        "Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()
