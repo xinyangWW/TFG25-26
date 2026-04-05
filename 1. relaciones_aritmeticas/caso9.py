@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_9_progresion_aritmetica_vs_formula():
     prompt_base = (
-        "Calcula la suma: 3 + 7 + 11 + 15 + 19. Responde solo con el número, en español."
+        "Calcula la suma: 3 + 7 + 11 + 15 + 19. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 5 × (3 + 19) / 2. Responde solo con el número, en español."
+        "Calcula el resultado de: 5 × (3 + 19) / 2. Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

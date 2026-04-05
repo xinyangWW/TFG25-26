@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_21_binomio_newton_vs_directa():
     prompt_base = (
-        "Calcula el resultado de: (1 + 1/3)^3. Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: (1 + 1/3)^3. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 1 + 3×(1/3) + 3×(1/9) + 1/27. Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: 1 + 3×(1/3) + 3×(1/9) + 1/27. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

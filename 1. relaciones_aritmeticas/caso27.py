@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_27_suma_cubos_coeficientes_fraccionarios():
     prompt_base = (
-        "Calcula el resultado de: (1/2)^3 + (1/3)^3 + (1/6)^3 + 3×(1/2)×(1/3)×(1/6). Responde solo con el número, en español."
+        "Calcula el resultado de: (1/2)^3 + (1/3)^3 + (1/6)^3 + 3×(1/2)×(1/3)×(1/6). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: (1/2 + 1/3 + 1/6)^3. Responde solo con el número, en español."
+        "Calcula el resultado de: (1/2 + 1/3 + 1/6)^3. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

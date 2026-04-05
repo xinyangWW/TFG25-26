@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_28_norma_euclidea_4d():
     prompt_base = (
-        "Calcula el resultado de: 3^2 + (-4)^2 + 12^2 + (-5)^2. Responde solo con el número, en español."
+        "Calcula el resultado de: 3^2 + (-4)^2 + 12^2 + (-5)^2. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: (sqrt(3^2 + 4^2))^2 + (sqrt(12^2 + 5^2))^2. Responde solo con el número, en español."
+        "Calcula el resultado de: (sqrt(3^2 + 4^2))^2 + (sqrt(12^2 + 5^2))^2. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

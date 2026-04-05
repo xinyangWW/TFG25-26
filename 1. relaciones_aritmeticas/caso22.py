@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_22_suma_fracciones_encadenada():
     prompt_base = (
-        "Calcula el resultado de: 1/2 + 1/4 + 1/8 + 1/16 + 1/32. Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: 1/2 + 1/4 + 1/8 + 1/16 + 1/32. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 31/32. Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: 31/32. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

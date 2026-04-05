@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_23_combinatoria_vs_factorial():
     prompt_base = (
-        "Calcula el resultado de: 6! / (2! × 4!). Recuerda que n! es el producto de todos los enteros positivos hasta n. Responde solo con el número, en español."
+        "Calcula el resultado de: 6! / (2! × 4!). Recuerda que n! es el producto de todos los enteros positivos hasta n. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: (6 × 5) / (2 × 1). Responde solo con el número, en español."
+        "Calcula el resultado de: (6 × 5) / (2 × 1). Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

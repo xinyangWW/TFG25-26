@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_5_distributiva_suma():
     prompt_base = (
-        "Calcula el resultado de: 3 × 6 + 3 × 4. Responde solo con el número, en español."
+        "Calcula el resultado de: 3 × 6 + 3 × 4. Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Calcula el resultado de: 3 × (6 + 4). Responde solo con el número, en español."
+        "Calcula el resultado de: 3 × (6 + 4). Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

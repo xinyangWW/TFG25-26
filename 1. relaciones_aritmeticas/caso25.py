@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_25_suma_cuadrados_consecutivos():
     prompt_base = (
-        "Calcula la suma: 1^2 + 2^2 + 3^2 + 4^2 + 5^2. Responde solo con el número, en español."
+        "Calcula la suma: 1^2 + 2^2 + 3^2 + 4^2 + 5^2. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 5 × 6 × 11 / 6. Responde solo con el número, en español."
+        "Calcula el resultado de: 5 × 6 × 11 / 6. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

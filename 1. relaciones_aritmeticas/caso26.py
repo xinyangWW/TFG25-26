@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_26_triple_producto_raices_telescopico():
     prompt_base = (
-        "Calcula el resultado de: sqrt(2/3) × sqrt(3/5) × sqrt(5/7) × sqrt(7/2). Responde solo con el número, en español."
+        "Calcula el resultado de: sqrt(2/3) × sqrt(3/5) × sqrt(5/7) × sqrt(7/2). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: sqrt((2/3) × (3/5) × (5/7) × (7/2)). Responde solo con el número, en español."
+        "Calcula el resultado de: sqrt((2/3) × (3/5) × (5/7) × (7/2)). Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

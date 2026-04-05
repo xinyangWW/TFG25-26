@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_29_cascada_potencias_multiples_bases():
     prompt_base = (
-        "Calcula el resultado de: (2^3 × 3^2 × 5^1) / (2^1 × 3^3 × 5^2). Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: (2^3 × 3^2 × 5^1) / (2^1 × 3^3 × 5^2). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: (8 × 9 × 5) / (2 × 27 × 25). Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: (8 × 9 × 5) / (2 × 27 × 25). Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

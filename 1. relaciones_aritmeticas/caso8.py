@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_8_media_ponderada_vs_directa():
     prompt_base = (
-        "Calcula el resultado de: (3×7 + 5×3 + 2×10) / (3+5+2). Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: (3×7 + 5×3 + 2×10) / (3+5+2). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 61/10. Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: 61/10. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_20_expresion_maxima_complejidad():
     prompt_base = (
-        "Calcula el resultado de: (2^4 - 4^(1/2)) × (3/2 + 7/6) - 5^2/5. Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: (2^4 - 4^(1/2)) × (3/2 + 7/6) - 5^2/5. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: (16 - 2) × (9/6 + 7/6) - 5. Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: (16 - 2) × (9/6 + 7/6) - 5. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

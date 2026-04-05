@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_15_fraccion_compleja_anidada():
     prompt_base = (
-        "Calcula el resultado de: (1 + 1/2) / (1 - 1/4). Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: (1 + 1/2) / (1 - 1/4). Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Calcula el resultado de: (3/2) / (3/4). Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: (3/2) / (3/4). Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

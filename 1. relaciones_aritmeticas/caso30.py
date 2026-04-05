@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_30_combinatorios_factoriales_potencias():
     prompt_base = (
-        "Calcula el resultado de: (C(6,3) × 3! × 2^3) / (6! / 3!). Recuerda que C(n,k) = n!/(k!×(n-k)!) y que n! es el producto de todos los enteros positivos hasta n. Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: (C(6,3) × 3! × 2^3) / (6! / 3!). Recuerda que C(n,k) = n!/(k!×(n-k)!) y que n! es el producto de todos los enteros positivos hasta n. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: (20 × 6 × 8) / 120. Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: (20 × 6 × 8) / 120. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

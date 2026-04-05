@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_4_asociatividad_multiplicacion():
     prompt_base = (
-        "Calcula el resultado de: (2 × 3) × 4. Responde solo con el número, en español."
+        "Calcula el resultado de: (2 × 3) × 4. Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Calcula el resultado de: 2 × (3 × 4). Responde solo con el número, en español."
+        "Calcula el resultado de: 2 × (3 × 4). Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

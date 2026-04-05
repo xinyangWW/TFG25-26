@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_12_suma_cuadrados_vs_factorizada():
     prompt_base = (
-        "Calcula el resultado de: 7^2 - 3^2. Responde solo con el número, en español."
+        "Calcula el resultado de: 7^2 - 3^2. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: (7+3) × (7-3). Responde solo con el número, en español."
+        "Calcula el resultado de: (7+3) × (7-3). Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

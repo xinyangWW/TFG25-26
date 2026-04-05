@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_13_orden_mixto_largo():
     prompt_base = (
-        "Calcula el resultado de: 2^5 / (4 × (3+1)) - 1/2. Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: 2^5 / (4 × (3+1)) - 1/2. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 32/16 - 1/2. Responde solo con el número o fracción simplificada, en español."
+        "Calcula el resultado de: 32/16 - 1/2. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

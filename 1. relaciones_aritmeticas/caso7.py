@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_7_telescopica_vs_directa():
     prompt_base = (
-        "Calcula el resultado de: 1/(1×2) + 1/(2×3) + 1/(3×4) + 1/(4×5). Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: 1/(1×2) + 1/(2×3) + 1/(3×4) + 1/(4×5). Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Calcula el resultado de: 4/5. Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: 4/5. Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

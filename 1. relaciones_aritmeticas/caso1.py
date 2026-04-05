@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_1_conmutatividad_multiplicacion():
     prompt_base = (
-        "Calcula el resultado de: 7 + 2 × 5. Responde solo con el número, en español."
+        "Calcula el resultado de: 7 + 2 × 5. Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Calcula el resultado de: 7 + 5 × 2. Responde solo con el número, en español."
+        "Calcula el resultado de: 7 + 5 × 2. Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

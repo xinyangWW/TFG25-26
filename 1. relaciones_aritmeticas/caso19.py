@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_19_expresion_con_raices_y_potencias():
     prompt_base = (
-        "Calcula el resultado de: sqrt(2^6 × 3^2). Responde solo con el número, en español."
+        "Calcula el resultado de: sqrt(2^6 × 3^2). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 2^3 × 3. Responde solo con el número, en español."
+        "Calcula el resultado de: 2^3 × 3. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

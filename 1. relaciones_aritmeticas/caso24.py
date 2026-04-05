@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_24_expresion_modular_vs_directa():
     prompt_base = (
-        "Calcula el resultado de: |3^2 - 4^2|. El símbolo | | indica valor absoluto. Responde solo con el número, en español."
+        "Calcula el resultado de: |3^2 - 4^2|. El símbolo | | indica valor absoluto. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: |9 - 16|. El símbolo | | indica valor absoluto. Responde solo con el número, en español."
+        "Calcula el resultado de: |9 - 16|. El símbolo | | indica valor absoluto. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_10_potencia_fraccion_compleja():
     prompt_base = (
-        "Calcula el resultado de: (3/4)^3. Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: (3/4)^3. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 3^3 / 4^3. Responde solo con la fracción simplificada, en español."
+        "Calcula el resultado de: 3^3 / 4^3. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

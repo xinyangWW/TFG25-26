@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_2_conmutatividad_suma():
     prompt_base = (
-        "Calcula el resultado de: 3 + 8. Responde solo con el número, en español."
+        "Calcula el resultado de: 3 + 8. Responde solo con la respuesta, en español."
     )
     prompt_transformado = (
-        "Calcula el resultado de: 8 + 3. Responde solo con el número, en español."
+        "Calcula el resultado de: 8 + 3. Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()

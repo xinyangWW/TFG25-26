@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_17_raiz_expresion_compleja():
     prompt_base = (
-        "Calcula el resultado de: sqrt((3^2 + 4^2) × (5^2 - 3^2)). Responde solo con el número, en español."
+        "Calcula el resultado de: sqrt((3^2 + 4^2) × (5^2 - 3^2)). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: sqrt(25 × 16). Responde solo con el número, en español."
+        "Calcula el resultado de: sqrt(25 × 16). Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

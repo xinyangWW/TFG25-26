@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_11_expresion_anidada_profunda():
     prompt_base = (
-        "Calcula el resultado de: 2^(3+1) × (10 - (2×3)). Responde solo con el número, en español."
+        "Calcula el resultado de: 2^(3+1) × (10 - (2×3)). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 2^4 × 4. Responde solo con el número, en español."
+        "Calcula el resultado de: 2^4 × 4. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

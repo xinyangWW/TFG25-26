@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_18_factorial_vs_producto():
     prompt_base = (
-        "Calcula el resultado de: 5! / 3!. Recuerda que n! es el producto de todos los enteros positivos hasta n. Responde solo con el número, en español."
+        "Calcula el resultado de: 5! / 3!. Recuerda que n! es el producto de todos los enteros positivos hasta n. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 4 × 5. Responde solo con el número, en español."
+        "Calcula el resultado de: 4 × 5. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()

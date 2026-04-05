@@ -18,10 +18,10 @@ TIPO = "Aritmética"
 
 def caso_16_progresion_geometrica_vs_formula():
     prompt_base = (
-        "Calcula la suma: 1 + 2 + 4 + 8 + 16. Responde solo con el número, en español."
+        "Calcula la suma: 1 + 2 + 4 + 8 + 16. Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 2^5 - 1. Responde solo con el número, en español."
+        "Calcula el resultado de: 2^5 - 1. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()
