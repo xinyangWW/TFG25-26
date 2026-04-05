@@ -6,7 +6,6 @@ sys.path.append(
         os.path.dirname(__file__)
     )
 )
-
 import time
 from query_model import query_model, preload_model
 from results_manager import guardar_resultado
@@ -17,35 +16,26 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Algebraica"
 
 
-def caso_4_distributiva_basica():
+def caso_15_cuadratica_completar_cuadrado():
     """
-    MR: Aplicar la propiedad distributiva básica no cambia la solución.
-    2(x + 3) = 14 → 2x + 6 = 14.
-    Resultado esperado: x = 4.
+    MR: Una ecuación cuadrática resuelta en forma estándar y mediante
+    completar el cuadrado deben dar las mismas soluciones.
+    x^2 + 6x + 5 = 0  →  (x + 3)^2 = 4.
+    Soluciones: x = -1 y x = -5.
+    Pedimos la solución mayor para poder comparar con normalizar_respuesta.
+    Resultado esperado: -1.
     """
     prompt_base = (
-        "Resuelve la ecuación: 2(x + 3) = 14. "
-        "Responde solo con la solución, en español."
+        "Resuelve la ecuación x^2 + 6x + 5 = 0. Indica solo el valor mayor de x entre las dos soluciones. Responde solo con la respuesta, en español."
     )
-
     prompt_transformado = (
-        "Resuelve la ecuación: 2x + 6 = 14. "
-        "Responde solo con la solución, en español."
+        "Resuelve la ecuación (x + 3)^2 = 4. Indica solo el valor mayor de x entre las dos soluciones. Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()
 
-    respuesta_base = query_model(
-        prompt_base,
-        model=MODEL,
-        think=False
-    )
-
-    respuesta_transformada = query_model(
-        prompt_transformado,
-        model=MODEL,
-        think=False
-    )
+    respuesta_base = query_model(prompt_base, model=MODEL, think=False)
+    respuesta_transformada = query_model(prompt_transformado, model=MODEL, think=False)
 
     elapsed = time.perf_counter() - start
 
@@ -57,7 +47,7 @@ def caso_4_distributiva_basica():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 4: Distributiva básica",
+        caso="Caso 15: Cuadrática completar cuadrado (x^2+6x+5=0 vs (x+3)^2=4)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -67,7 +57,7 @@ def caso_4_distributiva_basica():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 4: Distributiva básica",
+        caso="Caso 15: Cuadrática completar cuadrado (x^2+6x+5=0 vs (x+3)^2=4)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -78,4 +68,4 @@ def caso_4_distributiva_basica():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_4_distributiva_basica()
+    caso_15_cuadratica_completar_cuadrado()

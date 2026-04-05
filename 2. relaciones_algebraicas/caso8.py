@@ -6,6 +6,7 @@ sys.path.append(
         os.path.dirname(__file__)
     )
 )
+
 import time
 from query_model import query_model, preload_model
 from results_manager import guardar_resultado
@@ -16,36 +17,27 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Algebraica"
 
 
-def caso_1_diferencia_cuadrados(a_value: int):
+def caso_8_fraccion_equivalente():
     """
-    MR: Reescribir una diferencia de cuadrados en forma factorizada o expandida
-    no cambia las soluciones de la ecuación.
-    (x - a)(x + a) = 0 → x^2 - a^2 = 0.
-    Resultado esperado: x = a y x = -a.
+    MR: Multiplicar ambos miembros de una ecuación fraccionaria por el denominador
+    no cambia la solución.
+    (x + 1)/2 = 3 → x + 1 = 6.
+    Resultado esperado: x = 5.
     """
     prompt_base = (
-        f"Para a = {a_value}, resuelve: (x - a)(x + a) = 0. "
-        "Responde solo con las soluciones, en español."
+        "Resuelve la ecuación: (x + 1)/2 = 3. "
+        "Responde solo con la solución, en español."
     )
 
     prompt_transformado = (
-        f"Para a = {a_value}, resuelve: x^2 - a^2 = 0. "
-        "Responde solo con las soluciones, en español."
+        "Resuelve la ecuación: x + 1 = 6. "
+        "Responde solo con la solución, en español."
     )
 
     start = time.perf_counter()
 
-    respuesta_base = query_model(
-        prompt_base,
-        model=MODEL,
-        think=False
-    )
-
-    respuesta_transformada = query_model(
-        prompt_transformado,
-        model=MODEL,
-        think=False
-    )
+    respuesta_base = query_model(prompt_base, model=MODEL, think=False)
+    respuesta_transformada = query_model(prompt_transformado, model=MODEL, think=False)
 
     elapsed = time.perf_counter() - start
 
@@ -57,7 +49,7 @@ def caso_1_diferencia_cuadrados(a_value: int):
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso=f"Caso 1: Diferencia de cuadrados (a = {a_value})",
+        caso="Caso 8: Fracción equivalente",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -67,7 +59,7 @@ def caso_1_diferencia_cuadrados(a_value: int):
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso=f"Caso 1: Diferencia de cuadrados (a = {a_value})",
+        caso="Caso 8: Fracción equivalente",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -78,6 +70,4 @@ def caso_1_diferencia_cuadrados(a_value: int):
 
 if __name__ == "__main__":
     preload_model(MODEL)
-
-    caso_1_diferencia_cuadrados(4)
-    caso_1_diferencia_cuadrados(0)
+    caso_8_fraccion_equivalente()

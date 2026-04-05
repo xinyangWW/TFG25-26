@@ -14,18 +14,27 @@ from mr_utils import evaluar_cumplimiento_mr
 from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
+TIPO = "Algebraica"
 
-def caso_factor_comun_con_excepcion(a_value: int):
 
+def caso_3_factor_comun_con_excepcion(a_value: int):
+    """
+    MR: Expandir una ecuación con factor común no cambia la solución,
+    salvo cuando el factor común se anula.
+    (a - 3)(x - 2) = (a - 3)(x + 1)
+    → (a - 3)x - 2(a - 3) = (a - 3)x + (a - 3).
+    Resultado esperado: para a ≠ 3, no hay solución;
+    para a = 3, aparece un caso excepcional.
+    """
     prompt_base = (
         f"Para a = {a_value}, resuelve: (a - 3)(x - 2) = (a - 3)(x + 1). "
-        "Responde solo con la solución."
+        "Responde solo con la solución, en español."
     )
 
     prompt_transformado = (
         f"Para a = {a_value}, resuelve: "
         f"(a - 3)x - 2(a - 3) = (a - 3)x + (a - 3). "
-        "Responde solo con la solución."
+        "Responde solo con la solución, en español."
     )
 
     start = time.perf_counter()
@@ -42,8 +51,8 @@ def caso_factor_comun_con_excepcion(a_value: int):
 
     imprimir_resultados(
         modelo=MODEL,
-        tipo="Algebraica",
-        caso=f"Factor común con excepción (a = {a_value})",
+        tipo=TIPO,
+        caso=f"Caso 3: Factor común con excepción (a = {a_value})",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -52,8 +61,8 @@ def caso_factor_comun_con_excepcion(a_value: int):
 
     guardar_resultado(
         modelo=MODEL,
-        tipo="Algebraica",
-        caso=f"Factor común con excepción (a = {a_value})",
+        tipo=TIPO,
+        caso=f"Caso 3: Factor común con excepción (a = {a_value})",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -61,8 +70,9 @@ def caso_factor_comun_con_excepcion(a_value: int):
         tiempo=elapsed
     )
 
+
 if __name__ == "__main__":
     preload_model(MODEL)
 
-    caso_factor_comun_con_excepcion(5)
-    caso_factor_comun_con_excepcion(3)
+    caso_3_factor_comun_con_excepcion(5)
+    caso_3_factor_comun_con_excepcion(3)

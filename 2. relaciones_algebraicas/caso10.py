@@ -6,6 +6,7 @@ sys.path.append(
         os.path.dirname(__file__)
     )
 )
+
 import time
 from query_model import query_model, preload_model
 from results_manager import guardar_resultado
@@ -16,21 +17,24 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Algebraica"
 
 
-def caso_1_diferencia_cuadrados(a_value: int):
+def caso_10_parametro_cancelacion(a_value: int):
     """
-    MR: Reescribir una diferencia de cuadrados en forma factorizada o expandida
-    no cambia las soluciones de la ecuación.
-    (x - a)(x + a) = 0 → x^2 - a^2 = 0.
-    Resultado esperado: x = a y x = -a.
+    MR: Desarrollar una ecuación con un factor paramétrico no cambia la solución,
+    salvo cuando dicho factor se anula.
+    (a + 1)(x - 2) = 0 → (a + 1)x - 2(a + 1) = 0.
+    Resultado esperado: para a ≠ -1, x = 2;
+    para a = -1, aparece un caso excepcional.
     """
     prompt_base = (
-        f"Para a = {a_value}, resuelve: (x - a)(x + a) = 0. "
-        "Responde solo con las soluciones, en español."
+        f"Para a = {a_value}, resuelve la ecuación: "
+        f"(a + 1)(x - 2) = 0. "
+        "Responde solo con la solución, en español."
     )
 
     prompt_transformado = (
-        f"Para a = {a_value}, resuelve: x^2 - a^2 = 0. "
-        "Responde solo con las soluciones, en español."
+        f"Para a = {a_value}, resuelve la ecuación: "
+        f"(a + 1)x - 2(a + 1) = 0. "
+        "Responde solo con la solución, en español."
     )
 
     start = time.perf_counter()
@@ -57,7 +61,7 @@ def caso_1_diferencia_cuadrados(a_value: int):
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso=f"Caso 1: Diferencia de cuadrados (a = {a_value})",
+        caso=f"Caso 10: Cancelación con parámetro (a = {a_value})",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -67,7 +71,7 @@ def caso_1_diferencia_cuadrados(a_value: int):
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso=f"Caso 1: Diferencia de cuadrados (a = {a_value})",
+        caso=f"Caso 10: Cancelación con parámetro (a = {a_value})",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -79,5 +83,5 @@ def caso_1_diferencia_cuadrados(a_value: int):
 if __name__ == "__main__":
     preload_model(MODEL)
 
-    caso_1_diferencia_cuadrados(4)
-    caso_1_diferencia_cuadrados(0)
+    caso_10_parametro_cancelacion(2)
+    caso_10_parametro_cancelacion(-1)

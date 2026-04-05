@@ -14,16 +14,24 @@ from mr_utils import evaluar_cumplimiento_mr
 from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
+TIPO = "Algebraica"
 
-def run_case_5():
+
+def caso_5_distributiva_con_signo_negativo():
+    """
+    MR: Aplicar la propiedad distributiva con signo negativo
+    no cambia la solución de la ecuación.
+    -2(x - 3) = 4 → -2x + 6 = 4.
+    Resultado esperado: x = 1.
+    """
     prompt_base = (
         "Resuelve la ecuación: -2(x - 3) = 4. "
-        "Responde solo con la solución."
+        "Responde solo con la solución, en español."
     )
 
     prompt_transformado = (
         "Resuelve la ecuación: -2x + 6 = 4. "
-        "Responde solo con la solución."
+        "Responde solo con la solución, en español."
     )
 
     start = time.perf_counter()
@@ -41,6 +49,7 @@ def run_case_5():
     )
 
     elapsed = time.perf_counter() - start
+
     cumple_mr, error_tecnico = evaluar_cumplimiento_mr(
         respuesta_base,
         respuesta_transformada
@@ -48,8 +57,8 @@ def run_case_5():
 
     imprimir_resultados(
         modelo=MODEL,
-        tipo="Algebraica",
-        caso=f"Distributiva con signo negativo",
+        tipo=TIPO,
+        caso="Caso 5: Distributiva con signo negativo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -58,8 +67,8 @@ def run_case_5():
 
     guardar_resultado(
         modelo=MODEL,
-        tipo="Algebraica",
-        caso="Distributiva con signo negativo",
+        tipo=TIPO,
+        caso="Caso 5: Distributiva con signo negativo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -67,6 +76,7 @@ def run_case_5():
         tiempo=elapsed
     )
 
+
 if __name__ == "__main__":
     preload_model(MODEL)
-    run_case_5()
+    caso_5_distributiva_con_signo_negativo()

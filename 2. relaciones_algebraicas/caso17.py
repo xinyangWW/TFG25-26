@@ -6,7 +6,6 @@ sys.path.append(
         os.path.dirname(__file__)
     )
 )
-
 import time
 from query_model import query_model, preload_model
 from results_manager import guardar_resultado
@@ -17,35 +16,24 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Algebraica"
 
 
-def caso_4_distributiva_basica():
+def caso_17_ecuacion_fracciones_vs_entera():
     """
-    MR: Aplicar la propiedad distributiva básica no cambia la solución.
-    2(x + 3) = 14 → 2x + 6 = 14.
-    Resultado esperado: x = 4.
+    MR: Multiplicar ambos miembros de una ecuación con fracciones por el mínimo
+    común múltiplo produce una ecuación entera equivalente.
+    x/2 + x/3 = 5  →  multiplicando por 6: 3x + 2x = 30.
+    Resultado esperado: x = 6.
     """
     prompt_base = (
-        "Resuelve la ecuación: 2(x + 3) = 14. "
-        "Responde solo con la solución, en español."
+        "Resuelve la ecuación: x/2 + x/3 = 5. Responde solo con la respuesta, en español."
     )
-
     prompt_transformado = (
-        "Resuelve la ecuación: 2x + 6 = 14. "
-        "Responde solo con la solución, en español."
+        "Resuelve la ecuación: 3x + 2x = 30. Responde solo con la respuesta, en español."
     )
 
     start = time.perf_counter()
 
-    respuesta_base = query_model(
-        prompt_base,
-        model=MODEL,
-        think=False
-    )
-
-    respuesta_transformada = query_model(
-        prompt_transformado,
-        model=MODEL,
-        think=False
-    )
+    respuesta_base = query_model(prompt_base, model=MODEL, think=False)
+    respuesta_transformada = query_model(prompt_transformado, model=MODEL, think=False)
 
     elapsed = time.perf_counter() - start
 
@@ -57,7 +45,7 @@ def caso_4_distributiva_basica():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 4: Distributiva básica",
+        caso="Caso 17: Ecuación fracciones vs entera (x/2+x/3=5 vs 3x+2x=30)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -67,7 +55,7 @@ def caso_4_distributiva_basica():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 4: Distributiva básica",
+        caso="Caso 17: Ecuación fracciones vs entera (x/2+x/3=5 vs 3x+2x=30)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -78,4 +66,4 @@ def caso_4_distributiva_basica():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_4_distributiva_basica()
+    caso_17_ecuacion_fracciones_vs_entera()

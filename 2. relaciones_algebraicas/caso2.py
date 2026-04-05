@@ -14,17 +14,25 @@ from mr_utils import evaluar_cumplimiento_mr
 from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
+TIPO = "Algebraica"
 
-def caso_distribucion_con_excepcion(a_value: int):
 
+def caso_2_distribucion_con_excepcion(a_value: int):
+    """
+    MR: Aplicar la propiedad distributiva no cambia la solución,
+    salvo cuando el parámetro hace degenerar la ecuación.
+    a(x + 2) = ax + 4 → ax + 2a = ax + 4.
+    Resultado esperado: para a ≠ 0, la ecuación conserva su solución;
+    para a = 0, aparece un caso excepcional.
+    """
     prompt_base = (
         f"Para a = {a_value}, resuelve: a(x + 2) = ax + 4. "
-        "Responde solo con la solución."
+        "Responde solo con la solución, en español."
     )
 
     prompt_transformado = (
         f"Para a = {a_value}, resuelve: ax + 2a = ax + 4. "
-        "Responde solo con la solución."
+        "Responde solo con la solución, en español."
     )
 
     start = time.perf_counter()
@@ -41,8 +49,8 @@ def caso_distribucion_con_excepcion(a_value: int):
 
     imprimir_resultados(
         modelo=MODEL,
-        tipo="Algebraica",
-        caso=f"Distribución con excepción (a = {a_value})",
+        tipo=TIPO,
+        caso=f"Caso 2: Distribución con excepción (a = {a_value})",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -51,8 +59,8 @@ def caso_distribucion_con_excepcion(a_value: int):
 
     guardar_resultado(
         modelo=MODEL,
-        tipo="Algebraica",
-        caso=f"Distribución con excepción (a = {a_value})",
+        tipo=TIPO,
+        caso=f"Caso 2: Distribución con excepción (a = {a_value})",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -60,8 +68,9 @@ def caso_distribucion_con_excepcion(a_value: int):
         tiempo=elapsed
     )
 
+
 if __name__ == "__main__":
     preload_model(MODEL)
 
-    caso_distribucion_con_excepcion(2)
-    caso_distribucion_con_excepcion(0)
+    caso_2_distribucion_con_excepcion(2)
+    caso_2_distribucion_con_excepcion(0)
