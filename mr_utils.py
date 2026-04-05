@@ -17,6 +17,50 @@ _REAL_PATTERN = re.compile(
     r"|(números reales|numeros reales)"
 )
 
+# ── Fracciones escritas en español ───────────────────────────────────────────
+# Mapea expresiones textuales a su valor decimal
+_FRACCIONES_TEXTO = {
+    # mitades
+    "un medio": 0.5, "una mitad": 0.5,
+    # tercios
+    "un tercio": round(1/3, 10), "dos tercios": round(2/3, 10),
+    # cuartos
+    "un cuarto": 0.25, "tres cuartos": 0.75,
+    # quintos
+    "un quinto": 0.2, "dos quintos": 0.4,
+    "tres quintos": 0.6, "cuatro quintos": 0.8,
+    # sextos
+    "un sexto": round(1/6, 10), "cinco sextos": round(5/6, 10),
+    # séptimos
+    "un séptimo": round(1/7, 10), "un septimo": round(1/7, 10),
+    # octavos
+    "un octavo": 0.125, "tres octavos": 0.375,
+    "cinco octavos": 0.625, "siete octavos": 0.875,
+    # novenos
+    "un noveno": round(1/9, 10),
+    # décimos
+    "un décimo": 0.1, "un decimo": 0.1,
+    "tres décimos": 0.3, "tres decimos": 0.3,
+    "siete décimos": 0.7, "siete decimos": 0.7,
+    "nueve décimos": 0.9, "nueve decimos": 0.9,
+}
+
+
+def _fraccion_a_decimal(texto: str) -> float | None:
+    """
+    Intenta convertir una fracción en formato 'a/b' a decimal.
+    Devuelve None si no encuentra ninguna fracción.
+    Busca la ÚLTIMA fracción válida en el texto (el resultado final).
+    """
+    # Busca patrones del tipo número/número, evitando falsos positivos como fechas
+    matches = re.findall(r"(-?\d+)\s*/\s*(\d+)", texto)
+    if matches:
+        num, den = matches[-1]  # última fracción encontrada
+        den = int(den)
+        if den != 0:
+            return int(num) / den
+    return None
+
 
 def normalizar_respuesta(respuesta: str) -> str:
     """
@@ -24,7 +68,9 @@ def normalizar_respuesta(respuesta: str) -> str:
       - "R"           → todos los reales
       - "NO_SOLUTION" → sin solución
       - "ERROR"       → error técnico del modelo
-      - "1,2,3"       → lista de números ordenada y deduplicada
+      - número        → último número encontrado (entero o decimal)
+      - fracción a/b  → convertida a decimal
+      - texto fracción → "cuatro quintos" → 0.8
       - texto limpio  → cualquier otro caso
     """
     if not respuesta:
@@ -52,12 +98,21 @@ def normalizar_respuesta(respuesta: str) -> str:
     if _REAL_PATTERN.search(r):
         return "R"
 
-    # ── 3. Extraer números ───────────────────────────────────────────────────
+    # ── 3. Fracciones escritas en español ────────────────────────────────────
+    for expresion, valor in _FRACCIONES_TEXTO.items():
+        if expresion in r:
+            return str(int(valor)) if float(valor).is_integer() else str(valor)
+
+    # ── 4. Fracciones en formato a/b ─────────────────────────────────────────
+    valor_fraccion = _fraccion_a_decimal(r)
+    if valor_fraccion is not None:
+        return str(int(valor_fraccion)) if float(valor_fraccion).is_integer() else str(round(valor_fraccion, 10))
+
+    # ── 5. Extraer el último número (resultado final) ────────────────────────
     numeros = re.findall(r"-?\d+(?:\.\d+)?", r)
     if numeros:
-        nums = sorted(set(float(n) for n in numeros))
-        nums = [int(n) if n.is_integer() else n for n in nums]
-        return ",".join(str(n) for n in nums)
+        ultimo = float(numeros[-1])
+        return str(int(ultimo)) if ultimo.is_integer() else str(ultimo)
 
     return r
 
