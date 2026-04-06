@@ -16,18 +16,24 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_12_funcion_par():
+def caso_12_desplazamiento_vertical():
     """
-    MR: Una función par cumple f(x) = f(-x).
-    f(x) = 1 + x^2.  f(3) debe ser igual a f(-3).
-    Resultado esperado: 10.
+    MR: Sumar una constante a una función desplaza su valor verticalmente.
+    f(x) = x^2.
+    g(x) = f(x) + 3.
+    Evaluamos g(2) y f(2) + 3.
+    Resultado esperado: 7.
     """
+
     prompt_base = (
-        "Sea f(x) = 1 + x^2. Calcula f(3). "
+        "Sea f(x) = x^2 y g(x) = f(x) + 3. "
+        "Calcula g(2). "
         "Responde solo con la respuesta, en español."
     )
+
     prompt_transformado = (
-        "Sea f(x) = 1 + x^2. Calcula f(-3). "
+        "Sea f(x) = x^2. "
+        "Calcula f(2) + 3. "
         "Responde solo con la respuesta, en español."
     )
 
@@ -46,7 +52,7 @@ def caso_12_funcion_par():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 12 Funcional: Función par — f(3) vs f(-3) con f(x)=1+x^2",
+        caso="Caso 12: Desplazamiento vertical — g(2)=f(2)+3",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -56,7 +62,7 @@ def caso_12_funcion_par():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 12 Funcional: Función par — f(3) vs f(-3) con f(x)=1+x^2",
+        caso="Caso 12: Desplazamiento vertical — g(2)=f(2)+3",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -67,4 +73,4 @@ def caso_12_funcion_par():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_12_funcion_par()
+    caso_12_desplazamiento_vertical()

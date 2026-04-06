@@ -45,7 +45,7 @@ def caso_5_periodicidad_seno():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 5 Funcional: Periodicidad del seno — sen(0) vs sen(2π)",
+        caso="Caso 5: Periodicidad del seno — sen(0) vs sen(2π)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -55,7 +55,7 @@ def caso_5_periodicidad_seno():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 5 Funcional: Periodicidad del seno — sen(0) vs sen(2π)",
+        caso="Caso 5: Periodicidad del seno — sen(0) vs sen(2π)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

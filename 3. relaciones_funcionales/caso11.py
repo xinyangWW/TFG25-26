@@ -16,20 +16,22 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_11_orden_ramas_funcion_trozos():
+def caso_11_composicion_identidad():
     """
-    MR: Reordenar las ramas de una función definida a trozos no altera su evaluación.
-    f(x) = x^2 si x >= 0, -x si x < 0  →  misma función con ramas intercambiadas.
-    Evaluamos f(-3). Resultado esperado: 3.
+    MR: Componer una función con la identidad no altera su valor.
+    f(x) = x^2 + 2.
+    id(x) = x.
+    Evaluamos f(3) y f(id(3)).
+    Resultado esperado: 11.
     """
+
     prompt_base = (
-        "Sea f(x) definida a trozos: f(x) = x^2 si x >= 0, "
-        "y f(x) = -x si x < 0. Calcula f(-3). "
+        "Sea f(x) = x^2 + 2. Calcula f(3). "
         "Responde solo con la respuesta, en español."
     )
+
     prompt_transformado = (
-        "Sea f(x) definida a trozos: f(x) = -x si x < 0, "
-        "y f(x) = x^2 si x >= 0. Calcula f(-3). "
+        "Sea f(x) = x^2 + 2 e id(x) = x. Calcula f(id(3)). "
         "Responde solo con la respuesta, en español."
     )
 
@@ -48,7 +50,7 @@ def caso_11_orden_ramas_funcion_trozos():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 11 Funcional: Orden de ramas en función a trozos — f(-3)",
+        caso="Caso 11: Composición con identidad — f(3) vs f(id(3))",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -58,7 +60,7 @@ def caso_11_orden_ramas_funcion_trozos():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 11 Funcional: Orden de ramas en función a trozos — f(-3)",
+        caso="Caso 11: Composición con identidad — f(3) vs f(id(3))",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -69,4 +71,4 @@ def caso_11_orden_ramas_funcion_trozos():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_11_orden_ramas_funcion_trozos()
+    caso_11_composicion_identidad()

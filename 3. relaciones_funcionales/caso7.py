@@ -47,7 +47,7 @@ def caso_7_desplazamiento_horizontal():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 7 Funcional: Desplazamiento horizontal — f(3)=x^2 vs g(5)=(x-2)^2",
+        caso="Caso 7: Desplazamiento horizontal — f(3)=x^2 vs g(5)=(x-2)^2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -57,7 +57,7 @@ def caso_7_desplazamiento_horizontal():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 7 Funcional: Desplazamiento horizontal — f(3)=x^2 vs g(5)=(x-2)^2",
+        caso="Caso 7: Desplazamiento horizontal — f(3)=x^2 vs g(5)=(x-2)^2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

@@ -46,7 +46,7 @@ def caso_9_linealidad_escalado():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 9 Funcional: Linealidad — f(6) vs 3×f(2) con f(x)=5x",
+        caso="Caso 9: Linealidad — f(6) vs 3×f(2) con f(x)=5x",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -56,7 +56,7 @@ def caso_9_linealidad_escalado():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 9 Funcional: Linealidad — f(6) vs 3×f(2) con f(x)=5x",
+        caso="Caso 9: Linealidad — f(6) vs 3×f(2) con f(x)=5x",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

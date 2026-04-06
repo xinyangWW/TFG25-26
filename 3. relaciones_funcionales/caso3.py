@@ -46,7 +46,7 @@ def caso_3_reescritura_algebraica():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 3 Funcional: Reescritura algebraica — f(5) con x^2-9 vs (x-3)(x+3)",
+        caso="Caso 3: Reescritura algebraica — f(5) con x^2-9 vs (x-3)(x+3)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -56,7 +56,7 @@ def caso_3_reescritura_algebraica():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 3 Funcional: Reescritura algebraica — f(5) con x^2-9 vs (x-3)(x+3)",
+        caso="Caso 3: Reescritura algebraica — f(5) con x^2-9 vs (x-3)(x+3)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

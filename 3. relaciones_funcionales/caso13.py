@@ -16,18 +16,24 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 TIPO = "Relaciones funcionales"
 
 
-def caso_13_composicion_desplazamiento():
+def caso_13_escalado_vertical():
     """
-    MR: h(x) = f(x+1) con f(x) = x^2, luego h(2) = f(3) = 9.
-    Evaluamos f(3) directamente y h(2) mediante la definición compuesta.
-    Resultado esperado: 9.
+    MR: Multiplicar una función por una constante escala su valor.
+    f(x) = x + 1.
+    g(x) = 2f(x).
+    Evaluamos g(3) y 2*(f(3)).
+    Resultado esperado: 8.
     """
+
     prompt_base = (
-        "Sea f(x) = x^2. Calcula f(3). "
+        "Sea f(x) = x + 1 y g(x) = 2f(x). "
+        "Calcula g(3). "
         "Responde solo con la respuesta, en español."
     )
+
     prompt_transformado = (
-        "Sea f(x) = x^2 y h(x) = f(x + 1). Calcula h(2). "
+        "Sea f(x) = x + 1. "
+        "Calcula 2 × f(3). "
         "Responde solo con la respuesta, en español."
     )
 
@@ -46,7 +52,7 @@ def caso_13_composicion_desplazamiento():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 13 Funcional: Composición con desplazamiento — f(3) vs h(2)=f(x+1)",
+        caso="Caso 13: Escalado vertical — g(3)=2f(3)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -56,7 +62,7 @@ def caso_13_composicion_desplazamiento():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 13 Funcional: Composición con desplazamiento — f(3) vs h(2)=f(x+1)",
+        caso="Caso 13: Escalado vertical — g(3)=2f(3)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -67,4 +73,4 @@ def caso_13_composicion_desplazamiento():
 
 if __name__ == "__main__":
     preload_model(MODEL)
-    caso_13_composicion_desplazamiento()
+    caso_13_escalado_vertical()

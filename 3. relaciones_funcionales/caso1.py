@@ -48,7 +48,7 @@ def caso_1_orden_ramas_funcion_trozos():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 1 Funcional: Orden de ramas en función a trozos — f(-2)",
+        caso="Caso 1: Orden de ramas en función a trozos — f(-2)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -58,7 +58,7 @@ def caso_1_orden_ramas_funcion_trozos():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 1 Funcional: Orden de ramas en función a trozos — f(-2)",
+        caso="Caso 1: Orden de ramas en función a trozos — f(-2)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

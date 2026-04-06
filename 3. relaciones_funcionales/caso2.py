@@ -46,7 +46,7 @@ def caso_2_cambio_nombre_variable():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 2 Funcional: Cambio de nombre de variable — f(4) vs g(4)",
+        caso="Caso 2: Cambio de nombre de variable — f(4) vs g(4)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -56,7 +56,7 @@ def caso_2_cambio_nombre_variable():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 2 Funcional: Cambio de nombre de variable — f(4) vs g(4)",
+        caso="Caso 2: Cambio de nombre de variable — f(4) vs g(4)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

@@ -48,7 +48,7 @@ def caso_4_composicion_descripcion_vs_formula():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 4 Funcional: Composición f(g(4)) vs fórmula directa h(4)",
+        caso="Caso 4: Composición f(g(4)) vs fórmula directa h(4)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -58,7 +58,7 @@ def caso_4_composicion_descripcion_vs_formula():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 4 Funcional: Composición f(g(4)) vs fórmula directa h(4)",
+        caso="Caso 4: Composición f(g(4)) vs fórmula directa h(4)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

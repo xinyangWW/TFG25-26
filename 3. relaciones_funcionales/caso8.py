@@ -46,7 +46,7 @@ def caso_8_funcion_par():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 8 Funcional: Función par — f(4) vs f(-4) con f(x)=x^2+1",
+        caso="Caso 8: Función par — f(4) vs f(-4) con f(x)=x^2+1",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -56,7 +56,7 @@ def caso_8_funcion_par():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 8 Funcional: Función par — f(4) vs f(-4) con f(x)=x^2+1",
+        caso="Caso 8: Función par — f(4) vs f(-4) con f(x)=x^2+1",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

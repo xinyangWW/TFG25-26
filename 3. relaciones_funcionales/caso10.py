@@ -49,7 +49,7 @@ def caso_10_exponencial_verbal_vs_formula():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 10 Funcional: Exponencial — f(4)=2^x vs descripción verbal de duplicación",
+        caso="Caso 10: Exponencial — f(4)=2^x vs descripción verbal de duplicación",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -59,7 +59,7 @@ def caso_10_exponencial_verbal_vs_formula():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 10 Funcional: Exponencial — f(4)=2^x vs descripción verbal de duplicación",
+        caso="Caso 10: Exponencial — f(4)=2^x vs descripción verbal de duplicación",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

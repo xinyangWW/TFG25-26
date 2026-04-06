@@ -51,7 +51,7 @@ def caso_14_composicion_tres_funciones():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 14 Funcional: Composición de tres funciones — h(g(f(1))) vs p(1)=(2x+3)^2",
+        caso="Caso 14: Composición de tres funciones — h(g(f(1))) vs p(1)=(2x+3)^2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -61,7 +61,7 @@ def caso_14_composicion_tres_funciones():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 14 Funcional: Composición de tres funciones — h(g(f(1))) vs p(1)=(2x+3)^2",
+        caso="Caso 14: Composición de tres funciones — h(g(f(1))) vs p(1)=(2x+3)^2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

@@ -46,7 +46,7 @@ def caso_15_funcion_racional_simplificada():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 15 Funcional: Función racional simplificada — f(5)=(x^2-4)/(x-2) vs g(5)=x+2",
+        caso="Caso 15: Función racional simplificada — f(5)=(x^2-4)/(x-2) vs g(5)=x+2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -56,7 +56,7 @@ def caso_15_funcion_racional_simplificada():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 15 Funcional: Función racional simplificada — f(5)=(x^2-4)/(x-2) vs g(5)=x+2",
+        caso="Caso 15: Función racional simplificada — f(5)=(x^2-4)/(x-2) vs g(5)=x+2",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

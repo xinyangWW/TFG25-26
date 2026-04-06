@@ -52,7 +52,7 @@ def caso_6_funcion_inversa():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 6: Función inversa — f^-1(f(3)) en dos formulaciones",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -62,7 +62,7 @@ def caso_6_funcion_inversa():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 6 Funcional: Función inversa — f^-1(f(3)) en dos formulaciones",
+        caso="Caso 6: Función inversa — f^-1(f(3)) en dos formulaciones",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
