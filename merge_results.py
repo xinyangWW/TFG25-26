@@ -11,60 +11,23 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 MODELOS = ["chatgpt", "gemma", "deepseek"]
 
-CABECERA = [
-    "modelo", "tipo_relacion", "caso",
-    "resultado_base", "resultado_transformado",
-    "cumple_mr", "error_tecnico", "tiempo_segundos",
-]
+print(f"\n{'=' * 50}  MERGE DE RESULTADOS  {'=' * 50}\n")
 
-
-def combinar(modelo: str) -> None:
+for modelo in MODELOS:
     archivos = list(BASE_DIR.glob(f"resultados_{modelo}_*.csv"))
 
     if not archivos:
         print(f"[AVISO] Sin archivos para '{modelo}'")
-        return
+        continue
 
-    # Leer y concatenar
     df = pd.concat((pd.read_csv(f) for f in archivos), ignore_index=True)
+    df.to_csv(BASE_DIR / f"resultados_finales_{modelo}.csv", index=False)
 
-    # Asegurar columnas (por si falta alguna)
-    df = df.reindex(columns=CABECERA)
+    resumen = df.groupby("tipo_relacion")["cumple_mr"].agg(["sum", "count"])
+    total, cumple = len(df), df["cumple_mr"].sum()
 
-    # Guardar CSV final
-    salida = BASE_DIR / f"resultados_finales_{modelo}.csv"
-    df.to_csv(salida, index=False)
-
-    # Convertir a booleanos
-    cumple = df["cumple_mr"].astype(str).str.lower() == "true"
-    errores = df["error_tecnico"].astype(str).str.lower() == "true"
-
-    total = len(df)
-    total_cumple = cumple.sum()
-    total_errores = errores.sum()
-
-    pct = (100 * total_cumple / total) if total else 0
-
-    print(f"\n── {modelo.upper()} ── {total} casos | Cumple MR: {total_cumple} ({pct:.1f}%) | Errores: {total_errores}")
-
-    # Estadísticas por tipo
-    resumen = (
-        df.assign(cumple_mr_bool=cumple)
-        .groupby("tipo_relacion")["cumple_mr_bool"]
-        .agg(["count", "sum"])
-        .sort_index()
-    )
-
+    print(f"\n── {modelo.upper()} ── {total} casos | Cumple MR: {cumple} ({100 * cumple / total:.1f}%)")
     for tipo, row in resumen.iterrows():
-        t = row["count"]
-        c = row["sum"]
-        print(f"   {tipo:<35} {c}/{t} ({100*c/t:.1f}%)")
+        print(f"   {tipo:<35} {int(row['sum'])}/{int(row['count'])} ({100 * row['sum'] / row['count']:.1f}%)")
 
-    print(f"   → {salida.name}")
-
-
-if __name__ == "__main__":
-    print(f"\n{'='*50}  MERGE DE RESULTADOS  {'='*50}\n")
-    for modelo in MODELOS:
-        combinar(modelo)
-    print(f"\n{'='*50}\n")
+print(f"\n{'=' * 50}\n")
