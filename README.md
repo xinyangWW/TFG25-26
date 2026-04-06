@@ -17,7 +17,7 @@ Para cada modelo (`chatgpt`, `gemma`, `deepseek`), el script:
 
 Esto permite obtener una **visión global del rendimiento del modelo** a partir de ejecuciones distribuidas entre varios miembros del equipo.
 
-## 2. 'mr_utils.py'
+## 2. `mr_utils.py`
 
 Módulo encargado de **normalizar y comparar respuestas de los modelos** para evaluar relaciones metamórficas (MR).
 
@@ -28,7 +28,7 @@ Módulo encargado de **normalizar y comparar respuestas de los modelos** para ev
 
 Permite una **evaluación robusta y consistente** entre respuestas heterogéneas.
 
-## 3. 'print_results.py'
+## 3. `print_results.py`
 
 Módulo para **mostrar resultados en consola** de forma clara.
 
@@ -39,7 +39,7 @@ Módulo para **mostrar resultados en consola** de forma clara.
 
 Facilita la **interpretación rápida de resultados**.
 
-## 4. 'results_manager.py'
+## 4. `results_manager.py`
 
 Módulo para **guardar resultados en CSV** por modelo.
 
@@ -50,7 +50,7 @@ Módulo para **guardar resultados en CSV** por modelo.
 
 Permite **recolectar resultados de forma estructurada**.
 
-## 5. 'query_model.py'
+## 5. `query_model.py`
 
 Módulo para **interactuar con modelos vía Ollama**.
 
