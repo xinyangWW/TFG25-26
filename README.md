@@ -72,3 +72,34 @@ En la terminal hay que ejecutar los siguientes comandos:
 python run_all.py chatgpt
 python run_all.py gemma
 python run_all.py deepseek
+
+# Librerías utilizadas
+
+## Estándar de Python
+
+| Librería | Uso |
+|---|---|
+| `re` | Expresiones regulares para normalizar respuestas |
+| `csv` | Escritura de archivos de resultados |
+| `os` | Gestión de rutas y archivos |
+| `sys` | Argumentos de línea de comandos |
+| `time` | Medición de tiempos y pausas entre reintentos |
+| `logging` | Registro de eventos en `execution.log` |
+| `pathlib` | Manejo de rutas de archivos |
+| `importlib` | Carga dinámica de módulos en tiempo de ejecución |
+| `inspect` | Detección y ejecución de funciones `caso_*` |
+| `traceback` | Impresión detallada de errores |
+| `typing` | Anotaciones de tipos (`Optional`, `Any`) |
+
+## Terceros
+
+| Librería | Uso |
+|---|---|
+| `pandas` | Lectura, concatenación y análisis estadístico de CSVs |
+| `requests` | Peticiones HTTP al servidor Ollama local |
+
+### Instalación
+
+Para instalar las librerías de terceros hay que ejecutar el siguiente comando ( para instalar pandas):
+
+pip install pandas requests
