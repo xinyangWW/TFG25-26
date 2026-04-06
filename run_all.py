@@ -9,57 +9,39 @@ Uso:
 Resultado: resultados_chatgpt.csv / resultados_gemma.csv / resultados_deepseek.csv
 """
 
-import sys
-import importlib.util
-import inspect
-import traceback
+import sys, runpy, traceback
+import pandas as pd
 from pathlib import Path
-
 from query_model import preload_model
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 BASE_DIR = Path(__file__).resolve().parent
-
-# Carpetas que empiezan por número
 CARPETAS = sorted(p for p in BASE_DIR.iterdir() if p.is_dir() and p.name[0].isdigit())
 
-print("\n" + "="*50)
-print(f"Modelo: {MODEL.upper()} — {len(CARPETAS)} categorías")
-print("="*50)
-
+print(f"\n{'='*50}\nModelo: {MODEL.upper()} — {len(CARPETAS)} categorías\n{'='*50}")
 preload_model(MODEL)
-
-def ejecutar_archivo(ruta: Path) -> None:
-    sys.argv = [str(ruta), MODEL]
-
-    # Cargar módulo dinámicamente
-    spec = importlib.util.spec_from_file_location("_caso", ruta)
-    modulo = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(modulo)
-
-    # Ejecutar funciones caso_*
-    for nombre in dir(modulo):
-        fn = getattr(modulo, nombre)
-        if nombre.startswith("caso_") and callable(fn) and not inspect.signature(fn).parameters:
-            fn()
 
 total = errores = 0
 
 for carpeta in CARPETAS:
     archivos = sorted(carpeta.glob("caso*.py"))
     print(f"\n── {carpeta.name} ({len(archivos)} casos) ──")
-
     for archivo in archivos:
         print(f"  ▶ {archivo.name}")
         try:
-            ejecutar_archivo(archivo)
+            sys.argv = [str(archivo), MODEL]
+            runpy.run_path(str(archivo), run_name="__main__")
             total += 1
         except Exception as e:
             print(f"  [ERROR] {archivo.name}: {e}")
             traceback.print_exc()
             errores += 1
 
-print("\n" + "="*60)
-print(f"Completado: {total} casos, {errores} errores")
-print(f"CSV: resultados_{MODEL}.csv")
-print("="*60 + "\n")
+# Resumen con pandas
+df = pd.read_csv(BASE_DIR / f"resultados_{MODEL}.csv")
+resumen = df.groupby("tipo_relacion")["cumple_mr"].agg(["sum", "count"])
+
+print(f"\n{'='*60}\nCompletado: {total} casos, {errores} errores\n")
+for tipo, row in resumen.iterrows():
+    print(f"  {tipo:<35} {int(row['sum'])}/{int(row['count'])} ({100*row['sum']/row['count']:.1f}%)")
+print(f"\nCSV: resultados_{MODEL}.csv\n{'='*60}\n")
