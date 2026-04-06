@@ -19,15 +19,20 @@ TIPO = "Aritmética"
 def caso_8_media_ponderada_vs_directa():
     """
     MR: La expresión de una media ponderada y su valor simplificado son
-    aritméticamante equivalentes.
-    (3×7 + 5×3 + 2×10) / (3+5+2) = (21+15+20) / 10 = 56/10  →  61/10.
+    aritméticamente equivalentes.
+
+    (3×7 + 5×3 + 2×10) / (3+5+2)
+    = (21+15+20) / 10
+    = 56/10
+    → 5.6.
+
     Resultado esperado: 5.6.
     """
     prompt_base = (
         "Calcula el resultado de: (3×7 + 5×3 + 2×10) / (3+5+2). Responde solo con la respuesta, en español. "
     )
     prompt_transformado = (
-        "Calcula el resultado de: 61/10. Responde solo con la respuesta, en español. "
+        "Calcula el resultado de: 56/10. Responde solo con la respuesta, en español. "
     )
 
     start = time.perf_counter()
@@ -45,7 +50,7 @@ def caso_8_media_ponderada_vs_directa():
     imprimir_resultados(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 8: Media ponderada vs expresión directa ((3×7+5×3+2×10)/(3+5+2) vs 61/10)",
+        caso="Caso 8: Media ponderada vs expresión directa ((3×7 + 5×3 + 2×10) / (3+5+2) vs 56/10)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -55,7 +60,7 @@ def caso_8_media_ponderada_vs_directa():
     guardar_resultado(
         modelo=MODEL,
         tipo=TIPO,
-        caso="Caso 8: Media ponderada vs expresión directa ((3×7+5×3+2×10)/(3+5+2) vs 61/10)",
+        caso="Caso 8: Media ponderada vs expresión directa ((3×7 + 5×3 + 2×10) / (3+5+2) vs 56/10)",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
