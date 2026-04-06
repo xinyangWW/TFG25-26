@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_18_factorial_vs_producto():
+    """
+    MR: El cociente entre factoriales consecutivos puede expresarse como el
+    producto de los factores restantes.
+    5! / 3!  →  4 × 5.
+    Resultado esperado: 20.
+    """
     prompt_base = (
         "Calcula el resultado de: 5! / 3!. Recuerda que n! es el producto de todos los enteros positivos hasta n. Responde solo con la respuesta, en español. "
     )

@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_25_suma_cuadrados_consecutivos():
+    """
+    MR: La suma de los cuadrados de los primeros n números naturales puede
+    sustituirse por su fórmula cerrada n(n+1)(2n+1)/6.
+    1^2 + 2^2 + 3^2 + 4^2 + 5^2  →  5 × 6 × 11 / 6.
+    Resultado esperado: 55.
+    """
     prompt_base = (
         "Calcula la suma: 1^2 + 2^2 + 3^2 + 4^2 + 5^2. Responde solo con la respuesta, en español. "
     )

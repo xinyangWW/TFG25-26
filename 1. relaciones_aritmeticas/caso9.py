@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_9_progresion_aritmetica_vs_formula():
+    """
+    MR: La suma directa de los términos de una progresión aritmética debe
+    coincidir con el resultado de aplicar la fórmula de Gauss S = n×(a1+an)/2.
+    3 + 7 + 11 + 15 + 19  →  5 × (3 + 19) / 2.
+    Resultado esperado: 55.
+    """
     prompt_base = (
         "Calcula la suma: 3 + 7 + 11 + 15 + 19. Responde solo con la respuesta, en español. "
     )

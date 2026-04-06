@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_3_asociatividad_suma():
+    """
+    MR: La propiedad asociativa de la suma establece que la forma de agrupar
+    los sumandos no altera el resultado.
+    (2 + 3) + 4  →  2 + (3 + 4).
+    Resultado esperado: 9.
+    """
     prompt_base = (
         "Calcula el resultado de: (2 + 3) + 4. Responde solo con la respuesta, en español."
     )

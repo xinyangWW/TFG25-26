@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_27_suma_cubos_coeficientes_fraccionarios():
+    """
+    MR: La identidad algebraica (a + b + c)^3 es equivalente a la suma de los
+    cubos de los términos más tres veces su producto.
+    (1/2)^3 + (1/3)^3 + (1/6)^3 + 3×(1/2)×(1/3)×(1/6)
+    → (1/2 + 1/3 + 1/6)^3.
+    Resultado esperado: 1.
+    """
     prompt_base = (
         "Calcula el resultado de: (1/2)^3 + (1/3)^3 + (1/6)^3 + 3×(1/2)×(1/3)×(1/6). Responde solo con la respuesta, en español. "
     )

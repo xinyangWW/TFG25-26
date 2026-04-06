@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_29_cascada_potencias_multiples_bases():
+    """
+    MR: La sustitución de potencias por sus valores numéricos dentro de una
+    fracción algebraica no altera el resultado final.
+    (2^3 × 3^2 × 5^1) / (2^1 × 3^3 × 5^2)
+    → (8 × 9 × 5) / (2 × 27 × 25).
+    Resultado esperado: 2/15.
+    """
     prompt_base = (
         "Calcula el resultado de: (2^3 × 3^2 × 5^1) / (2^1 × 3^3 × 5^2). Responde solo con la respuesta, en español. "
     )

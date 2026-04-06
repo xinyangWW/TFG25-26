@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_1_conmutatividad_multiplicacion():
+    """
+    MR: La propiedad conmutativa de la multiplicación establece que el orden
+    de los factores no altera el producto.
+    7 + 2 × 5  →  7 + 5 × 2.
+    Resultado esperado: 17.
+    """
     prompt_base = (
         "Calcula el resultado de: 7 + 2 × 5. Responde solo con la respuesta, en español."
     )

@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_13_orden_mixto_largo():
+    """
+    MR: Una expresión compleja con potencias, productos y fracciones debe
+    dar el mismo resultado que su forma simplificada tras evaluar las
+    subexpresiones paso a paso.
+    2^5 / (4 × (3+1)) - 1/2  →  32/16 - 1/2.
+    Resultado esperado: 1.5.
+    """
     prompt_base = (
         "Calcula el resultado de: 2^5 / (4 × (3+1)) - 1/2. Responde solo con la respuesta, en español. "
     )

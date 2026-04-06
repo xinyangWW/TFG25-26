@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_20_expresion_maxima_complejidad():
+    """
+    MR: Evaluar parcialmente subexpresiones equivalentes dentro de una expresión
+    compuesta no modifica el resultado final.
+    (2^4 − 4^(1/2)) × (3/2 + 7/6) − 5^2/5  →  (16 − 2) × (9/6 + 7/6) − 5.
+    Resultado esperado: 23.
+    """
     prompt_base = (
         "Calcula el resultado de: (2^4 - 4^(1/2)) × (3/2 + 7/6) - 5^2/5. Responde solo con la respuesta, en español. "
     )

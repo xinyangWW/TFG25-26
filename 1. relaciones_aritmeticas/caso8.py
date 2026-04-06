@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_8_media_ponderada_vs_directa():
+    """
+    MR: La expresión de una media ponderada y su valor simplificado son
+    aritméticamante equivalentes.
+    (3×7 + 5×3 + 2×10) / (3+5+2) = (21+15+20) / 10 = 56/10  →  61/10.
+    Resultado esperado: 5.6.
+    """
     prompt_base = (
         "Calcula el resultado de: (3×7 + 5×3 + 2×10) / (3+5+2). Responde solo con la respuesta, en español. "
     )

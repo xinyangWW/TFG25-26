@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_17_raiz_expresion_compleja():
+    """
+    MR: Sustituir subexpresiones matemáticamente equivalentes dentro de una
+    expresión no altera el resultado final.
+    sqrt((3^2 + 4^2) × (5^2 − 3^2))  →  sqrt(25 × 16).
+    Resultado esperado: 20.
+    """
     prompt_base = (
         "Calcula el resultado de: sqrt((3^2 + 4^2) × (5^2 - 3^2)). Responde solo con la respuesta, en español. "
     )

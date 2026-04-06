@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_2_conmutatividad_suma():
+    """
+    MR: La propiedad conmutativa de la suma establece que el orden de los
+    sumandos no altera el resultado.
+    3 + 8  →  8 + 3.
+    Resultado esperado: 11.
+    """
     prompt_base = (
         "Calcula el resultado de: 3 + 8. Responde solo con la respuesta, en español."
     )

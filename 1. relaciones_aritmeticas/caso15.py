@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_15_fraccion_compleja_anidada():
+    """
+    MR: Una fracción compleja con sumas y restas en numerador y denominador
+    es equivalente a su forma simplificada tras resolver cada parte.
+    (1 + 1/2) / (1 - 1/4)  →  (3/2) / (3/4).
+    Ambas expresiones representan 2 al simplificar (3/2) ÷ (3/4) = (3/2) × (4/3).
+    Resultado esperado: 2.
+    """
     prompt_base = (
         "Calcula el resultado de: (1 + 1/2) / (1 - 1/4). Responde solo con la respuesta, en español."
     )

@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_11_expresion_anidada_profunda():
+    """
+    MR: Una expresión con operaciones anidadas y su forma simplificada paso
+    a paso deben producir el mismo resultado al aplicar correctamente la
+    jerarquía de operaciones.
+    2^(3+1) × (10 - (2×3))  →  2^4 × 4.
+    Resultado esperado: 64.
+    """
     prompt_base = (
         "Calcula el resultado de: 2^(3+1) × (10 - (2×3)). Responde solo con la respuesta, en español. "
     )

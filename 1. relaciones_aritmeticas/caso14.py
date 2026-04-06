@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_14_suma_cubos_vs_factorizada():
+    """
+    MR: La identidad de suma de cubos establece que
+    a^3 + b^3 = (a+b) × (a^2 - a×b + b^2).
+    2^3 + 3^3  →  (2+3) × (2^2 - 2×3 + 3^2) = 5 × 7.
+    Resultado esperado: 35.
+    """
     prompt_base = (
         "Calcula el resultado de: 2^3 + 3^3. Responde solo con la respuesta, en español."
     )

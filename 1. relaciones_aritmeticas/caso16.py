@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_16_progresion_geometrica_vs_formula():
+    """
+    MR: La suma de una progresión geométrica de razón 2 desde 2^0 hasta 2^(n-1)
+    es equivalente a la expresión cerrada 2^n − 1.
+    1 + 2 + 4 + 8 + 16  →  2^5 − 1.
+    Resultado esperado: 31.
+    """
     prompt_base = (
         "Calcula la suma: 1 + 2 + 4 + 8 + 16. Responde solo con la respuesta, en español. "
     )

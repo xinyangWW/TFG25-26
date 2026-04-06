@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_7_telescopica_vs_directa():
+    """
+    MR: Una suma telescópica puede simplificarse a su resultado cerrado.
+    Cada término 1/(n×(n+1)) = 1/n - 1/(n+1), por lo que los términos
+    intermedios se cancelan y la suma total es 1 - 1/5 = 4/5.
+    1/(1×2) + 1/(2×3) + 1/(3×4) + 1/(4×5)  →  4/5.
+    Resultado esperado: 0.8.
+    """
     prompt_base = (
         "Calcula el resultado de: 1/(1×2) + 1/(2×3) + 1/(3×4) + 1/(4×5). Responde solo con la respuesta, en español."
     )

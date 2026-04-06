@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_6_elemento_neutro_suma():
+    """
+    MR: El elemento neutro de la suma es el 0: sumar 0 a cualquier número
+    no altera su valor.
+    15 + 0  →  15.
+    Resultado esperado: 15.
+    """
     prompt_base = (
         "Calcula el resultado de: 15 + 0. Responde solo con la respuesta, en español. "
     )

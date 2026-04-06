@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_12_suma_cuadrados_vs_factorizada():
+    """
+    MR: La identidad de diferencia de cuadrados establece que
+    a^2 - b^2 = (a+b) × (a-b).
+    7^2 - 3^2  →  (7+3) × (7-3).
+    Resultado esperado: 40.
+    """
     prompt_base = (
         "Calcula el resultado de: 7^2 - 3^2. Responde solo con la respuesta, en español. "
     )

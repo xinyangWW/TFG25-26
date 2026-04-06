@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_26_triple_producto_raices_telescopico():
+    """
+    MR: El producto de raíces encadenadas puede reagruparse dentro de una única
+    raíz utilizando la propiedad multiplicativa de la raíz cuadrada.
+    sqrt(2/3) × sqrt(3/5) × sqrt(5/7) × sqrt(7/2)
+    → sqrt((2/3) × (3/5) × (5/7) × (7/2)).
+    Resultado esperado: 1.
+    """
     prompt_base = (
         "Calcula el resultado de: sqrt(2/3) × sqrt(3/5) × sqrt(5/7) × sqrt(7/2). Responde solo con la respuesta, en español. "
     )

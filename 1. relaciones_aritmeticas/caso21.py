@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_21_binomio_newton_vs_directa():
+    """
+    MR: La expansión de un binomio mediante el teorema de Newton es equivalente
+    a su forma desarrollada término a término.
+    (1 + 1/3)^3  →  1 + 3×(1/3) + 3×(1/9) + 1/27.
+    Resultado esperado: 64/27.
+    """
     prompt_base = (
         "Calcula el resultado de: (1 + 1/3)^3. Responde solo con la respuesta, en español. "
     )

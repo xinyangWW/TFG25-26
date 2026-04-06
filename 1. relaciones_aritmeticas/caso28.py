@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_28_norma_euclidea_4d():
+    """
+    MR: La suma de los cuadrados de los componentes de un vector es equivalente
+    a la suma de los cuadrados de sus normas parciales.
+    3^2 + (-4)^2 + 12^2 + (-5)^2
+    → (sqrt(3^2 + 4^2))^2 + (sqrt(12^2 + 5^2))^2.
+    Resultado esperado: 194.
+    """
     prompt_base = (
         "Calcula el resultado de: 3^2 + (-4)^2 + 12^2 + (-5)^2. Responde solo con la respuesta, en español. "
     )

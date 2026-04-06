@@ -17,6 +17,13 @@ TIPO = "Aritmética"
 
 
 def caso_30_combinatorios_factoriales_potencias():
+    """
+    MR: Sustituir expresiones combinatorias y factoriales por sus valores
+    numéricos equivalentes mantiene la equivalencia matemática de la expresión.
+    (C(6,3) × 3! × 2^3) / (6! / 3!)
+    → (20 × 6 × 8) / 120.
+    Resultado esperado: 8.
+    """
     prompt_base = (
         "Calcula el resultado de: (C(6,3) × 3! × 2^3) / (6! / 3!). Recuerda que C(n,k) = n!/(k!×(n-k)!) y que n! es el producto de todos los enteros positivos hasta n. Responde solo con la respuesta, en español. "
     )

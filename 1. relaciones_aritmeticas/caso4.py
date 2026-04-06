@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_4_asociatividad_multiplicacion():
+    """
+    MR: La propiedad asociativa de la multiplicación establece que la forma
+    de agrupar los factores no altera el producto.
+    (2 × 3) × 4  →  2 × (3 × 4).
+    Resultado esperado: 24.
+    """
     prompt_base = (
         "Calcula el resultado de: (2 × 3) × 4. Responde solo con la respuesta, en español."
     )

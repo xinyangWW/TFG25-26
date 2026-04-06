@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_23_combinatoria_vs_factorial():
+    """
+    MR: Un número combinatorio puede calcularse mediante su definición factorial
+    o mediante la simplificación algebraica equivalente.
+    6! / (2! × 4!)  →  (6 × 5) / (2 × 1).
+    Resultado esperado: 15.
+    """
     prompt_base = (
         "Calcula el resultado de: 6! / (2! × 4!). Recuerda que n! es el producto de todos los enteros positivos hasta n. Responde solo con la respuesta, en español. "
     )

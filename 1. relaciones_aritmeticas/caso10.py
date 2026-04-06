@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_10_potencia_fraccion_compleja():
+    """
+    MR: La potencia de una fracción es equivalente a elevar por separado
+    numerador y denominador a dicho exponente: (a/b)^n = a^n / b^n.
+    (3/4)^3  →  3^3 / 4^3 = 27/64.
+    Resultado esperado: 0.421875.
+    """
     prompt_base = (
         "Calcula el resultado de: (3/4)^3. Responde solo con la respuesta, en español. "
     )

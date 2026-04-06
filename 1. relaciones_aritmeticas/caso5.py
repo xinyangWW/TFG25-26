@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_5_distributiva_suma():
+    """
+    MR: La propiedad distributiva establece que multiplicar un factor por
+    una suma es equivalente a multiplicarlo por cada sumando por separado.
+    3 × 6 + 3 × 4  →  3 × (6 + 4).
+    Resultado esperado: 30.
+    """
     prompt_base = (
         "Calcula el resultado de: 3 × 6 + 3 × 4. Responde solo con la respuesta, en español."
     )

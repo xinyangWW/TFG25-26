@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_22_suma_fracciones_encadenada():
+    """
+    MR: La suma de una serie geométrica finita puede sustituirse por su resultado
+    exacto previamente calculado sin alterar la equivalencia matemática.
+    1/2 + 1/4 + 1/8 + 1/16 + 1/32  →  31/32.
+    Resultado esperado: 31/32.
+    """
     prompt_base = (
         "Calcula el resultado de: 1/2 + 1/4 + 1/8 + 1/16 + 1/32. Responde solo con la respuesta, en español. "
     )

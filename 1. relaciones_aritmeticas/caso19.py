@@ -17,6 +17,12 @@ TIPO = "Aritmética"
 
 
 def caso_19_expresion_con_raices_y_potencias():
+    """
+    MR: La raíz cuadrada de una potencia par puede simplificarse reduciendo el
+    exponente a la mitad.
+    sqrt(2^6 × 3^2)  →  2^3 × 3.
+    Resultado esperado: 24.
+    """
     prompt_base = (
         "Calcula el resultado de: sqrt(2^6 × 3^2). Responde solo con la respuesta, en español. "
     )
