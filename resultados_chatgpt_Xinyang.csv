@@ -1,0 +1,61 @@
+modelo,tipo_relacion,caso,resultado_base,resultado_transformado,cumple_mr,error_tecnico,tiempo_segundos
+chatgpt,Transformacion simbolica,Caso 1: Simplificacion_racional,2,2,True,False,7.53
+chatgpt,Transformacion simbolica,Caso 10: Probabilidad unión,p(a)+p(b)-p(a∩b),p(a ∪ b),False,False,17.33
+chatgpt,Transformacion simbolica,Caso 11: Derivada funcional,2,2,True,False,16.5
+chatgpt,Transformacion simbolica,Caso 12: Derivación implícita,-x/y,-x/y,True,False,6.25
+chatgpt,Transformacion simbolica,Caso 13: Derivada orden superior,24,60,False,False,105.14
+chatgpt,Transformacion simbolica,Caso 14: Gradiente campo escalar,2,2,True,False,18.6
+chatgpt,Transformacion simbolica,Caso 15: Producto escalar funciones,0,0,True,False,8.24
+chatgpt,Transformacion simbolica,Caso 16: Ecuación funcional exponencial,e^x,e^x,True,False,18.3
+chatgpt,Transformacion simbolica,Caso 17: Serie Taylor exponencial,24,e^x,False,False,11.4
+chatgpt,Transformacion simbolica,Caso 18: Función generatriz Fibonacci,2,2,True,False,105.37
+chatgpt,Transformacion simbolica,Caso 19: Factorización ciclotómica,2,4,False,False,24.49
+chatgpt,Transformacion simbolica,Caso 2: Factorización cuadrática,4,12,False,False,7.33
+chatgpt,Transformacion simbolica,Caso 20: Límite fundamental sen x/x,1,1,True,False,8.31
+chatgpt,Transformacion simbolica,Caso 21: Identidad triple de Jacobi,2,2,True,False,34.65
+chatgpt,Transformacion simbolica,Caso 22: Fracción de fracción,x,"para poder determinar x necesito la ecuación o el contexto en el que aparece. por favor, indícame la ecuación completa o la relación que relaciona x con otras variables.",False,False,8.96
+chatgpt,Transformacion simbolica,Caso 23: Recursión alternada por paridad,2,4,False,False,228.4
+chatgpt,Transformacion simbolica,Caso 24: Recursión sistema acoplado,2,1,False,False,118.89
+chatgpt,Transformacion simbolica,Caso 25: Conjetura Collatz n=27,9232,9232,True,False,133.8
+chatgpt,Transformacion simbolica,Caso 26: Criptoaritmética SEND+MORE,2,4,False,False,212.15
+chatgpt,Transformacion simbolica,Caso 27: Silogismo avanzado múltiples premisas,"sí, no","sí, no",True,False,67.6
+chatgpt,Transformacion simbolica,Caso 28: Teoría juegos Tit for Tat,"c, c, d, c, c",1,False,False,89.54
+chatgpt,Transformacion simbolica,Caso 29: Transformada de Mellin,γ(s),-1,False,False,13.1
+chatgpt,Transformacion simbolica,Caso 3: Expansión binómica (a+b)⁵,5,5,True,False,9.68
+chatgpt,Transformacion simbolica,Caso 30: Máquina Turing,11,1,False,False,119.24
+chatgpt,Transformacion simbolica,Caso 4: Expansión logaritmo,3,3,True,False,13.57
+chatgpt,Transformacion simbolica,Caso 5: Polinomio simétrico,3,∑ rᵢ²,False,False,33.89
+chatgpt,Transformacion simbolica,"Caso 6: Combinatoria C(2n,2)",1,2,False,False,9.62
+chatgpt,Transformacion simbolica,Caso 7: Suma a producto trigonométrico,4,3,False,False,16.15
+chatgpt,Transformacion simbolica,Caso 8: Identidad hiperbólica fundamental,1,1,True,False,13.23
+chatgpt,Transformacion simbolica,Caso 9: Relación recurrencia Hermite,0,0,True,False,19.62
+chatgpt,Invariancia estructural,Caso 1: Prioridad de operaciones,17,17,True,False,5.31
+chatgpt,Invariancia estructural,Caso 10: Interés compuesto,2552.56,2552.563125,False,False,15.14
+chatgpt,Invariancia estructural,Caso 11: Ecuación exponencial,9,9,True,False,5.68
+chatgpt,Invariancia estructural,Caso 12: Signos consecutivos lenguaje natural,11,11,True,False,4.59
+chatgpt,Invariancia estructural,Caso 13: Distancia euclidiana,5,5,True,False,7.53
+chatgpt,Invariancia estructural,Caso 14: Teorema de Pitágoras,16.5529,16.5529,True,False,26.08
+chatgpt,Invariancia estructural,Caso 15: Teorema de Bayes,4.8,4.76,False,False,36.72
+chatgpt,Invariancia estructural,Caso 16: Multiplicación números complejos,-3,-3,True,False,12.1
+chatgpt,Invariancia estructural,Caso 17: Producto de matrices,50,-2,False,False,150.51
+chatgpt,Invariancia estructural,Caso 18: Autovalores de matriz,1,3,False,False,10.81
+chatgpt,Invariancia estructural,Caso 19: Derivada regla del producto,ERROR,ERROR,False,True,724.24
+chatgpt,Invariancia estructural,Caso 2:Fracciones equivalentes,1,1,True,False,5.66
+chatgpt,Invariancia estructural,Caso 20: Transformada de Laplace exponencial,-5,-5,True,False,7.18
+chatgpt,Invariancia estructural,Caso 21: Teorema de convolución,0.117,0.117,True,False,21.2
+chatgpt,Invariancia estructural,Caso 22: Teorema de la divergencia,12.566370614359172,12566.370614359172,False,False,25.37
+chatgpt,Invariancia estructural,Caso 23: Función Gamma Γ(n)=(n-1)!,120,120,True,False,5.08
+chatgpt,Invariancia estructural,Caso 24: Identidad de Euler,0,0,True,False,4.85
+chatgpt,Invariancia estructural,Caso 25: Identidad de Bessel J₀(0)=1,1,1,True,False,8.93
+chatgpt,Invariancia estructural,Caso 26: Función Zeta de Riemann,1.6449,1.6449340668482264,False,False,8.1
+chatgpt,Invariancia estructural,Caso 27: Permutaciones con repetición - INFORMÁTICA,9979200,9979200,True,False,12.88
+chatgpt,Invariancia estructural,Caso 28: Espacio dual,12,12,True,False,6.04
+chatgpt,Invariancia estructural,Caso 29: Producto interno L²,0.25,0.25,True,False,9.99
+chatgpt,Invariancia estructural,Caso 3: Propiedad distributiva,63,63,True,False,5.1
+chatgpt,Invariancia estructural,Caso 30: Teorema espectral operador Hilbert-Schmidt,0.5,0.5,True,False,105.27
+chatgpt,Invariancia estructural,Caso 4: Potencia exponente fraccionario,25,25,True,False,5.83
+chatgpt,Invariancia estructural,Caso 5: Raíz cuadrada,7,7,True,False,5.25
+chatgpt,Invariancia estructural,Caso 6: Raíz con índice,4,4,True,False,6.76
+chatgpt,Invariancia estructural,Caso 7: Notación científica multiplicación,60000000000,0,False,False,9.83
+chatgpt,Invariancia estructural,Caso 8: Notación científica exponentes negativos,0.013,0.013,True,False,7.16
+chatgpt,Invariancia estructural,Caso 9: Logaritmos cambio de base,2,2,True,False,6.8
