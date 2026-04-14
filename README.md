@@ -73,7 +73,6 @@ Uso:
     python run_all.py deepseek
 
 ## 7. `metricas_por_categoria.py`
-=========================
 Calcula métricas de cumplimiento de relaciones metamórficas (MR) agrupadas
 por tipo de relación, a partir de los CSVs generados por results_manager.py ejecutado por cada integrante del grupo
 para los 3 modelos de inteligencia artificial usados.
