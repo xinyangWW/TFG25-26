@@ -121,8 +121,8 @@ Salida
 
 ### Instalación
 
-Para instalar las librerías de terceros hay que ejecutar el siguiente comando ( para instalar pandas):
+Para instalar las librerías de terceros hay que ejecutar el siguiente comando:
 
 Uso
 ---
-    pip install pandas requests
+    pip install pandas requests matplotlib
