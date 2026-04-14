@@ -122,6 +122,7 @@ Salida
 ### Instalación
 
 Para instalar las librerías de terceros hay que ejecutar el siguiente comando ( para instalar pandas):
+
 Uso
 ---
-pip install pandas requests
+    pip install pandas requests
