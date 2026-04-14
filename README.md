@@ -1,6 +1,6 @@
 ## TFG25-26
 
-A continuación se describen los 6 scripts generales para evaluar los modelos de lenguaje usando testing metamórfico.
+A continuación se describen los 7 scripts generales para evaluar los modelos de lenguaje usando testing metamórfico.
 ## 1. `merge_results.py`
 
 Script encargado de **fusionar los resultados generados por los distintos integrantes del equipo** en un único archivo final por modelo.
@@ -73,6 +73,28 @@ python run_all.py chatgpt
 python run_all.py gemma
 python run_all.py deepseek
 
+## 7. `metricas_por_categoria.py`
+=========================
+Calcula métricas de cumplimiento de relaciones metamórficas (MR) agrupadas
+por tipo de relación, a partir de los CSVs generados por results_manager.py ejecutado por cada integrante del grupo
+para los 3 modelos de inteligencia artificial usados.
+
+Uso
+---
+    python metricas_por_categoria.py chatgpt
+    python metricas_por_categoria.py gemma
+    python metricas_por_categoria.py deepseek
+
+
+
+Salida
+------
+    metricas_<stem>_por_tipo_relacion.csv
+        CSV con columnas: tipo_relacion, aciertos, total, porcentaje_acierto.
+
+    grafica_<stem>_por_tipo_relacion.png
+        Gráfica de barras con el porcentaje de acierto por categoría.
+
 # Librerías utilizadas
 
 ## Estándar de Python
@@ -97,6 +119,7 @@ python run_all.py deepseek
 |---|---|
 | `pandas` | Lectura, concatenación y análisis estadístico de CSVs |
 | `requests` | Peticiones HTTP al servidor Ollama local |
+| `matplotlib` | Creación de graficos para las metricas de aciertos en la ejecucion de los casos en los 3 modelos de IA |
 
 ### Instalación
 
