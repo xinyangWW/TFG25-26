@@ -66,12 +66,11 @@ Permite una **ejecución automatizada y fiable de consultas a modelos**.
 
 Script encargado de **ejecutar automáticamente todos los casos de prueba del proyecto** para un modelo específico.
 
-### Uso:
-En la terminal hay que ejecutar los siguientes comandos: 
-
-python run_all.py chatgpt
-python run_all.py gemma
-python run_all.py deepseek
+Uso:
+---
+    python run_all.py chatgpt
+    python run_all.py gemma
+    python run_all.py deepseek
 
 ## 7. `metricas_por_categoria.py`
 =========================
@@ -84,7 +83,6 @@ Uso
     python metricas_por_categoria.py chatgpt
     python metricas_por_categoria.py gemma
     python metricas_por_categoria.py deepseek
-
 
 
 Salida
