@@ -109,6 +109,11 @@ def normalizar_respuesta(respuesta: str) -> str:
         return str(int(valor_fraccion)) if float(valor_fraccion).is_integer() else str(round(valor_fraccion, 10))
 
     # ── 5. Extraer el último número (resultado final) ────────────────────────
+    # esto es para expresiones algebraicas con incógnitas, evita que x^2 se confunda con 2
+    if re.search(r"[a-zA-Z]", r):
+        r = r.replace(" ", "")
+        r = r.replace("*", "")
+        return r
     numeros = re.findall(r"-?\d+(?:\.\d+)?", r)
     if numeros:
         ultimo = float(numeros[-1])
@@ -127,13 +132,21 @@ def evaluar_cumplimiento_mr(respuesta_base: str, respuesta_transformada: str):
     transf_norm = normalizar_respuesta(respuesta_transformada)
 
     error_tecnico = (
-        base_norm  in ("", "ERROR")
+        base_norm in ("", "ERROR")
         or transf_norm in ("", "ERROR")
     )
 
-    cumple_mr = (
-        not error_tecnico
-        and base_norm == transf_norm
-    )
+    if error_tecnico:
+        return False, True
 
-    return cumple_mr, error_tecnico
+    # trata de comparar como números y compara con cierta tolerancia
+    try:
+        base_val = float(base_norm)
+        transf_val = float(transf_norm)
+        epsilon = 1e-6
+        cumple_mr = abs(base_val - transf_val) < epsilon
+    # si no son números, compara como texto
+    except ValueError:
+        cumple_mr = base_norm == transf_norm
+
+    return cumple_mr, False
