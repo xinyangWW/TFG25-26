@@ -61,9 +61,7 @@ def guardar_grafica(resumen: pd.DataFrame, stem: str) -> Path:
     etiquetas = [f"{CATEGORIA_NUM.get(t, '?')}. {t}" for t in resumen["tipo_relacion"]]
     plt.figure()
     plt.bar(etiquetas, resumen["porcentaje_acierto"])
-    plt.xlabel("Tipo de relación")
     plt.ylabel("% de acierto")
-    plt.title(f"Accuracy por tipo_relacion — {MODEL}")
     plt.xticks(rotation=45)
     plt.tight_layout()
     path = BASE_DIR / f"grafica_{stem}_por_tipo_relacion.png"
