@@ -21,7 +21,7 @@ Esto permite obtener una **visión global del rendimiento del modelo** a partir 
 
 Módulo encargado de **normalizar y comparar respuestas de los modelos** para evaluar relaciones metamórficas (MR).
 
-- Convierte respuestas a un formato estándar (números, fracciones, “sin solución”, “R”, etc.)
+- Convierte respuestas a un formato estándar (números, fracciones, “sin solución”, “R”, expresiones simbólicas, etc...)
 - Limpia ruido (LaTeX, etiquetas, texto irrelevante)
 - Detecta errores técnicos
 - Compara respuestas base y transformadas para determinar si se cumple la MR
