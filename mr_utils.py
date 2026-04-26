@@ -1,4 +1,5 @@
 import re
+from sympy import sympify, integrate, symbols, Symbol, diff, solveset, S, simplify
 
 # ── Patrones de "sin solución" (solo español) ────────────────────────────────
 _NO_SOLUTION_PATTERNS = [
@@ -108,17 +109,20 @@ def normalizar_respuesta(respuesta: str) -> str:
     if valor_fraccion is not None:
         return str(int(valor_fraccion)) if float(valor_fraccion).is_integer() else str(round(valor_fraccion, 10))
 
-    # ── 5. Extraer el último número (resultado final) ────────────────────────
-    # esto es para expresiones algebraicas con incógnitas, evita que x^2 se confunda con 2
-    if re.search(r"[a-zA-Z]", r):
-        r = r.replace(" ", "")
-        r = r.replace("*", "")
-        return r
+    # ── 5. Extraer números SIEMPRE que existan ─────────────────────────────
     numeros = re.findall(r"-?\d+(?:\.\d+)?", r)
-    if numeros:
-        ultimo = float(numeros[-1])
-        return str(int(ultimo)) if ultimo.is_integer() else str(ultimo)
 
+    if numeros:
+        valores = sorted(float(n) for n in numeros)
+        valores_str = [
+            str(int(v)) if v.is_integer() else str(v)
+            for v in valores
+        ]
+        return ",".join(valores_str)
+
+    # ── 6. Fallback: texto limpio ─────────────────────────────────────────
+    r = r.replace(" ", "")
+    r = r.replace("*", "")
     return r
 
 
@@ -143,10 +147,250 @@ def evaluar_cumplimiento_mr(respuesta_base: str, respuesta_transformada: str):
     try:
         base_val = float(base_norm)
         transf_val = float(transf_norm)
-        epsilon = 1e-6
+        epsilon = 1e-4
         cumple_mr = abs(base_val - transf_val) < epsilon
     # si no son números, compara como texto
     except ValueError:
         cumple_mr = base_norm == transf_norm
 
     return cumple_mr, False
+
+# extrae números positivos o negativos, enteros o decimales, de un string
+def extraer_valores(respuesta: str):
+    numeros = re.findall(r"-?\d+(?:\.\d+)?", respuesta)
+    return [float(n) for n in numeros]
+
+
+# formatea una lista de valores con sus variables correspondientes
+def formatear_lista_valores(valores, variable):
+    if not valores:
+        return "valores inválidos"
+
+    return ", ".join(f"{variable} = {int(v) if v.is_integer() else v}" for v in valores)
+
+# evalúa una ecuación igualando a 0
+def evaluar_ecuacion(expr: str, valores: dict):
+    try:
+        if "=" in expr:
+            izq, der = expr.split("=")
+            expr = f"({izq}) - ({der})"
+
+        ecuacion = sympify(expr)
+        return float(ecuacion.subs(valores))
+    except:
+        return None
+
+def extraer_soluciones(respuesta: str, variables):
+    if not respuesta:
+        return None
+
+    # extraer números, también fracciones
+    matches = re.findall(r"-?\d+/\d+|-?\d+(?:\.\d+)?", respuesta)
+
+    if not matches:
+        return None
+
+    valores = []
+    for val in matches:
+        if "/" in val:
+            num, den = val.split("/")
+            valores.append(float(num) / float(den))
+        else:
+            valores.append(float(val))
+
+    # agrupar en bloques del tamaño de variables
+    n = len(variables)
+
+    if len(valores) % n != 0:
+        return None 
+
+    soluciones = []
+    for i in range(0, len(valores), n):
+        bloque = valores[i:i+n]
+        soluciones.append(dict(zip(variables, bloque)))
+
+    return soluciones
+
+# para el prompt transformado
+def formatear_soluciones(soluciones):
+    if not soluciones:
+        return "valores inválidos"
+
+    partes = []
+    for sol in soluciones:
+        parte = ", ".join(f"{k} = {int(v) if v.is_integer() else v}" for k, v in sol.items())
+        partes.append(f"({parte})")
+
+    return " ; ".join(partes)
+
+# evalúa una ecuación o sistema de ecuaciones dado una serie de valores para las variables
+def evaluar_solucion_general(respuesta_modelo: str, ecuaciones, variables=('x',), epsilon=1e-6):
+    if not respuesta_modelo or respuesta_modelo.startswith("[ERROR"):
+        return False, True
+
+    soluciones = extraer_soluciones(respuesta_modelo, variables)
+
+    if not soluciones:
+        return False, True
+
+    for valores in soluciones:
+        for eq in ecuaciones:
+            resultado = evaluar_ecuacion(eq, valores)
+
+            if resultado is None or abs(resultado) > epsilon:
+                return False, False
+
+    return True, False
+
+# funcion que evalúa una integral definida
+def evaluar_integral_definida(expr: str, variable: str, a: float, b: float, valor_modelo: float, epsilon=1e-5):
+    try:
+        var = symbols(variable)
+
+        # parsear expresión
+        funcion = sympify(expr)
+
+        # calcular integral exacta
+        resultado_real = float(integrate(funcion, (var, a, b)))
+
+        return abs(resultado_real - valor_modelo) < epsilon
+
+    except:
+        return None
+    
+# función que evalúa la respuesta del modelo para una integral definida
+def evaluar_integral_respuesta(respuesta_modelo: str, expr: str, variable: str, a: float, b: float, epsilon=1e-6):
+    if not respuesta_modelo or respuesta_modelo.startswith("[ERROR"):
+        return False, True
+
+    valores = re.findall(r"-?\d+/\d+|-?\d+(?:\.\d+)?", respuesta_modelo)
+
+    if not valores:
+        return False, True
+
+    val = valores[-1]
+
+    if "/" in val:
+        num, den = val.split("/")
+        val = float(num) / float(den)
+    else:
+        val = float(val)
+
+    correcto = evaluar_integral_definida(expr, variable, a, b, val, epsilon)
+
+    if correcto is None:
+        return False, True
+
+    return correcto, False
+
+# función que extrae una matriz en formato cadena entre corchetes y la convierte de una lista de listas de float
+def extraer_matriz(respuesta: str):
+    filas = re.findall(r"\[([^\[\]]+)\]", respuesta)
+
+    matriz = []
+    for fila in filas:
+        nums = re.findall(r"-?\d+(?:\.\d+)?", fila)
+        if nums:
+            matriz.append([float(n) for n in nums])
+
+    return matriz if matriz else None
+
+# función para multiplicar dos matrices
+def multiplicar_matrices(A, B):
+    resultado = []
+
+    for i in range(len(A)):
+        fila = []
+        for j in range(len(B[0])):
+            val = sum(A[i][k] * B[k][j] for k in range(len(B)))
+            fila.append(val)
+        resultado.append(fila)
+
+    return resultado
+
+# función para comprobar si una matriz es la identidad
+def es_matriz_identidad(M):
+    n = len(M)
+
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                if M[i][j] != 1:
+                    return False
+            else:
+                if M[i][j] != 0:
+                    return False
+
+    return True
+
+# función para comparar dos matrices
+def matrices_iguales(A, B, epsilon=1e-6):
+    if not A or not B:
+        return False
+
+    if len(A) != len(B) or len(A[0]) != len(B[0]):
+        return False
+
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            if abs(A[i][j] - B[i][j]) > epsilon:
+                return False
+
+    return True
+
+# función para evalúar el valor de una función en un punto y comprobar si es un extremo absoluto
+def evaluar_extremo_global(respuesta_modelo: str, funcion: str, tipo="max", epsilon=1e-6):
+
+    x = Symbol('x')
+
+    puntos = extraer_valores(respuesta_modelo)
+    if not puntos:
+        return False, True
+
+    x0 = float(puntos[-1])
+
+    try:
+        f = sympify(funcion)
+        f1 = diff(f, x)
+
+        # puntos críticos
+        criticos = solveset(f1, x, domain=S.Reals)
+
+        if not criticos:
+            return False, False
+
+        f_x0 = float(f.subs(x, x0))
+
+        # evaluar SOLO en críticos
+        valores = [
+            float(f.subs(x, c))
+            for c in criticos
+            if c.is_real
+        ]
+
+        if tipo == "max":
+            return all(f_x0 >= v - epsilon for v in valores), False
+
+        elif tipo == "min":
+            return all(f_x0 <= v + epsilon for v in valores), False
+
+        else:
+            return False, True
+
+    except:
+        return False, True
+
+# funcion para comprobar que dos expresiones simbólicas son iguales
+def equivalentes(expr1, expr2):
+    try:
+        return simplify(sympify(expr1) - sympify(expr2)) == 0
+    except Exception as e:
+        return False
+    
+# funcion para evaluar el cumplimiento de mr, cuando queremos comparar expresiones
+def evaluar_cumplimiento_expresiones(base, transf):
+    try:
+        return equivalentes(base, transf), False
+    except:
+        return False, True
+    

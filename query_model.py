@@ -79,7 +79,7 @@ def query_model(
             response = SESSION.post(
                 OLLAMA_URL,
                 json=payload,
-                timeout=(5, 180),
+                timeout=(5, 300),
             )
             response.raise_for_status()
             data    = response.json()
