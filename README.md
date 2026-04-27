@@ -117,6 +117,7 @@ Salida
 | `pandas` | Lectura, concatenación y análisis estadístico de CSVs |
 | `requests` | Peticiones HTTP al servidor Ollama local |
 | `matplotlib` | Creación de graficos para las metricas de aciertos en la ejecucion de los casos en los 3 modelos de IA |
+| `sympy` | Matemática simbólica, simplificar expresiones, y evaluar ecuaciones | 
 
 ### Instalación
 
@@ -124,4 +125,4 @@ Para instalar las librerías de terceros hay que ejecutar el siguiente comando:
 
 Uso
 ---
-    pip install pandas requests matplotlib
+    pip install pandas requests matplotlib sympy
