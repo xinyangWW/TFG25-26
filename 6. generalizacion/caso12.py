@@ -19,13 +19,13 @@ def caso_12_derivada_monomio(n: int):
     # Caso base
     prompt_base = (
         f"Calcula la derivada de x^{n}. "
-        "Responde SOLO la derivada, sin texto adicional."
+        "Responde SOLO la derivada, sin texto adicional y en formato ASCII."
     )
 
     # Caso transformado: 
     prompt_transformado = (
         f"Usa la fórmula de la derivada de x^n = n * x^(n-1), con n={n}. "
-        "Responde SOLO la derivada, sin texto adicional."
+        "Responde SOLO la derivada, sin texto adicional y en formato ASCII."
     )
 
     start = time.perf_counter()
