@@ -48,7 +48,7 @@ def caso_20_suma_fracciones():
         tipo=TIPO,
         caso="Caso 20: Suma de fracciones",
         resultado_base=respuesta_base,
-        resultado_transformado=respuesta_transformado,
+        resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
         tiempo=elapsed
     )
@@ -58,7 +58,7 @@ def caso_20_suma_fracciones():
         tipo=TIPO,
         caso="Caso 20: Suma de fracciones",
         resultado_base=respuesta_base,
-        resultado_transformado=respuesta_transformado,
+        resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
         error_tecnico=error_tecnico,
         tiempo=elapsed

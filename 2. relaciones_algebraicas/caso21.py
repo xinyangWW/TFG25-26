@@ -48,7 +48,7 @@ def caso_21_valor_absoluto():
         tipo=TIPO,
         caso="Caso 21: Ecuación con valor absoluto",
         resultado_base=respuesta_base,
-        resultado_transformado=respuesta_transformado,
+        resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
         tiempo=elapsed
     )
@@ -58,7 +58,7 @@ def caso_21_valor_absoluto():
         tipo=TIPO,
         caso="Caso 21: Ecuación con valor absoluto",
         resultado_base=respuesta_base,
-        resultado_transformado=respuesta_transformado,
+        resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
         error_tecnico=error_tecnico,
         tiempo=elapsed
