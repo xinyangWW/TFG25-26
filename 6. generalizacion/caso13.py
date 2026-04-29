@@ -23,7 +23,7 @@ def caso_13_derivada_polinomio(n: int):
     
     prompt_base = (
         f"Calcula la derivada de {polinomio}. "
-        "Responde SOLO la derivada, sin texto adicional."
+        "Responde SOLO la derivada, sin texto adicional y en formato ASCII."
     )
 
     # Caso transformado: fórmula general
