@@ -23,13 +23,13 @@ def caso_15_integral_polinomio(n: int):
     
     prompt_base = (
         f"Calcula la integral de {polinomio}. "
-        "Responde SOLO la integral, sin texto adicional."
+        "Responde SOLO la integral, sin texto adicional y en formato ASCII."
     )
 
     # Caso transformado: fórmula general
     prompt_transformado = (
         f"Usa la fórmula de la integral de x^n = x^(n+1)/(n+1), e integra {polinomio}. "
-        "Responde SOLO la integral, sin texto adicional."
+        "Responde SOLO la integral, sin texto adicional y en formato ASCII."
     )
 
     start = time.perf_counter()
