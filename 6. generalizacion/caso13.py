@@ -29,7 +29,7 @@ def caso_13_derivada_polinomio(n: int):
     # Caso transformado: fórmula general
     prompt_transformado = (
         f"Usa la fórmula de la derivada de x^n = nx^(n-1), y deriva {polinomio}. "
-        "Responde SOLO la derivada, sin texto adicional."
+        "Responde SOLO la derivada, sin texto adicional y en formato ASCII."
     )
 
     start = time.perf_counter()
