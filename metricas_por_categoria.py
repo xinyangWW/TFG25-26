@@ -26,7 +26,7 @@ CATEGORIA_NUM = {
 
 
 def encontrar_csv(modelo: str) -> Path:
-    archivos = sorted(BASE_DIR.glob(f"resultados_{modelo}*.csv"))
+    archivos = sorted(BASE_DIR.glob(f"resultados_finales_{modelo}*.csv"))
     if not archivos:
         raise FileNotFoundError(f"No se encontró ningún CSV para '{modelo}'")
     if len(archivos) == 1:
