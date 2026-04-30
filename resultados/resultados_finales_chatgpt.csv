@@ -1,0 +1,263 @@
+modelo,tipo_relacion,caso,resultado_base,resultado_transformado,cumple_mr,error_tecnico,tiempo_segundos
+chatgpt,Generalización,Suma de los primeros 100 números naturales,5050,5050,True,False,308.6
+chatgpt,Generalización,Suma de ángulos (30 + 60),1,1,True,False,37.47
+chatgpt,Generalización,"Suma de logaritmos (a=8, b=16)",7,7,True,False,59.46
+chatgpt,Generalización,Derivada de x^33,"32,33","32,33",True,False,34.28
+chatgpt,Generalización,Derivada de 2x^5 + 1x^4 + 5x^3 + 4x^2 + 4x^1 + 3,"2,3,4,4,4,8,10,15","2,3,4,4,4,8,10,15",True,False,73.28
+chatgpt,Generalización,Integral de x^33,1,1,True,False,38.22
+chatgpt,Generalización,Integral de 2x^5 + 9x^4 + 2x^3 + 7x^2 + 1x^1 + 1,0.5,0.5,True,False,104.2
+chatgpt,Generalización,Suma telescopica (n=11),0.9166666667,0.9166666667,True,False,113.43
+chatgpt,Generalización,"Progresión geométrica (a=2, r=2, n=11)",4094,4094,True,False,60.92
+chatgpt,Generalización,Suma alternante (n=7),4,4,True,False,53.83
+chatgpt,Generalización,"Progresión aritmética (a=3, d=2, n=7)",63,63,True,False,45.04
+chatgpt,Generalización,Perímetro de la circunferencia,ERROR,31.41592653589793,False,True,633.33
+chatgpt,Generalización,Suma ponderada (n=5),258,258,True,False,57.22
+chatgpt,Generalización,Suma de cuadrados (n=7),140,140,True,False,44.18
+chatgpt,Generalización,Suma de cubos de 1 a 7,784,784,True,False,42.72
+chatgpt,Generalización,Suma de diferencias cúbicas (n=7),342,342,True,False,63.92
+chatgpt,Generalización,Producto telescopico (n=7),0.125,0.125,True,False,44.43
+chatgpt,Generalización,Caso factorial n=5,120,120,True,False,19.48
+chatgpt,Generalización,Caso límite: sin(x)/x,1,1,True,False,508.29
+chatgpt,Generalización,Binomio de Newton (2 + 3)^5,3125,1,False,False,406.6
+chatgpt,Generalización,"Esperanza binomial (n=5, p=0.5)",2.5,2.5,True,False,33.9
+chatgpt,Generalización,# aristas de un grafo completo de 8 vértices,28,28,True,False,29.75
+chatgpt,Generalización,Área de la circunferencia,78.53981633974483,78.53981633974483,True,False,46.0
+chatgpt,Generalización,Aproximación por series de Taylor,2.718281525573192,2.718281525573192,True,False,169.61
+chatgpt,Generalización,Caso media aritmética,4,4,True,False,29.34
+chatgpt,Generalización,Cuadrado de la suma,49,49,True,False,26.34
+chatgpt,Generalización,Cuadrado de la resta,25,25,True,False,35.55
+chatgpt,Generalización,Suma por diferencia,96,96,True,False,28.34
+chatgpt,Generalización,Seno del ángulo doble (45),1,1,True,False,28.22
+chatgpt,Generalización,tangente de 60,1.7320508075688772,1.7320508075688772,True,False,51.5
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación 2*x + 3 = 11,4,si,True,False,37.69
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 4*x + 7*y = 1, 9*x - 5*y = 23","-1,2",si,True,False,85.75
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x^2 + y = 5, x + y = 3","-1,1,2,4",sisi,True,False,105.46
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones sqrt(x) + y = 5, x + y = 7","3,4",si,True,False,65.98
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x*y = 6, x + y = 5","2,2,3,3",si,True,False,88.22
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x/2 + y = 3, x - y = 1",1.6666666667,si,True,False,104.61
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones (1/2)*x + (1/3)*y = 7/6, (1/4)*x - (1/5)*y = -3/20","1,2",si,True,False,97.34
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 2/x + 3/y = 2, 4/x - 3/y = 1","2,3",si,True,False,77.11
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 123*x + 456*y = 789, x - y = 1",1.1502590674,si,True,False,264.2
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y + z = 0, x + y - z = 2, 2*x - y + 3*z = -1","-1,0,1",si,True,False,78.77
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones (1/2)*x + (1/3)*y + (1/4)*z = 13/12, (1/3)*x - (1/2)*y + (1/5)*z = 1/30, (1/4)*x + (1/4)*y - (1/3)*z = 1/6",ERROR,no,True,True,639.93
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación x^2 = 9,"-3,3",si,True,False,59.99
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 6/x + 4/y + 2/z = 12, 3/x - 2/y + 4/z = 5, 9/x - 2/y - 2/z = 5","1,1,1",si,True,False,177.2
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones sqrt(2)*x + sqrt(3)*y + sqrt(5)*z = sqrt(2)+sqrt(3)+sqrt(5), sqrt(3)*x + sqrt(5)*y + sqrt(2)*z = sqrt(3)+sqrt(5)+sqrt(2), sqrt(5)*x + sqrt(2)*y + sqrt(3)*z = sqrt(5)+sqrt(2)+sqrt(3)","1,1,1",si,True,False,219.11
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + 2*y - z + 3*t = -8, 2*x + 2*z -t = 13, -x + y + z - t = 8, 3*x +3*y - z + 2*t = -1","-3,1,2,4",si,True,False,304.28
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida x^2 entre 0 y 2,2.6666666667,si,True,False,39.94
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida x^2 + 2*x + 1 entre 0 y 1,2.3333333333,si,True,False,61.66
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida sin(x) entre 0 y 6.283185307179586,0,si,True,False,56.34
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida abs(x) entre -1 y 1,1,si,True,False,63.25
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida x*exp(x) entre 0 y 2,8.38905609893,si,True,False,82.03
+chatgpt,Verificación de solución,Evaluación de la primalidad de 997,si,"1,997",True,False,98.43
+chatgpt,Verificación de solución,"Evaluación del producto de matrices A=[[1, 2], [3, 4]] y B=[[2, 0], [1, 2]]","4,4,8,10",si,True,False,65.96
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación (x - 2)*(x - 3) = 0,"2,3",si,True,False,82.01
+chatgpt,Verificación de solución,"Evaluación de la matriz inversa de A=[[2, 1], [5, 3]]","-5,-1,2,3",si,True,False,92.4
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación x^5 - x^4 - x + 1 = 0,"-1,1",sisi,True,False,156.27
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación (x^2 - 1)/(x - 1) = 0,-1,si,True,False,79.61
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación log(x - 1) = 0,2,si,True,False,54.4
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación sqrt(x - 1) = x - 3,5,si,True,False,66.13
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 5, x - y = 1","2,3",si,True,False,56.04
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 1, 2*x - y = -2",1.3333333333,si,True,False,74.69
+chatgpt,Contexto Previo,Resolver la ecuacion x^2 - 5x + 6 = 0; sin y con contexto previo,"2,3","2,3",True,False,170.76
+chatgpt,Contexto Previo,Calcular sqrt(9 + 16); sin y con el contexto erróneo: recuerda que sqrt(a + b) != sqrt(a) + sqrt(b),5,5,True,False,25.6
+chatgpt,Contexto Previo,Calcular la derivada de sin(x^2); sin y con el contexto: recuerda la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),"2,2","2,2",True,False,47.71
+chatgpt,Contexto Previo,Calcular el límite lim_{x->0} (sin(x)/x); sin y con el contexto: recuerda la regla de L'Hôpital: lim_{x->a} = f(x)/g(x) = f'(x)/g'(x),1,1,True,False,47.71
+chatgpt,Contexto Previo,Calcular log(2 + 3); sin y con el contexto: recuerda que log(a + b) != log(a) + log(b),0.69897,1.6094379124341003,False,False,120.94
+chatgpt,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.1666666667,0.1666666667,True,False,168.57
+chatgpt,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.8427,0.8428,True,False,292.64
+chatgpt,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.004524886,0.004524886,True,False,89.59
+chatgpt,Contexto Previo,Derivar el límite lim{x->0} ((1 + x)^(1/x)); sin y con el contexto: recuerda la definición del número e,e,e,True,False,119.18
+chatgpt,Contexto Previo,Calcular el valor de x donde la función -x^2 + 6*x alcanza su máximo; sin y con el contexto: ten en cuenta que el vértice de una parábola ax^2 + bx + c se encuentra en x = -b/(2a),3,3,True,False,43.86
+chatgpt,Contexto Previo,Calcular la derivada de ln(sin(x)); sin y con el contexto: ten en cuenta la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),cos(x)/sin(x),cot(x),True,False,42.41
+chatgpt,Contexto Previo,Resolver la ecuacion x^3 - 4x = 0; sin y con contexto previo,"-2,0,2","-2,0,2",True,False,65.9
+chatgpt,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 5), x ≡ 3 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","17,35","17,35",True,False,96.78
+chatgpt,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","23,105","23,105",True,False,136.13
+chatgpt,Contexto Previo,"Resolver el problema: Sea X ~ Binomial(n=5, p=0.3). Calcula P(X ≤ 2). Sin y con el contexto: Ten en cuenta que P(X ≤ k) = sum_{i=0}^k C(n,i) p^i (1-p)^(n-i)",0.83692,0.83692,True,False,133.37
+chatgpt,Contexto Previo,"Resolver el problema: Una pieza puede venir de tres fábricas A (50%), B (30%), C (20%). Sin y con el contexto: Ten en cuenta el Tª de Bayes: P(A|B) = P(B|A)P(A) / P(B). ",0.5,ERROR,False,True,685.84
+chatgpt,Contexto Previo,Calcular la integral de e^(-x) entre 0 e infinito; sin y con el contexto: ten en cuenta que la integral converge y se puede calcular como un límite,1,1,True,False,41.37
+chatgpt,Contexto Previo,Calcular el mínimo de la función x^3 - 3x^2 + 2; sin y con el contexto: ten en cuenta que un punto crítico es mínimo si f''(x) > 0 y máximo si f''(x) < 0,2,2,True,False,88.95
+chatgpt,Contexto Previo,"Calcular los valores propios o eigenvalores de la matriz [[4,1,-2],[1,3,0],[-2,0,3]]; sin y con el contexto: ten en cuenta que para calcular los eigenvalores de una matriz, debes resolver el polinomio característico det(A - λI) = 0","1.20871215252208,3,5.79128784747792","1.20871215252208,3,5.79128784747792",True,False,791.28
+chatgpt,Contexto Previo,Simplificar la expresión log(e^(2*x) + e^x); sin y con el contexto: intenta factorizar antes de aplicar logaritmos,1,1,True,False,81.2
+chatgpt,Contexto Previo,Calcular el límite cuando x->0 de (sqrt(1 + x) - 1) / x; sin y con el contexto: intenta racionalizar multiplicando por el conjugado,0.5,0.5,True,False,70.36
+chatgpt,Contexto Previo,"Calcular la integral de x * cos(x^2); sin y con el contexto: recuerda que si aparece una función y su derivada, puedes hacer un cambio de variable",0.5,0.5,True,False,66.58
+chatgpt,Contexto Previo,Resolver la ecuacion x^5 + 3*x^4 - 5*x^3 - 15*x^2 + 4*x + 12 = 0; sin y con contexto previo,"-3,-2,-1,1,2","-3,-2,-1,1,2",True,False,320.02
+chatgpt,Contexto Previo,"Calcular la potencia de la matriz [[1, 1], [0, 1]]; sin y con el contexto: Ten en cuenta que algunas matrices pueden escribirse como I + N, siendo N una matriz nilpotente (N^2 = 0), lo que simplifica mucho el cálculo de potencias","0,1,1,5","0,1,1,5",True,False,59.97
+chatgpt,Contexto Previo,Resolver la ecuacion x^2 - 4x + 4 = 0; sin y con el contexto: recuerda que (x - 2)^2 = x^2 -4x + 4,2,2,True,False,40.94
+chatgpt,Contexto Previo,Resolver la ecuacion (x^2 - 1)/(x - 1) = 3; sin y con el contexto: recuerda que no se puede dividir entre 0,2,2,True,False,59.7
+chatgpt,Contexto Previo,Resolver la ecuacion |x - 3| = 5; sin y con el contexto: recuerda que |a| = b implica: a = b o a = -b,"-2,8","-2,8",True,False,62.4
+chatgpt,Contexto Previo,Resolver la ecuacion log((x+1)/10) = 2; sin y con el contexto: recuerda que log(a/b) = log(a) - log(b),999,999,True,False,95.04
+chatgpt,Contexto Previo,Resolver la ecuacion 2 - 3^(-x) + 3^(x+1) = 0; sin y con el contexto: recuerda las propiedades de las potencias y resuelve mediante el cambio de variable t=3^x,-1,-1,True,False,110.33
+chatgpt,Contexto Previo,Derivar la función x^2 * e^x; sin y con el contexto: mediante la regla del producto (fg)' = f'g + fg',"2,2","2,2",False,False,49.5
+chatgpt,Aritmética,Caso 1: Conmutatividad multiplicación (7+2×5 vs 7+5×2),17,17,True,False,33.82
+chatgpt,Aritmética,Caso 10: Potencia de fracción compleja ((3/4)^3 vs 27/64),0.421875,0.421875,True,False,22.67
+chatgpt,Aritmética,Caso 11: Expresión anidada profunda (2^(3+1) × (10-(2×3)) vs 2^4 × 4),64,64,True,False,28.36
+chatgpt,Aritmética,Caso 12: Diferencia de cuadrados encadenada (7^2-3^2 vs (7+3)×(7-3)),40,40,True,False,24.37
+chatgpt,Aritmética,Caso 13: Operación mixta larga con potencias y fracciones (2^5/(4×(3+1)) - 1/2 vs 32/16 - 1/2),5,5,True,False,59.45
+chatgpt,Aritmética,Caso 14: Suma de cubos vs factorización (2^3+3^3 vs (2+3)×(4-6+9)),35,35,True,False,33.81
+chatgpt,Aritmética,Caso 15: Fracción compleja anidada ((1+1/2)/(1-1/4) vs (3/2)/(3/4)),2,2,True,False,32.89
+chatgpt,Aritmética,Caso 16: Suma progresión geométrica directa vs fórmula (1+2+4+8+16 vs 2^5-1),31,31,True,False,22.93
+chatgpt,Aritmética,Caso 17: Raíz de expresión compleja (sqrt((3^2+4^2)×(5^2-3^2)) vs sqrt(25×16)),20,20,True,False,36.56
+chatgpt,Aritmética,Caso 18: Factorial parcial vs producto equivalente (5!/(3!) vs 4×5),20,20,True,False,26.69
+chatgpt,Aritmética,Caso 19: Expresión con raíces y potencias (sqrt(2^6 × 3^2) vs 2^3 × 3),24,24,True,False,26.89
+chatgpt,Aritmética,Caso 2: Conmutatividad suma (3+8 vs 8+3),11,11,True,False,17.48
+chatgpt,Aritmética,Caso 20: Expresión de máxima complejidad ((2^4-4^(1/2))×(3/2+7/6) - 5^2/5 vs 12×(8/3) - 5),32.3333333333,32.3333333333,True,False,57.77
+chatgpt,Aritmética,Caso 21: Binomio de Newton vs cálculo directo ((1+1/3)^3 vs 1+3×(1/3)+3×(1/9)+1/27),2.3703703704,2.3703703704,True,False,42.75
+chatgpt,Aritmética,Caso 22: Suma encadenada de fracciones vs resultado (1/2+1/4+1/8+1/16+1/32 vs 31/32),0.96875,96875,False,False,39.3
+chatgpt,Aritmética,"Caso 23: Número combinatorio C(6,2) vs expresión factorial (6!/(2!×4!) vs 15)",15,15,True,False,31.31
+chatgpt,Aritmética,Caso 24: Expresión con valor absoluto y potencias (|3^2 - 4^2| vs |9-16|),7,7,True,False,27.49
+chatgpt,Aritmética,Caso 25: Suma de cuadrados consecutivos vs fórmula (1^2+2^2+3^2+4^2+5^2 vs 5×6×11/6),55,55,True,False,35.34
+chatgpt,Aritmética,Caso 26: Producto telescópico de raíces (sqrt(2/3)×sqrt(3/5)×sqrt(5/7)×sqrt(7/2) vs 1),1,1,True,False,34.27
+chatgpt,Aritmética,Caso 27: Simplificación de suma de fracciones antes de potencia ((1/2+1/3+1/6)^3 vs 1^3),1,1,True,False,21.57
+chatgpt,Aritmética,Caso 28: Norma euclídea 4D directa vs suma de normas parciales (3^2+(-4)^2+12^2+(-5)^2 vs (sqrt(3^2+4^2))^2+(sqrt(12^2+5^2))^2),194,194,True,False,53.63
+chatgpt,Aritmética,Caso 29: Cascada de potencias con múltiples bases ((2^3×3^2×5^1)/(2^1×3^3×5^2) vs (8×9×5)/(2×27×25)),0.2666666667,0.2666666667,True,False,62.32
+chatgpt,Aritmética,Caso 3: Asociatividad suma ((2+3)+4 vs 2+(3+4)),9,9,True,False,21.11
+chatgpt,Aritmética,"Caso 30: Expresión con combinatorios, factoriales y potencias (C(6,3)×3!×2^3 / (6!/3!) vs (20×6×8)/120)",8,8,True,False,39.75
+chatgpt,Aritmética,Caso 4: Asociatividad multiplicación ((2×3)×4 vs 2×(3×4)),24,24,True,False,21.05
+chatgpt,Aritmética,Caso 5: Distributiva suma (3×6+3×4 vs 3×(6+4)),30,30,True,False,18.49
+chatgpt,Aritmética,Caso 6: Elemento neutro suma (15+0 vs 15),15,15,True,False,17.33
+chatgpt,Aritmética,Caso 7: Suma telescópica vs resultado directo (1/(1×2)+1/(2×3)+1/(3×4)+1/(4×5) vs 4/5),0.8,0.8,True,False,47.96
+chatgpt,Aritmética,Caso 8: Media ponderada vs expresión directa ((3×7 + 5×3 + 2×10) / (3+5+2) vs 56/10),6,6,True,False,58.05
+chatgpt,Aritmética,Caso 9: Suma progresión aritmética directa vs fórmula (3+7+11+15+19 vs 5×(3+19)/2),55,55,True,False,26.17
+chatgpt,Algebraica,Caso 1: Diferencia de cuadrados (a = 4),-4,-4,True,False,57.55
+chatgpt,Algebraica,Caso 1: Diferencia de cuadrados (a = 0),0,0,True,False,37.88
+chatgpt,Algebraica,Caso 10: Cancelación con parámetro (a = 2),2,2,True,False,34.55
+chatgpt,Algebraica,Caso 10: Cancelación con parámetro (a = -1),R,R,True,False,54.09
+chatgpt,Algebraica,Caso 11: Asociativa suma ((x+2)+5=12 vs x+(2+5)=12),5,5,True,False,29.82
+chatgpt,Algebraica,Caso 12: Conmutativa ecuación (3x+7=22 vs 7+3x=22),5,5,True,False,21.89
+chatgpt,Algebraica,Caso 13: Traslado términos (5x-3=2x+9 vs 5x-2x=9+3),4,4,True,False,30.48
+chatgpt,Algebraica,Caso 14: Multiplicar ambos lados (x/3=4 vs x=4*3),12,12,True,False,17.5
+chatgpt,Algebraica,Caso 15: Cuadrática completar cuadrado (x^2+6x+5=0 vs (x+3)^2=4),-1,-1,True,False,32.24
+chatgpt,Algebraica,Caso 16: Sistema sustitución vs eliminación (x+y=10 y x-y=4),7,7,True,False,31.6
+chatgpt,Algebraica,Caso 17: Ecuación fracciones vs entera (x/2+x/3=5 vs 3x+2x=30),6,6,True,False,27.94
+chatgpt,Algebraica,Caso 18: Inecuación reescrita (4x-3>2x+7 vs 2x>10),6,6,True,False,32.63
+chatgpt,Algebraica,Caso 19: Ecuación racional con denominador común,2,2,True,False,34.35
+chatgpt,Algebraica,Caso 2: Distribución con excepción (a = 2),R,R,True,False,48.22
+chatgpt,Algebraica,Caso 2: Distribución con excepción (a = 0),NO_SOLUTION,NO_SOLUTION,True,False,37.33
+chatgpt,Algebraica,Caso 20: Suma de fracciones,12,12,True,False,29.45
+chatgpt,Algebraica,Caso 21: Ecuación con valor absoluto,-2,-2,True,False,57.95
+chatgpt,Algebraica,Caso 22: Fórmula general vs raíz cuadrada (c = 9),3,3,True,False,24.82
+chatgpt,Algebraica,Caso 22: Fórmula general vs raíz cuadrada (c = 25),5,5,True,False,25.35
+chatgpt,Algebraica,Caso 22: Fórmula general vs raíz cuadrada (c = 49),7,7,True,False,25.31
+chatgpt,Algebraica,Caso 23: Distributiva — 3(x+4)=21 vs 3x+12=21,3,3,True,False,22.85
+chatgpt,Algebraica,Caso 23: Distributiva — 5(x+2)=30 vs 5x+10=30,4,4,True,False,22.23
+chatgpt,Algebraica,Caso 23: Distributiva — 2(x+7)=20 vs 2x+14=20,3,3,True,False,22.85
+chatgpt,Algebraica,Caso 24: Traslado de términos — 4x+6=22 vs 4x=16,4,4,True,False,38.82
+chatgpt,Algebraica,Caso 24: Traslado de términos — 3x+9=24 vs 3x=15,5,5,True,False,21.26
+chatgpt,Algebraica,Caso 24: Traslado de términos — 7x+5=33 vs 7x=28,4,4,True,False,19.53
+chatgpt,Algebraica,Caso 25: Variable en ambos lados — 7x=3x+12 vs 4x=12,3,3,True,False,25.43
+chatgpt,Algebraica,Caso 25: Variable en ambos lados — 9x=4x+20 vs 5x=20,4,4,True,False,21.39
+chatgpt,Algebraica,Caso 25: Variable en ambos lados — 6x=2x+16 vs 4x=16,4,4,True,False,43.45
+chatgpt,Algebraica,"Caso 26: Cuadrado de binomio — (x+2)^2=25 vs expandida, solución mayor",3,3,True,False,41.79
+chatgpt,Algebraica,"Caso 26: Cuadrado de binomio — (x+1)^2=16 vs expandida, solución mayor",3,3,True,False,36.22
+chatgpt,Algebraica,"Caso 26: Cuadrado de binomio — (x+3)^2=36 vs expandida, solución mayor",3,3,True,False,44.66
+chatgpt,Algebraica,Caso 27: Sistema escalado por k=2 — solución de x invariante,4,4,True,False,34.72
+chatgpt,Algebraica,Caso 27: Sistema escalado por k=3 — solución de x invariante,4,4,True,False,34.4
+chatgpt,Algebraica,Caso 27: Sistema escalado por k=5 — solución de x invariante,4,4,True,False,41.51
+chatgpt,Algebraica,Caso 28: Fracciones con MCM — x/4=6/3 vs 3x=24,8,8,True,False,22.25
+chatgpt,Algebraica,Caso 28: Fracciones con MCM — x/2=10/5 vs 5x=20,4,4,True,False,22.09
+chatgpt,Algebraica,Caso 28: Fracciones con MCM — x/6=9/2 vs 2x=54,27,27,True,False,27.53
+chatgpt,Algebraica,Caso 29: Inecuación escalada por k=2 — x>3 vs 2x>6,4,4,True,False,23.54
+chatgpt,Algebraica,Caso 29: Inecuación escalada por k=5 — x>3 vs 5x>15,4,4,True,False,22.41
+chatgpt,Algebraica,Caso 29: Inecuación escalada por k=10 — x>3 vs 10x>30,4,4,True,False,23.4
+chatgpt,Algebraica,Caso 3: Factor común con excepción (a = 5),NO_SOLUTION,NO_SOLUTION,True,False,61.04
+chatgpt,Algebraica,Caso 3: Factor común con excepción (a = 3),R,x puede ser cualquier número real.,False,False,57.26
+chatgpt,Algebraica,"Caso 30: Sustitución de variable — x^2=25 vs t^2=25, solución positiva",5,5,True,False,27.27
+chatgpt,Algebraica,"Caso 30: Sustitución de variable — x^2=64 vs t^2=64, solución positiva",8,8,True,False,25.11
+chatgpt,Algebraica,"Caso 30: Sustitución de variable — x^2=121 vs t^2=121, solución positiva",11,11,True,False,23.69
+chatgpt,Algebraica,Caso 4: Distributiva básica,4,4,True,False,26.0
+chatgpt,Algebraica,Caso 5: Distributiva con signo negativo,1,1,True,False,29.08
+chatgpt,Algebraica,Caso 6: Cuadrado de binomio,-5,-5,True,False,55.23
+chatgpt,Algebraica,Caso 7: Diferencia de cuadrados no nula,-7,-7,True,False,43.09
+chatgpt,Algebraica,Caso 8: Fracción equivalente,5,5,True,False,25.31
+chatgpt,Algebraica,Caso 9: Factorización de trinomio,3,-2,False,False,42.51
+chatgpt,Relaciones funcionales,Caso 1: Orden de ramas en función a trozos — f(-2),2,2,True,False,32.38
+chatgpt,Relaciones funcionales,Caso 10: Exponencial — f(4)=2^x vs descripción verbal de duplicación,16,16,True,False,25.77
+chatgpt,Relaciones funcionales,Caso 11: Composición con identidad — f(3) vs f(id(3)),11,6,False,False,94.41
+chatgpt,Relaciones funcionales,Caso 12: Desplazamiento vertical — g(2)=f(2)+3,7,7,True,False,102.07
+chatgpt,Relaciones funcionales,Caso 13: Escalado vertical — g(3)=2f(3),8,8,True,False,31.61
+chatgpt,Relaciones funcionales,Caso 14: Composición de tres funciones — h(g(f(1))) vs p(1)=(2x+3)^2,25,25,True,False,32.36
+chatgpt,Relaciones funcionales,Caso 15: Función racional simplificada — f(5)=(x^2-4)/(x-2) vs g(5)=x+2,7,7,True,False,28.53
+chatgpt,Relaciones funcionales,Caso 16: Doble inversa — f(4) vs (f^-1)^-1(4) con f(x)=3x-6,6,6,True,False,36.51
+chatgpt,Relaciones funcionales,Caso 17: Valor absoluto — |-7| vs definición a trozos f(-7),7,7,True,False,29.85
+chatgpt,Relaciones funcionales,Caso 18: Propiedad exponencial — f(5)=2^5 vs f(3)·f(2),32,32,True,False,29.32
+chatgpt,Relaciones funcionales,Caso 19: Cuadrática estándar vs factorizada — f(7)=x^2-5x+6 vs g(7)=(x-2)(x-3),20,20,True,False,25.04
+chatgpt,Relaciones funcionales,Caso 2: Cambio de nombre de variable — f(4) vs g(4),14,14,True,False,21.72
+chatgpt,Relaciones funcionales,Caso 20: Paridad por composición — g(4) vs g(-4) con g(x)=f(x^2),49,49,True,False,31.28
+chatgpt,Relaciones funcionales,Caso 21: Logaritmo de producto — log2(32) vs log2(4)+log2(8),5,5,True,False,26.21
+chatgpt,Relaciones funcionales,Caso 22: Implícita vs explícita — x^2+y=2x+8 vs y=-x^2+2x+8 en x=3,5,5,True,False,30.71
+chatgpt,Relaciones funcionales,Caso 23: Composición inversa ambos órdenes — f(f^-1(9))=9 y f^-1(f(2))=2,9,2,True,False,37.25
+chatgpt,Relaciones funcionales,Caso 24: Horner vs estándar — f(4)=2x^3-3x^2+x-5 vs forma de Horner,79,79,True,False,57.28
+chatgpt,Relaciones funcionales,Caso 25: Cambio de base — log4(64) vs log2(64)/log2(4),3,3,True,False,31.59
+chatgpt,Relaciones funcionales,Caso 26: Identidad pitagórica — sen^2(30)+cos^2(30) vs valor constante,1,1,True,False,34.97
+chatgpt,Relaciones funcionales,Caso 27: Recurrencia vs fórmula cerrada — a(8) con a(n)=a(n-1)+4 vs 4n-1,31,31,True,False,30.42
+chatgpt,Relaciones funcionales,Caso 28: Exponencial y logaritmo inversas — e^ln(7)=7 y ln(e^3)=3,7,3,True,False,22.51
+chatgpt,Relaciones funcionales,Caso 29: Composición no conmutativa — f(g(3))=11 y g(f(3))=25,11,25,True,False,315.54
+chatgpt,Relaciones funcionales,Caso 3: Reescritura algebraica — f(5) con x^2-9 vs (x-3)(x+3),16,16,True,False,24.43
+chatgpt,Relaciones funcionales,Caso 30: Fracciones parciales — f(4)=(2x+1)/(x(x+1)) vs 1/x+1/(x+1),0.45,0.45,True,False,33.61
+chatgpt,Relaciones funcionales,Caso 4: Composición f(g(4)) vs fórmula directa h(4),14,14,True,False,28.37
+chatgpt,Relaciones funcionales,Caso 5: Periodicidad del seno — sen(0) vs sen(2π),0,0,True,False,26.63
+chatgpt,Relaciones funcionales,Caso 6: Función inversa — f^-1(f(3)) en dos formulaciones,3,3,True,False,37.26
+chatgpt,Relaciones funcionales,Caso 7: Desplazamiento horizontal — f(3)=x^2 vs g(5)=(x-2)^2,9,9,True,False,21.45
+chatgpt,Relaciones funcionales,Caso 8: Función par — f(4) vs f(-4) con f(x)=x^2+1,17,17,True,False,24.07
+chatgpt,Relaciones funcionales,Caso 9: Linealidad — f(6) vs 3×f(2) con f(x)=5x,30,30,True,False,22.47
+chatgpt,Transformacion simbolica,Caso 1: Simplificacion_racional,2,2,True,False,7.53
+chatgpt,Transformacion simbolica,Caso 10: Probabilidad unión,p(a)+p(b)-p(a∩b),p(a ∪ b),False,False,17.33
+chatgpt,Transformacion simbolica,Caso 11: Derivada funcional,2,2,True,False,16.5
+chatgpt,Transformacion simbolica,Caso 12: Derivación implícita,-x/y,-x/y,True,False,6.25
+chatgpt,Transformacion simbolica,Caso 13: Derivada orden superior,24,60,False,False,105.14
+chatgpt,Transformacion simbolica,Caso 14: Gradiente campo escalar,2,2,True,False,18.6
+chatgpt,Transformacion simbolica,Caso 15: Producto escalar funciones,0,0,True,False,8.24
+chatgpt,Transformacion simbolica,Caso 16: Ecuación funcional exponencial,e^x,e^x,True,False,18.3
+chatgpt,Transformacion simbolica,Caso 17: Serie Taylor exponencial,24,e^x,False,False,11.4
+chatgpt,Transformacion simbolica,Caso 18: Función generatriz Fibonacci,2,2,True,False,105.37
+chatgpt,Transformacion simbolica,Caso 19: Factorización ciclotómica,2,4,False,False,24.49
+chatgpt,Transformacion simbolica,Caso 2: Factorización cuadrática,4,12,False,False,7.33
+chatgpt,Transformacion simbolica,Caso 20: Límite fundamental sen x/x,1,1,True,False,8.31
+chatgpt,Transformacion simbolica,Caso 21: Identidad triple de Jacobi,2,2,True,False,34.65
+chatgpt,Transformacion simbolica,Caso 22: Fracción de fracción,x,"para poder determinar x necesito la ecuación o el contexto en el que aparece. por favor, indícame la ecuación completa o la relación que relaciona x con otras variables.",False,False,8.96
+chatgpt,Transformacion simbolica,Caso 23: Recursión alternada por paridad,2,4,False,False,228.4
+chatgpt,Transformacion simbolica,Caso 24: Recursión sistema acoplado,2,1,False,False,118.89
+chatgpt,Transformacion simbolica,Caso 25: Conjetura Collatz n=27,9232,9232,True,False,133.8
+chatgpt,Transformacion simbolica,Caso 26: Criptoaritmética SEND+MORE,2,4,False,False,212.15
+chatgpt,Transformacion simbolica,Caso 27: Silogismo avanzado múltiples premisas,"sí, no","sí, no",True,False,67.6
+chatgpt,Transformacion simbolica,Caso 28: Teoría juegos Tit for Tat,"c, c, d, c, c",1,False,False,89.54
+chatgpt,Transformacion simbolica,Caso 29: Transformada de Mellin,γ(s),-1,False,False,13.1
+chatgpt,Transformacion simbolica,Caso 3: Expansión binómica (a+b)⁵,5,5,True,False,9.68
+chatgpt,Transformacion simbolica,Caso 30: Máquina Turing,11,1,False,False,119.24
+chatgpt,Transformacion simbolica,Caso 4: Expansión logaritmo,3,3,True,False,13.57
+chatgpt,Transformacion simbolica,Caso 5: Polinomio simétrico,3,∑ rᵢ²,False,False,33.89
+chatgpt,Transformacion simbolica,"Caso 6: Combinatoria C(2n,2)",1,2,False,False,9.62
+chatgpt,Transformacion simbolica,Caso 7: Suma a producto trigonométrico,4,3,False,False,16.15
+chatgpt,Transformacion simbolica,Caso 8: Identidad hiperbólica fundamental,1,1,True,False,13.23
+chatgpt,Transformacion simbolica,Caso 9: Relación recurrencia Hermite,0,0,True,False,19.62
+chatgpt,Invariancia estructural,Caso 1: Prioridad de operaciones,17,17,True,False,5.31
+chatgpt,Invariancia estructural,Caso 10: Interés compuesto,2552.56,2552.563125,False,False,15.14
+chatgpt,Invariancia estructural,Caso 11: Ecuación exponencial,9,9,True,False,5.68
+chatgpt,Invariancia estructural,Caso 12: Signos consecutivos lenguaje natural,11,11,True,False,4.59
+chatgpt,Invariancia estructural,Caso 13: Distancia euclidiana,5,5,True,False,7.53
+chatgpt,Invariancia estructural,Caso 14: Teorema de Pitágoras,16.5529,16.5529,True,False,26.08
+chatgpt,Invariancia estructural,Caso 15: Teorema de Bayes,4.8,4.76,False,False,36.72
+chatgpt,Invariancia estructural,Caso 16: Multiplicación números complejos,-3,-3,True,False,12.1
+chatgpt,Invariancia estructural,Caso 17: Producto de matrices,50,-2,False,False,150.51
+chatgpt,Invariancia estructural,Caso 18: Autovalores de matriz,1,3,False,False,10.81
+chatgpt,Invariancia estructural,Caso 19: Derivada regla del producto,ERROR,ERROR,False,True,724.24
+chatgpt,Invariancia estructural,Caso 2:Fracciones equivalentes,1,1,True,False,5.66
+chatgpt,Invariancia estructural,Caso 20: Transformada de Laplace exponencial,-5,-5,True,False,7.18
+chatgpt,Invariancia estructural,Caso 21: Teorema de convolución,0.117,0.117,True,False,21.2
+chatgpt,Invariancia estructural,Caso 22: Teorema de la divergencia,12.566370614359172,12566.370614359172,False,False,25.37
+chatgpt,Invariancia estructural,Caso 23: Función Gamma Γ(n)=(n-1)!,120,120,True,False,5.08
+chatgpt,Invariancia estructural,Caso 24: Identidad de Euler,0,0,True,False,4.85
+chatgpt,Invariancia estructural,Caso 25: Identidad de Bessel J₀(0)=1,1,1,True,False,8.93
+chatgpt,Invariancia estructural,Caso 26: Función Zeta de Riemann,1.6449,1.6449340668482264,False,False,8.1
+chatgpt,Invariancia estructural,Caso 27: Permutaciones con repetición - INFORMÁTICA,9979200,9979200,True,False,12.88
+chatgpt,Invariancia estructural,Caso 28: Espacio dual,12,12,True,False,6.04
+chatgpt,Invariancia estructural,Caso 29: Producto interno L²,0.25,0.25,True,False,9.99
+chatgpt,Invariancia estructural,Caso 3: Propiedad distributiva,63,63,True,False,5.1
+chatgpt,Invariancia estructural,Caso 30: Teorema espectral operador Hilbert-Schmidt,0.5,0.5,True,False,105.27
+chatgpt,Invariancia estructural,Caso 4: Potencia exponente fraccionario,25,25,True,False,5.83
+chatgpt,Invariancia estructural,Caso 5: Raíz cuadrada,7,7,True,False,5.25
+chatgpt,Invariancia estructural,Caso 6: Raíz con índice,4,4,True,False,6.76
+chatgpt,Invariancia estructural,Caso 7: Notación científica multiplicación,60000000000,0,False,False,9.83
+chatgpt,Invariancia estructural,Caso 8: Notación científica exponentes negativos,0.013,0.013,True,False,7.16
+chatgpt,Invariancia estructural,Caso 9: Logaritmos cambio de base,2,2,True,False,6.8

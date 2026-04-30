@@ -1,0 +1,91 @@
+modelo,tipo_relacion,caso,resultado_base,resultado_transformado,cumple_mr,error_tecnico,tiempo_segundos
+chatgpt,Generalización,Suma de los primeros 100 números naturales,5050,5050,True,False,308.6
+chatgpt,Generalización,Suma de ángulos (30 + 60),1,1,True,False,37.47
+chatgpt,Generalización,"Suma de logaritmos (a=8, b=16)",7,7,True,False,59.46
+chatgpt,Generalización,Derivada de x^33,"32,33","32,33",True,False,34.28
+chatgpt,Generalización,Derivada de 2x^5 + 1x^4 + 5x^3 + 4x^2 + 4x^1 + 3,"2,3,4,4,4,8,10,15","2,3,4,4,4,8,10,15",True,False,73.28
+chatgpt,Generalización,Integral de x^33,1,1,True,False,38.22
+chatgpt,Generalización,Integral de 2x^5 + 9x^4 + 2x^3 + 7x^2 + 1x^1 + 1,0.5,0.5,True,False,104.2
+chatgpt,Generalización,Suma telescopica (n=11),0.9166666667,0.9166666667,True,False,113.43
+chatgpt,Generalización,"Progresión geométrica (a=2, r=2, n=11)",4094,4094,True,False,60.92
+chatgpt,Generalización,Suma alternante (n=7),4,4,True,False,53.83
+chatgpt,Generalización,"Progresión aritmética (a=3, d=2, n=7)",63,63,True,False,45.04
+chatgpt,Generalización,Perímetro de la circunferencia,ERROR,31.41592653589793,False,True,633.33
+chatgpt,Generalización,Suma ponderada (n=5),258,258,True,False,57.22
+chatgpt,Generalización,Suma de cuadrados (n=7),140,140,True,False,44.18
+chatgpt,Generalización,Suma de cubos de 1 a 7,784,784,True,False,42.72
+chatgpt,Generalización,Suma de diferencias cúbicas (n=7),342,342,True,False,63.92
+chatgpt,Generalización,Producto telescopico (n=7),0.125,0.125,True,False,44.43
+chatgpt,Generalización,Caso factorial n=5,120,120,True,False,19.48
+chatgpt,Generalización,Caso límite: sin(x)/x,1,1,True,False,508.29
+chatgpt,Generalización,Binomio de Newton (2 + 3)^5,3125,1,False,False,406.6
+chatgpt,Generalización,"Esperanza binomial (n=5, p=0.5)",2.5,2.5,True,False,33.9
+chatgpt,Generalización,# aristas de un grafo completo de 8 vértices,28,28,True,False,29.75
+chatgpt,Generalización,Área de la circunferencia,78.53981633974483,78.53981633974483,True,False,46.0
+chatgpt,Generalización,Aproximación por series de Taylor,2.718281525573192,2.718281525573192,True,False,169.61
+chatgpt,Generalización,Caso media aritmética,4,4,True,False,29.34
+chatgpt,Generalización,Cuadrado de la suma,49,49,True,False,26.34
+chatgpt,Generalización,Cuadrado de la resta,25,25,True,False,35.55
+chatgpt,Generalización,Suma por diferencia,96,96,True,False,28.34
+chatgpt,Generalización,Seno del ángulo doble (45),1,1,True,False,28.22
+chatgpt,Generalización,tangente de 60,1.7320508075688772,1.7320508075688772,True,False,51.5
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación 2*x + 3 = 11,4,si,True,False,37.69
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 4*x + 7*y = 1, 9*x - 5*y = 23","-1,2",si,True,False,85.75
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x^2 + y = 5, x + y = 3","-1,1,2,4",sisi,True,False,105.46
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones sqrt(x) + y = 5, x + y = 7","3,4",si,True,False,65.98
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x*y = 6, x + y = 5","2,2,3,3",si,True,False,88.22
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x/2 + y = 3, x - y = 1",1.6666666667,si,True,False,104.61
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones (1/2)*x + (1/3)*y = 7/6, (1/4)*x - (1/5)*y = -3/20","1,2",si,True,False,97.34
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 2/x + 3/y = 2, 4/x - 3/y = 1","2,3",si,True,False,77.11
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 123*x + 456*y = 789, x - y = 1",1.1502590674,si,True,False,264.2
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y + z = 0, x + y - z = 2, 2*x - y + 3*z = -1","-1,0,1",si,True,False,78.77
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones (1/2)*x + (1/3)*y + (1/4)*z = 13/12, (1/3)*x - (1/2)*y + (1/5)*z = 1/30, (1/4)*x + (1/4)*y - (1/3)*z = 1/6",ERROR,no,True,True,639.93
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación x^2 = 9,"-3,3",si,True,False,59.99
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 6/x + 4/y + 2/z = 12, 3/x - 2/y + 4/z = 5, 9/x - 2/y - 2/z = 5","1,1,1",si,True,False,177.2
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones sqrt(2)*x + sqrt(3)*y + sqrt(5)*z = sqrt(2)+sqrt(3)+sqrt(5), sqrt(3)*x + sqrt(5)*y + sqrt(2)*z = sqrt(3)+sqrt(5)+sqrt(2), sqrt(5)*x + sqrt(2)*y + sqrt(3)*z = sqrt(5)+sqrt(2)+sqrt(3)","1,1,1",si,True,False,219.11
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + 2*y - z + 3*t = -8, 2*x + 2*z -t = 13, -x + y + z - t = 8, 3*x +3*y - z + 2*t = -1","-3,1,2,4",si,True,False,304.28
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida x^2 entre 0 y 2,2.6666666667,si,True,False,39.94
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida x^2 + 2*x + 1 entre 0 y 1,2.3333333333,si,True,False,61.66
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida sin(x) entre 0 y 6.283185307179586,0,si,True,False,56.34
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida abs(x) entre -1 y 1,1,si,True,False,63.25
+chatgpt,Verificación de solución,Evaluación de la solución a la integral definida x*exp(x) entre 0 y 2,8.38905609893,si,True,False,82.03
+chatgpt,Verificación de solución,Evaluación de la primalidad de 997,si,"1,997",True,False,98.43
+chatgpt,Verificación de solución,"Evaluación del producto de matrices A=[[1, 2], [3, 4]] y B=[[2, 0], [1, 2]]","4,4,8,10",si,True,False,65.96
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación (x - 2)*(x - 3) = 0,"2,3",si,True,False,82.01
+chatgpt,Verificación de solución,"Evaluación de la matriz inversa de A=[[2, 1], [5, 3]]","-5,-1,2,3",si,True,False,92.4
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación x^5 - x^4 - x + 1 = 0,"-1,1",sisi,True,False,156.27
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación (x^2 - 1)/(x - 1) = 0,-1,si,True,False,79.61
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación log(x - 1) = 0,2,si,True,False,54.4
+chatgpt,Verificación de solución,Evaluación de la solución de la ecuación sqrt(x - 1) = x - 3,5,si,True,False,66.13
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 5, x - y = 1","2,3",si,True,False,56.04
+chatgpt,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 1, 2*x - y = -2",1.3333333333,si,True,False,74.69
+chatgpt,Contexto Previo,Resolver la ecuacion x^2 - 5x + 6 = 0; sin y con contexto previo,"2,3","2,3",True,False,170.76
+chatgpt,Contexto Previo,Calcular sqrt(9 + 16); sin y con el contexto erróneo: recuerda que sqrt(a + b) != sqrt(a) + sqrt(b),5,5,True,False,25.6
+chatgpt,Contexto Previo,Calcular la derivada de sin(x^2); sin y con el contexto: recuerda la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),"2,2","2,2",True,False,47.71
+chatgpt,Contexto Previo,Calcular el límite lim_{x->0} (sin(x)/x); sin y con el contexto: recuerda la regla de L'Hôpital: lim_{x->a} = f(x)/g(x) = f'(x)/g'(x),1,1,True,False,47.71
+chatgpt,Contexto Previo,Calcular log(2 + 3); sin y con el contexto: recuerda que log(a + b) != log(a) + log(b),0.69897,1.6094379124341003,False,False,120.94
+chatgpt,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.1666666667,0.1666666667,True,False,168.57
+chatgpt,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.8427,0.8428,True,False,292.64
+chatgpt,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.004524886,0.004524886,True,False,89.59
+chatgpt,Contexto Previo,Derivar el límite lim{x->0} ((1 + x)^(1/x)); sin y con el contexto: recuerda la definición del número e,e,e,True,False,119.18
+chatgpt,Contexto Previo,Calcular el valor de x donde la función -x^2 + 6*x alcanza su máximo; sin y con el contexto: ten en cuenta que el vértice de una parábola ax^2 + bx + c se encuentra en x = -b/(2a),3,3,True,False,43.86
+chatgpt,Contexto Previo,Calcular la derivada de ln(sin(x)); sin y con el contexto: ten en cuenta la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),cos(x)/sin(x),cot(x),True,False,42.41
+chatgpt,Contexto Previo,Resolver la ecuacion x^3 - 4x = 0; sin y con contexto previo,"-2,0,2","-2,0,2",True,False,65.9
+chatgpt,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 5), x ≡ 3 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","17,35","17,35",True,False,96.78
+chatgpt,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","23,105","23,105",True,False,136.13
+chatgpt,Contexto Previo,"Resolver el problema: Sea X ~ Binomial(n=5, p=0.3). Calcula P(X ≤ 2). Sin y con el contexto: Ten en cuenta que P(X ≤ k) = sum_{i=0}^k C(n,i) p^i (1-p)^(n-i)",0.83692,0.83692,True,False,133.37
+chatgpt,Contexto Previo,"Resolver el problema: Una pieza puede venir de tres fábricas A (50%), B (30%), C (20%). Sin y con el contexto: Ten en cuenta el Tª de Bayes: P(A|B) = P(B|A)P(A) / P(B). ",0.5,ERROR,False,True,685.84
+chatgpt,Contexto Previo,Calcular la integral de e^(-x) entre 0 e infinito; sin y con el contexto: ten en cuenta que la integral converge y se puede calcular como un límite,1,1,True,False,41.37
+chatgpt,Contexto Previo,Calcular el mínimo de la función x^3 - 3x^2 + 2; sin y con el contexto: ten en cuenta que un punto crítico es mínimo si f''(x) > 0 y máximo si f''(x) < 0,2,2,True,False,88.95
+chatgpt,Contexto Previo,"Calcular los valores propios o eigenvalores de la matriz [[4,1,-2],[1,3,0],[-2,0,3]]; sin y con el contexto: ten en cuenta que para calcular los eigenvalores de una matriz, debes resolver el polinomio característico det(A - λI) = 0","1.20871215252208,3,5.79128784747792","1.20871215252208,3,5.79128784747792",True,False,791.28
+chatgpt,Contexto Previo,Simplificar la expresión log(e^(2*x) + e^x); sin y con el contexto: intenta factorizar antes de aplicar logaritmos,1,1,True,False,81.2
+chatgpt,Contexto Previo,Calcular el límite cuando x->0 de (sqrt(1 + x) - 1) / x; sin y con el contexto: intenta racionalizar multiplicando por el conjugado,0.5,0.5,True,False,70.36
+chatgpt,Contexto Previo,"Calcular la integral de x * cos(x^2); sin y con el contexto: recuerda que si aparece una función y su derivada, puedes hacer un cambio de variable",0.5,0.5,True,False,66.58
+chatgpt,Contexto Previo,Resolver la ecuacion x^5 + 3*x^4 - 5*x^3 - 15*x^2 + 4*x + 12 = 0; sin y con contexto previo,"-3,-2,-1,1,2","-3,-2,-1,1,2",True,False,320.02
+chatgpt,Contexto Previo,"Calcular la potencia de la matriz [[1, 1], [0, 1]]; sin y con el contexto: Ten en cuenta que algunas matrices pueden escribirse como I + N, siendo N una matriz nilpotente (N^2 = 0), lo que simplifica mucho el cálculo de potencias","0,1,1,5","0,1,1,5",True,False,59.97
+chatgpt,Contexto Previo,Resolver la ecuacion x^2 - 4x + 4 = 0; sin y con el contexto: recuerda que (x - 2)^2 = x^2 -4x + 4,2,2,True,False,40.94
+chatgpt,Contexto Previo,Resolver la ecuacion (x^2 - 1)/(x - 1) = 3; sin y con el contexto: recuerda que no se puede dividir entre 0,2,2,True,False,59.7
+chatgpt,Contexto Previo,Resolver la ecuacion |x - 3| = 5; sin y con el contexto: recuerda que |a| = b implica: a = b o a = -b,"-2,8","-2,8",True,False,62.4
+chatgpt,Contexto Previo,Resolver la ecuacion log((x+1)/10) = 2; sin y con el contexto: recuerda que log(a/b) = log(a) - log(b),999,999,True,False,95.04
+chatgpt,Contexto Previo,Resolver la ecuacion 2 - 3^(-x) + 3^(x+1) = 0; sin y con el contexto: recuerda las propiedades de las potencias y resuelve mediante el cambio de variable t=3^x,-1,-1,True,False,110.33
+chatgpt,Contexto Previo,Derivar la función x^2 * e^x; sin y con el contexto: mediante la regla del producto (fg)' = f'g + fg',"2,2","2,2",False,False,49.5

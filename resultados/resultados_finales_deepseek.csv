@@ -1,0 +1,263 @@
+modelo,tipo_relacion,caso,resultado_base,resultado_transformado,cumple_mr,error_tecnico,tiempo_segundos
+deepseek,Aritmética,Caso 1: Conmutatividad multiplicación (7+2×5 vs 7+5×2),17,17,True,False,6.64
+deepseek,Aritmética,Caso 10: Potencia de fracción compleja ((3/4)^3 vs 27/64),0.421875,0.421875,True,False,8.3
+deepseek,Aritmética,Caso 11: Expresión anidada profunda (2^(3+1) × (10-(2×3)) vs 2^4 × 4),256,16,False,False,4.91
+deepseek,Aritmética,Caso 12: Diferencia de cuadrados encadenada (7^2-3^2 vs (7+3)×(7-3)),40,40,True,False,6.4
+deepseek,Aritmética,Caso 13: Operación mixta larga con potencias y fracciones (2^5/(4×(3+1)) - 1/2 vs 32/16 - 1/2),1,1,True,False,6.45
+deepseek,Aritmética,Caso 14: Suma de cubos vs factorización (2^3+3^3 vs (2+3)×(4-6+9)),26,49,False,False,6.17
+deepseek,Aritmética,Caso 15: Fracción compleja anidada ((1+1/2)/(1-1/4) vs (3/2)/(3/4)),1.3333333333,2,False,False,5.09
+deepseek,Aritmética,Caso 16: Suma progresión geométrica directa vs fórmula (1+2+4+8+16 vs 2^5-1),31,31,True,False,5.51
+deepseek,Aritmética,Caso 17: Raíz de expresión compleja (sqrt((3^2+4^2)×(5^2-3^2)) vs sqrt(25×16)),10,20,False,False,6.28
+deepseek,Aritmética,Caso 18: Factorial parcial vs producto equivalente (5!/(3!) vs 4×5),10,veinte.,False,False,4.67
+deepseek,Aritmética,Caso 19: Expresión con raíces y potencias (sqrt(2^6 × 3^2) vs 2^3 × 3),24,24,True,False,6.84
+deepseek,Aritmética,Caso 2: Conmutatividad suma (3+8 vs 8+3),11,11,True,False,3.53
+deepseek,Aritmética,Caso 20: Expresión de máxima complejidad ((2^4-4^(1/2))×(3/2+7/6) - 5^2/5 vs 12×(8/3) - 5),1,15,False,False,6.84
+deepseek,Aritmética,Caso 21: Binomio de Newton vs cálculo directo ((1+1/3)^3 vs 1+3×(1/3)+3×(1/9)+1/27),2.3703703704,2,False,False,8.48
+deepseek,Aritmética,Caso 22: Suma encadenada de fracciones vs resultado (1/2+1/4+1/8+1/16+1/32 vs 31/32),0.96875,0.25,False,False,37.57
+deepseek,Aritmética,"Caso 23: Número combinatorio C(6,2) vs expresión factorial (6!/(2!×4!) vs 15)",1,15,False,False,5.25
+deepseek,Aritmética,Caso 24: Expresión con valor absoluto y potencias (|3^2 - 4^2| vs |9-16|),1,7,False,False,7.53
+deepseek,Aritmética,Caso 25: Suma de cuadrados consecutivos vs fórmula (1^2+2^2+3^2+4^2+5^2 vs 5×6×11/6),55,33,False,False,6.37
+deepseek,Aritmética,Caso 26: Producto telescópico de raíces (sqrt(2/3)×sqrt(3/5)×sqrt(5/7)×sqrt(7/2) vs 1),1,1,True,False,7.21
+deepseek,Aritmética,Caso 27: Simplificación de suma de fracciones antes de potencia ((1/2+1/3+1/6)^3 vs 1^3),0.1666666667,1,False,False,6.89
+deepseek,Aritmética,Caso 28: Norma euclídea 4D directa vs suma de normas parciales (3^2+(-4)^2+12^2+(-5)^2 vs (sqrt(3^2+4^2))^2+(sqrt(12^2+5^2))^2),194,25,False,False,9.24
+deepseek,Aritmética,Caso 29: Cascada de potencias con múltiples bases ((2^3×3^2×5^1)/(2^1×3^3×5^2) vs (8×9×5)/(2×27×25)),0.2,1,False,False,7.37
+deepseek,Aritmética,Caso 3: Asociatividad suma ((2+3)+4 vs 2+(3+4)),7,7,True,False,3.99
+deepseek,Aritmética,"Caso 30: Expresión con combinatorios, factoriales y potencias (C(6,3)×3!×2^3 / (6!/3!) vs (20×6×8)/120)",16,8,False,False,8.71
+deepseek,Aritmética,Caso 4: Asociatividad multiplicación ((2×3)×4 vs 2×(3×4)),24,24,True,False,5.53
+deepseek,Aritmética,Caso 5: Distributiva suma (3×6+3×4 vs 3×(6+4)),9,15,False,False,4.28
+deepseek,Aritmética,Caso 6: Elemento neutro suma (15+0 vs 15),15,5,False,False,3.12
+deepseek,Aritmética,Caso 7: Suma telescópica vs resultado directo (1/(1×2)+1/(2×3)+1/(3×4)+1/(4×5) vs 4/5),0.5,0.8,False,False,6.38
+deepseek,Aritmética,Caso 8: Media ponderada vs expresión directa ((3×7 + 5×3 + 2×10) / (3+5+2) vs 56/10),4,0.56,False,False,5.9
+deepseek,Aritmética,Caso 9: Suma progresión aritmética directa vs fórmula (3+7+11+15+19 vs 5×(3+19)/2),45,110,False,False,7.19
+deepseek,Algebraica,Caso 1: Diferencia de cuadrados (a = 4),-4,-4,True,False,10.86
+deepseek,Algebraica,Caso 1: Diferencia de cuadrados (a = 0),x = a x = -a,x = a x = -a,True,False,6.77
+deepseek,Algebraica,Caso 10: Cancelación con parámetro (a = 2),2,2,True,False,38.72
+deepseek,Algebraica,Caso 10: Cancelación con parámetro (a = -1),ERROR,0,False,True,387.8
+deepseek,Algebraica,Caso 11: Asociativa suma ((x+2)+5=12 vs x+(2+5)=12),5,5,True,False,19.23
+deepseek,Algebraica,Caso 12: Conmutativa ecuación (3x+7=22 vs 7+3x=22),5,5,True,False,10.83
+deepseek,Algebraica,Caso 13: Traslado términos (5x-3=2x+9 vs 5x-2x=9+3),4,4,True,False,21.44
+deepseek,Algebraica,Caso 14: Multiplicar ambos lados (x/3=4 vs x=4*3),12,12,True,False,11.38
+deepseek,Algebraica,Caso 15: Cuadrática completar cuadrado (x^2+6x+5=0 vs (x+3)^2=4),-1,1,False,False,53.71
+deepseek,Algebraica,Caso 16: Sistema sustitución vs eliminación (x+y=10 y x-y=4),7,7,True,False,9.15
+deepseek,Algebraica,Caso 17: Ecuación fracciones vs entera (x/2+x/3=5 vs 3x+2x=30),6,6,True,False,20.07
+deepseek,Algebraica,Caso 18: Inecuación reescrita (4x-3>2x+7 vs 2x>10),-3,6,False,False,14.09
+deepseek,Algebraica,Caso 19: Ecuación racional con denominador común,2,2,True,False,19.79
+deepseek,Algebraica,Caso 2: Distribución con excepción (a = 2),ERROR,2,False,True,380.54
+deepseek,Algebraica,Caso 2: Distribución con excepción (a = 0),NO_SOLUTION,NO_SOLUTION,True,False,26.4
+deepseek,Algebraica,Caso 20: Suma de fracciones,12,12,True,False,22.02
+deepseek,Algebraica,Caso 21: Ecuación con valor absoluto,-2,-2,True,False,11.32
+deepseek,Algebraica,Caso 22: Fórmula general vs raíz cuadrada (c = 9),3,3,True,False,30.05
+deepseek,Algebraica,Caso 22: Fórmula general vs raíz cuadrada (c = 25),5,5,True,False,30.32
+deepseek,Algebraica,Caso 22: Fórmula general vs raíz cuadrada (c = 49),7,7,True,False,31.44
+deepseek,Algebraica,Caso 23: Distributiva — 3(x+4)=21 vs 3x+12=21,5,3,False,False,11.13
+deepseek,Algebraica,Caso 23: Distributiva — 5(x+2)=30 vs 5x+10=30,4,4,True,False,9.53
+deepseek,Algebraica,Caso 23: Distributiva — 2(x+7)=20 vs 2x+14=20,3,3,True,False,8.86
+deepseek,Algebraica,Caso 24: Traslado de términos — 4x+6=22 vs 4x=16,4,4,True,False,8.79
+deepseek,Algebraica,Caso 24: Traslado de términos — 3x+9=24 vs 3x=15,5,5,True,False,6.5
+deepseek,Algebraica,Caso 24: Traslado de términos — 7x+5=33 vs 7x=28,4,4,True,False,10.2
+deepseek,Algebraica,Caso 25: Variable en ambos lados — 7x=3x+12 vs 4x=12,3,3,True,False,10.35
+deepseek,Algebraica,Caso 25: Variable en ambos lados — 9x=4x+20 vs 5x=20,4,4,True,False,10.61
+deepseek,Algebraica,Caso 25: Variable en ambos lados — 6x=2x+16 vs 4x=16,4,4,True,False,8.96
+deepseek,Algebraica,"Caso 26: Cuadrado de binomio — (x+2)^2=25 vs expandida, solución mayor",3,3,True,False,57.38
+deepseek,Algebraica,"Caso 26: Cuadrado de binomio — (x+1)^2=16 vs expandida, solución mayor",3,3,True,False,42.44
+deepseek,Algebraica,"Caso 26: Cuadrado de binomio — (x+3)^2=36 vs expandida, solución mayor",3,3,True,False,59.91
+deepseek,Algebraica,Caso 27: Sistema escalado por k=2 — solución de x invariante,4,4,True,False,8.46
+deepseek,Algebraica,Caso 27: Sistema escalado por k=3 — solución de x invariante,4,4,True,False,8.11
+deepseek,Algebraica,Caso 27: Sistema escalado por k=5 — solución de x invariante,4,4,True,False,8.22
+deepseek,Algebraica,Caso 28: Fracciones con MCM — x/4=6/3 vs 3x=24,2,8,False,False,17.47
+deepseek,Algebraica,Caso 28: Fracciones con MCM — x/2=10/5 vs 5x=20,4,4,True,False,8.53
+deepseek,Algebraica,Caso 28: Fracciones con MCM — x/6=9/2 vs 2x=54,27,27,True,False,7.14
+deepseek,Algebraica,Caso 29: Inecuación escalada por k=2 — x>3 vs 2x>6,4,4,True,False,13.55
+deepseek,Algebraica,Caso 29: Inecuación escalada por k=5 — x>3 vs 5x>15,4,4,True,False,13.39
+deepseek,Algebraica,Caso 29: Inecuación escalada por k=10 — x>3 vs 10x>30,4,4,True,False,13.87
+deepseek,Algebraica,Caso 3: Factor común con excepción (a = 5),NO_SOLUTION,NO_SOLUTION,True,False,82.53
+deepseek,Algebraica,Caso 3: Factor común con excepción (a = 3),R,R,True,False,41.14
+deepseek,Algebraica,"Caso 30: Sustitución de variable — x^2=25 vs t^2=25, solución positiva",25,5,False,False,7.33
+deepseek,Algebraica,"Caso 30: Sustitución de variable — x^2=64 vs t^2=64, solución positiva",8,8,True,False,17.37
+deepseek,Algebraica,"Caso 30: Sustitución de variable — x^2=121 vs t^2=121, solución positiva",11,11,True,False,18.39
+deepseek,Algebraica,Caso 4: Distributiva básica,4,4,True,False,7.01
+deepseek,Algebraica,Caso 5: Distributiva con signo negativo,1,-1,False,False,19.59
+deepseek,Algebraica,Caso 6: Cuadrado de binomio,-5,-3,False,False,8.97
+deepseek,Algebraica,Caso 7: Diferencia de cuadrados no nula,-7,-7,True,False,9.46
+deepseek,Algebraica,Caso 8: Fracción equivalente,5,5,True,False,6.84
+deepseek,Algebraica,Caso 9: Factorización de trinomio,3,-2,False,False,7.82
+deepseek,Relaciones funcionales,Caso 1: Orden de ramas en función a trozos — f(-2),2,2,True,False,11.56
+deepseek,Relaciones funcionales,Caso 10: Exponencial — f(4)=2^x vs descripción verbal de duplicación,16,4,False,False,7.99
+deepseek,Relaciones funcionales,Caso 11: Composición con identidad — f(3) vs f(id(3)),11,11,True,False,13.16
+deepseek,Relaciones funcionales,Caso 12: Desplazamiento vertical — g(2)=f(2)+3,7,7,True,False,16.88
+deepseek,Relaciones funcionales,Caso 13: Escalado vertical — g(3)=2f(3),8,8,True,False,13.15
+deepseek,Relaciones funcionales,Caso 14: Composición de tres funciones — h(g(f(1))) vs p(1)=(2x+3)^2,25,25,True,False,16.52
+deepseek,Relaciones funcionales,Caso 15: Función racional simplificada — f(5)=(x^2-4)/(x-2) vs g(5)=x+2,7,7,True,False,13.55
+deepseek,Relaciones funcionales,Caso 16: Doble inversa — f(4) vs (f^-1)^-1(4) con f(x)=3x-6,6,6,True,False,12.63
+deepseek,Relaciones funcionales,Caso 17: Valor absoluto — |-7| vs definición a trozos f(-7),7,7,True,False,9.68
+deepseek,Relaciones funcionales,Caso 18: Propiedad exponencial — f(5)=2^5 vs f(3)·f(2),32,16,False,False,7.42
+deepseek,Relaciones funcionales,Caso 19: Cuadrática estándar vs factorizada — f(7)=x^2-5x+6 vs g(7)=(x-2)(x-3),20,20,True,False,14.8
+deepseek,Relaciones funcionales,Caso 2: Cambio de nombre de variable — f(4) vs g(4),14,14,True,False,11.99
+deepseek,Relaciones funcionales,Caso 20: Paridad por composición — g(4) vs g(-4) con g(x)=f(x^2),49,49,True,False,15.47
+deepseek,Relaciones funcionales,Caso 21: Logaritmo de producto — log2(32) vs log2(4)+log2(8),5,5,True,False,19.36
+deepseek,Relaciones funcionales,Caso 22: Implícita vs explícita — x^2+y=2x+8 vs y=-x^2+2x+8 en x=3,5,5,True,False,17.86
+deepseek,Relaciones funcionales,Caso 23: Composición inversa ambos órdenes — f(f^-1(9))=9 y f^-1(f(2))=2,9,2,True,False,8.09
+deepseek,Relaciones funcionales,Caso 24: Horner vs estándar — f(4)=2x^3-3x^2+x-5 vs forma de Horner,79,79,True,False,34.59
+deepseek,Relaciones funcionales,Caso 25: Cambio de base — log4(64) vs log2(64)/log2(4),3,3,True,False,15.32
+deepseek,Relaciones funcionales,Caso 26: Identidad pitagórica — sen^2(30)+cos^2(30) vs valor constante,1,1,True,False,10.17
+deepseek,Relaciones funcionales,Caso 27: Recurrencia vs fórmula cerrada — a(8) con a(n)=a(n-1)+4 vs 4n-1,31,31,True,False,61.52
+deepseek,Relaciones funcionales,Caso 28: Exponencial y logaritmo inversas — e^ln(7)=7 y ln(e^3)=3,7,3,True,False,12.81
+deepseek,Relaciones funcionales,Caso 29: Composición no conmutativa — f(g(3))=11 y g(f(3))=25,11,15,False,False,10.37
+deepseek,Relaciones funcionales,Caso 3: Reescritura algebraica — f(5) con x^2-9 vs (x-3)(x+3),16,16,True,False,12.36
+deepseek,Relaciones funcionales,Caso 30: Fracciones parciales — f(4)=(2x+1)/(x(x+1)) vs 1/x+1/(x+1),0.45,0.2,False,False,23.31
+deepseek,Relaciones funcionales,Caso 4: Composición f(g(4)) vs fórmula directa h(4),14,14,True,False,10.15
+deepseek,Relaciones funcionales,Caso 5: Periodicidad del seno — sen(0) vs sen(2π),0,0,True,False,4.2
+deepseek,Relaciones funcionales,Caso 6: Función inversa — f^-1(f(3)) en dos formulaciones,3,3,True,False,18.12
+deepseek,Relaciones funcionales,Caso 7: Desplazamiento horizontal — f(3)=x^2 vs g(5)=(x-2)^2,9,9,True,False,9.41
+deepseek,Relaciones funcionales,Caso 8: Función par — f(4) vs f(-4) con f(x)=x^2+1,17,17,True,False,10.72
+deepseek,Relaciones funcionales,Caso 9: Linealidad — f(6) vs 3×f(2) con f(x)=5x,30,15,False,False,6.5
+deepseek,Transformacion simbolica,Caso 1: Simplificacion_racional,2,2,True,False,7.68
+deepseek,Transformacion simbolica,Caso 10: Probabilidad unión,"la expresión para p(a ∪ b) en términos de p(a), p(b) y p(a ∩ b) es: p(a ∪ b) = p(a) + p(b) - p(a ∩ b) esta fórmula se utiliza para calcular la probabilidad de la unión de dos eventos, a y b, considerando que la probabilidad de la intersección se resta para evitar contar el sobre superposición. **respuesta:** p(a) + p(b) - p(a ∩ b) \boxed{p(a) + p(b) - p(a \cap b)}","la expresión dada es p(a) + p(b) - p(a ∩ b). esta es la fórmula de la probabilidad de la unión de dos eventos, a y b. la respuesta es la expresión misma, ya que no se requiere simplificarla o calcularla numéricamente. por lo tanto, la respuesta es: p(a) + p(b) - p(a ∩ b) **final answer** \[ \boxed{p(a) + p(b) - p(a \cap b)} \] <｜begin of sentence｜>la expresión es la fórmula de la probabilidad de la unión de dos eventos a y b. no se proporcionan valores específicos, por lo que la respuesta es la expresión en sí. \[ \boxed{p(a) + p(b) - p(a \cap b)} \]",False,False,12.57
+deepseek,Transformacion simbolica,Caso 11: Derivada funcional,2,2,True,False,1.45
+deepseek,Transformacion simbolica,Caso 12: Derivación implícita,2,-x/y,False,False,11.74
+deepseek,Transformacion simbolica,Caso 13: Derivada orden superior,24,24,True,False,15.53
+deepseek,Transformacion simbolica,Caso 14: Gradiente campo escalar,2,2,True,False,11.01
+deepseek,Transformacion simbolica,Caso 15: Producto escalar funciones,0,0,True,False,21.75
+deepseek,Transformacion simbolica,Caso 16: Ecuación funcional exponencial,1,e^x,False,False,6.6
+deepseek,Transformacion simbolica,Caso 17: Serie Taylor exponencial,4,4,True,False,6.44
+deepseek,Transformacion simbolica,Caso 18: Función generatriz Fibonacci,2,2,True,False,14.73
+deepseek,Transformacion simbolica,Caso 19: Factorización ciclotómica,4,4,True,False,59.06
+deepseek,Transformacion simbolica,Caso 2: Factorización cuadrática,4,4,True,False,1.18
+deepseek,Transformacion simbolica,Caso 20: Límite fundamental sen x/x,0.9999998333333333,1,False,False,1.15
+deepseek,Transformacion simbolica,Caso 21: Identidad triple de Jacobi,2,2,True,False,7.28
+deepseek,Transformacion simbolica,Caso 22: Fracción de fracción,1,x,False,False,4.2
+deepseek,Transformacion simbolica,Caso 23: Recursión alternada por paridad,4,1,False,False,20.29
+deepseek,Transformacion simbolica,Caso 24: Recursión sistema acoplado,2,40,False,False,100.29
+deepseek,Transformacion simbolica,Caso 25: Conjetura Collatz n=27,9232,9232,True,False,31.44
+deepseek,Transformacion simbolica,Caso 26: Criptoaritmética SEND+MORE,2,10652,False,False,20.84
+deepseek,Transformacion simbolica,Caso 27: Silogismo avanzado múltiples premisas,"sí, sí",no,False,False,1.53
+deepseek,Transformacion simbolica,Caso 28: Teoría juegos Tit for Tat,"c, c, d, d, d",3,False,False,55.05
+deepseek,Transformacion simbolica,Caso 29: Transformada de Mellin,0,γ(s),False,False,5.33
+deepseek,Transformacion simbolica,Caso 3: Expansión binómica (a+b)⁵,5,5,True,False,3.35
+deepseek,Transformacion simbolica,Caso 30: Máquina Turing,1,1,True,False,29.08
+deepseek,Transformacion simbolica,Caso 4: Expansión logaritmo,3,3,True,False,2.92
+deepseek,Transformacion simbolica,Caso 5: Polinomio simétrico,2,2,True,False,10.32
+deepseek,Transformacion simbolica,"Caso 6: Combinatoria C(2n,2)",1,1,True,False,9.51
+deepseek,Transformacion simbolica,Caso 7: Suma a producto trigonométrico,3,4,False,False,10.74
+deepseek,Transformacion simbolica,Caso 8: Identidad hiperbólica fundamental,1,1,True,False,4.0
+deepseek,Transformacion simbolica,Caso 9: Relación recurrencia Hermite,0,0,True,False,10.71
+deepseek,Invariancia estructural,Caso 1: Prioridad de operaciones,17,37,False,False,0.57
+deepseek,Invariancia estructural,Caso 10: Interés compuesto,2092.5,1159.27407,False,False,1.15
+deepseek,Invariancia estructural,Caso 11: Ecuación exponencial,8,9,False,False,0.49
+deepseek,Invariancia estructural,Caso 12: Signos consecutivos lenguaje natural,5,11,False,False,0.95
+deepseek,Invariancia estructural,Caso 13: Distancia euclidiana,5,5,True,False,4.85
+deepseek,Invariancia estructural,Caso 14: Teorema de Pitágoras,274,52,False,False,161.17
+deepseek,Invariancia estructural,Caso 15: Teorema de Bayes,99,100,False,False,0.84
+deepseek,Invariancia estructural,Caso 16: Multiplicación números complejos,29,11,False,False,1.19
+deepseek,Invariancia estructural,Caso 17: Producto de matrices,122,64,False,False,1.92
+deepseek,Invariancia estructural,Caso 18: Autovalores de matriz,3,1,False,False,0.91
+deepseek,Invariancia estructural,Caso 19: Derivada regla del producto,0.8886,0.7654,False,False,1.1
+deepseek,Invariancia estructural,Caso 2:Fracciones equivalentes,0.5,0.5,True,False,0.95
+deepseek,Invariancia estructural,Caso 20: Transformada de Laplace exponencial,-5,-5,True,False,5.81
+deepseek,Invariancia estructural,Caso 21: Teorema de convolución,0.05,0.0796,False,False,1.11
+deepseek,Invariancia estructural,Caso 22: Teorema de la divergencia,12.566370614359172,628318530717958656,False,False,2.11
+deepseek,Invariancia estructural,Caso 23: Función Gamma Γ(n)=(n-1)!,691.4575141325,120,False,False,1.08
+deepseek,Invariancia estructural,Caso 24: Identidad de Euler,-1,0,False,False,0.54
+deepseek,Invariancia estructural,Caso 25: Identidad de Bessel J₀(0)=1,0,1,False,False,0.68
+deepseek,Invariancia estructural,Caso 26: Función Zeta de Riemann,1.6449,1.644934066848422,False,False,1.42
+deepseek,Invariancia estructural,Caso 27: Permutaciones con repetición - INFORMÁTICA,40320,48620,False,False,0.8
+deepseek,Invariancia estructural,Caso 28: Espacio dual,6,12,False,False,0.64
+deepseek,Invariancia estructural,Caso 29: Producto interno L²,0.1667,0.25,False,False,0.91
+deepseek,Invariancia estructural,Caso 3: Propiedad distributiva,33,63,False,False,0.87
+deepseek,Invariancia estructural,Caso 30: Teorema espectral operador Hilbert-Schmidt,0.7854,0.1987,False,False,1.32
+deepseek,Invariancia estructural,Caso 4: Potencia exponente fraccionario,125,25,False,False,0.61
+deepseek,Invariancia estructural,Caso 5: Raíz cuadrada,4,7,False,False,0.49
+deepseek,Invariancia estructural,Caso 6: Raíz con índice,4,4,True,False,0.5
+deepseek,Invariancia estructural,Caso 7: Notación científica multiplicación,2,0,False,False,5.86
+deepseek,Invariancia estructural,Caso 8: Notación científica exponentes negativos,0.013,0.013,True,False,0.81
+deepseek,Invariancia estructural,Caso 9: Logaritmos cambio de base,3,4,False,False,0.5
+deepseek,Generalización,Suma de los primeros 100 números naturales,"-1,1,1,1,1,2,2,2,2,50,100,100,100,100,100,101,5050,5050,5050",5050,False,False,411.36
+deepseek,Generalización,Suma de ángulos (30 + 60),0.866,0.86602540378,True,False,28.76
+deepseek,Generalización,"Suma de logaritmos (a=8, b=16)",4,4,True,False,27.0
+deepseek,Generalización,Derivada de x^33,"32,33","32,33",True,False,24.57
+deepseek,Generalización,Derivada de 2x^5 + 1x^4 + 5x^3 + 4x^2 + 4x^1 + 3,"2,3,4,4,4,8,10,15","2,3,4,4,4,8,10,15",True,False,48.51
+deepseek,Generalización,Integral de x^33,0.0294117647,"33,34,34",False,False,30.97
+deepseek,Generalización,Integral de 2x^5 + 9x^4 + 2x^3 + 7x^2 + 1x^1 + 1,0.5,0.5,True,False,63.47
+deepseek,Generalización,Suma telescopica (n=11),0.9166666667,1,False,False,98.89
+deepseek,Generalización,"Progresión geométrica (a=2, r=2, n=11)",10233,4094,False,False,42.49
+deepseek,Generalización,Suma alternante (n=7),15,-4,False,False,26.92
+deepseek,Generalización,"Progresión aritmética (a=3, d=2, n=7)",42,42,True,False,27.53
+deepseek,Generalización,Perímetro de la circunferencia,31.41592653589793,31.41592653589793,True,False,33.56
+deepseek,Generalización,Suma ponderada (n=5),"1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,8,8,8,10,10,16,24,24,32,34,34,64,64,98,98,160,160,258,258","-1,-1,-1,1,1,1,2,2,2,2,2,2,2,2,2,4,4,5,5,5,5,5,5,6,6,64,64,256,258,258,258",False,False,144.84
+deepseek,Generalización,Suma de cuadrados (n=7),35,35,True,False,30.77
+deepseek,Generalización,Suma de cubos de 1 a 7,351,140425,False,False,23.25
+deepseek,Generalización,Suma de diferencias cúbicas (n=7),127,343,False,False,31.94
+deepseek,Generalización,Producto telescopico (n=7),ERROR,0.125,False,True,616.41
+deepseek,Generalización,Caso factorial n=5,120,120,True,False,17.39
+deepseek,Generalización,Caso límite: sin(x)/x,0.999999999999999,1,True,False,23.97
+deepseek,Generalización,Binomio de Newton (2 + 3)^5,32,1,False,False,24.08
+deepseek,Generalización,"Esperanza binomial (n=5, p=0.5)",0,2.5,False,False,21.72
+deepseek,Generalización,# aristas de un grafo completo de 8 vértices,28,28,True,False,23.06
+deepseek,Generalización,Área de la circunferencia,"3.1415926535,25",25,False,False,31.79
+deepseek,Generalización,Aproximación por series de Taylor,10,3,False,False,37.29
+deepseek,Generalización,Caso media aritmética,4.2,4.2,True,False,18.35
+deepseek,Generalización,Cuadrado de la suma,49,9,False,False,19.3
+deepseek,Generalización,Cuadrado de la resta,25,25,True,False,19.84
+deepseek,Generalización,Suma por diferencia,48,100,False,False,23.21
+deepseek,Generalización,Seno del ángulo doble (45),1,0.7071,False,False,21.95
+deepseek,Generalización,tangente de 60,3,1.7321,False,False,18.62
+deepseek,Verificación de solución,Evaluación de la solución de la ecuación 2*x + 3 = 11,3.5,no,True,False,22.15
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 4*x + 7*y = 1, 9*x - 5*y = 23","0.5,3",no,True,False,27.63
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x^2 + y = 5, x + y = 3","1,2",si,True,False,23.84
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones sqrt(x) + y = 5, x + y = 7","2,3",si,False,False,24.33
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x*y = 6, x + y = 5","2,3",si,True,False,23.8
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x/2 + y = 3, x - y = 1","1,2",si,False,False,23.8
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones (1/2)*x + (1/3)*y = 7/6, (1/4)*x - (1/5)*y = -3/20","0.5,1",si,False,False,36.3
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 2/x + 3/y = 2, 4/x - 3/y = 1","2,3",si,True,False,27.67
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 123*x + 456*y = 789, x - y = 1","1,123,456,789",no,True,False,35.37
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y + z = 0, x + y - z = 2, 2*x - y + 3*z = -1","-1,-1,2",si,False,False,33.59
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones (1/2)*x + (1/3)*y + (1/4)*z = 13/12, (1/3)*x - (1/2)*y + (1/5)*z = 1/30, (1/4)*x + (1/4)*y - (1/3)*z = 1/6","1,2,3",si,False,False,56.33
+deepseek,Verificación de solución,Evaluación de la solución de la ecuación x^2 = 9,"-3,3",no,False,False,19.97
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones 6/x + 4/y + 2/z = 12, 3/x - 2/y + 4/z = 5, 9/x - 2/y - 2/z = 5","1,2,3",si,False,False,38.13
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones sqrt(2)*x + sqrt(3)*y + sqrt(5)*z = sqrt(2)+sqrt(3)+sqrt(5), sqrt(3)*x + sqrt(5)*y + sqrt(2)*z = sqrt(3)+sqrt(5)+sqrt(2), sqrt(5)*x + sqrt(2)*y + sqrt(3)*z = sqrt(5)+sqrt(2)+sqrt(3)","1,1,1",no,False,False,56.55
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + 2*y - z + 3*t = -8, 2*x + 2*z -t = 13, -x + y + z - t = 8, 3*x +3*y - z + 2*t = -1","-4,-2,1,3",no,True,False,45.1
+deepseek,Verificación de solución,Evaluación de la solución a la integral definida x^2 entre 0 y 2,4,no,True,False,18.01
+deepseek,Verificación de solución,Evaluación de la solución a la integral definida x^2 + 2*x + 1 entre 0 y 1,1,no,True,False,20.74
+deepseek,Verificación de solución,Evaluación de la solución a la integral definida sin(x) entre 0 y 6.283185307179586,0.000799,no,True,False,27.91
+deepseek,Verificación de solución,Evaluación de la solución a la integral definida abs(x) entre -1 y 1,0.6667,no,True,False,20.38
+deepseek,Verificación de solución,Evaluación de la solución a la integral definida x*exp(x) entre 0 y 2,6.38905609893065,no,True,False,27.46
+deepseek,Verificación de solución,Evaluación de la primalidad de 997,no,"1,3,31,93,331,993,997",True,False,20.12
+deepseek,Verificación de solución,"Evaluación del producto de matrices A=[[1, 2], [3, 4]] y B=[[2, 0], [1, 2]]","4,4,8,10","0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,6,8,8,8,8,8,10,10,10,10",True,False,126.29
+deepseek,Verificación de solución,Evaluación de la solución de la ecuación (x - 2)*(x - 3) = 0,"2,3",no,False,False,23.83
+deepseek,Verificación de solución,"Evaluación de la matriz inversa de A=[[2, 1], [5, 3]]","-5,-1,2,3","-5,-5,-5,-5,-5,-2,-1,-1,-1,-1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,5,5,5,5,5,6,6,15,15",True,False,174.84
+deepseek,Verificación de solución,Evaluación de la solución de la ecuación x^5 - x^4 - x + 1 = 0,"-1,-1,1,1,1",no,False,False,36.44
+deepseek,Verificación de solución,Evaluación de la solución de la ecuación (x^2 - 1)/(x - 1) = 0,"-1,1",no,False,False,24.03
+deepseek,Verificación de solución,Evaluación de la solución de la ecuación log(x - 1) = 0,1,no,True,False,18.78
+deepseek,Verificación de solución,Evaluación de la solución de la ecuación sqrt(x - 1) = x - 3,"-1,4",no,True,False,22.33
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 5, x - y = 1","2,3",si,True,False,23.64
+deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 1, 2*x - y = -2","-1,1",si,False,False,24.21
+deepseek,Contexto Previo,Resolver la ecuacion x^2 - 5x + 6 = 0; sin y con contexto previo,"2,3","2,3",True,False,9.72
+deepseek,Contexto Previo,Calcular sqrt(9 + 16); sin y con el contexto erróneo: recuerda que sqrt(a + b) != sqrt(a) + sqrt(b),5,3.605551275463989,False,False,6.17
+deepseek,Contexto Previo,Calcular la derivada de sin(x^2); sin y con el contexto: recuerda la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),"2,2","2,2",False,False,5.65
+deepseek,Contexto Previo,Calcular el límite lim_{x->0} (sin(x)/x); sin y con el contexto: recuerda la regla de L'Hôpital: lim_{x->a} = f(x)/g(x) = f'(x)/g'(x),1,1,True,False,4.26
+deepseek,Contexto Previo,Calcular log(2 + 3); sin y con el contexto: recuerda que log(a + b) != log(a) + log(b),"0.69897,2,3,5",0.6826,False,False,7.78
+deepseek,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.0833,0.091,False,False,8.97
+deepseek,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.89,0.14,False,False,7.26
+deepseek,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.0045,0.0045,True,False,6.32
+deepseek,Contexto Previo,Derivar el límite lim{x->0} ((1 + x)^(1/x)); sin y con el contexto: recuerda la definición del número e,2.718281828459045,2.718281828459045,True,False,9.08
+deepseek,Contexto Previo,Calcular el valor de x donde la función -x^2 + 6*x alcanza su máximo; sin y con el contexto: ten en cuenta que el vértice de una parábola ax^2 + bx + c se encuentra en x = -b/(2a),6,6,True,False,4.85
+deepseek,Contexto Previo,Calcular la derivada de ln(sin(x)); sin y con el contexto: ten en cuenta la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),"1,1","1,1",False,False,16.48
+deepseek,Contexto Previo,Resolver la ecuacion x^3 - 4x = 0; sin y con contexto previo,"-2,0,2","-2,0,2",True,False,6.49
+deepseek,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 5), x ≡ 3 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","23,35","17,35",False,False,7.99
+deepseek,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","-1,-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,15,15,15,15,15,15,20,21,21,21,21,21,21,21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,105,105,105,105,105,105,105,105,105,105,105,105,105,105,105","2,2,3,3,3,5,5,7,7,83,105,105",False,False,906.03
+deepseek,Contexto Previo,"Resolver el problema: Sea X ~ Binomial(n=5, p=0.3). Calcula P(X ≤ 2). Sin y con el contexto: Ten en cuenta que P(X ≤ k) = sum_{i=0}^k C(n,i) p^i (1-p)^(n-i)",0.6126,0.6126,True,False,7.61
+deepseek,Contexto Previo,"Resolver el problema: Una pieza puede venir de tres fábricas A (50%), B (30%), C (20%). Sin y con el contexto: Ten en cuenta el Tª de Bayes: P(A|B) = P(B|A)P(A) / P(B). ",0.5,0.5,True,False,6.65
+deepseek,Contexto Previo,Calcular la integral de e^(-x) entre 0 e infinito; sin y con el contexto: ten en cuenta que la integral converge y se puede calcular como un límite,0.5,1.781070192,False,False,6.43
+deepseek,Contexto Previo,Calcular el mínimo de la función x^3 - 3x^2 + 2; sin y con el contexto: ten en cuenta que un punto crítico es mínimo si f''(x) > 0 y máximo si f''(x) < 0,-1,1,False,False,6.03
+deepseek,Contexto Previo,"Calcular los valores propios o eigenvalores de la matriz [[4,1,-2],[1,3,0],[-2,0,3]]; sin y con el contexto: ten en cuenta que para calcular los eigenvalores de una matriz, debes resolver el polinomio característico det(A - λI) = 0","-1,3,4","3,3,4",False,False,8.02
+deepseek,Contexto Previo,Simplificar la expresión log(e^(2*x) + e^x); sin y con el contexto: intenta factorizar antes de aplicar logaritmos,2,1,True,False,8.09
+deepseek,Contexto Previo,Calcular el límite cuando x->0 de (sqrt(1 + x) - 1) / x; sin y con el contexto: intenta racionalizar multiplicando por el conjugado,0.5,0.5,True,False,5.09
+deepseek,Contexto Previo,"Calcular la integral de x * cos(x^2); sin y con el contexto: recuerda que si aparece una función y su derivada, puedes hacer un cambio de variable",∫xcos(x²)dx,0.5,False,False,14.97
+deepseek,Contexto Previo,Resolver la ecuacion x^5 + 3*x^4 - 5*x^3 - 15*x^2 + 4*x + 12 = 0; sin y con contexto previo,"-4,-2,-1,1,3","-3,-3,-2,1,2",False,False,10.79
+deepseek,Contexto Previo,"Calcular la potencia de la matriz [[1, 1], [0, 1]]; sin y con el contexto: Ten en cuenta que algunas matrices pueden escribirse como I + N, siendo N una matriz nilpotente (N^2 = 0), lo que simplifica mucho el cálculo de potencias","0,1,1,5","0,1,1,5",True,False,9.62
+deepseek,Contexto Previo,Resolver la ecuacion x^2 - 4x + 4 = 0; sin y con el contexto: recuerda que (x - 2)^2 = x^2 -4x + 4,4,4,True,False,4.73
+deepseek,Contexto Previo,Resolver la ecuacion (x^2 - 1)/(x - 1) = 3; sin y con el contexto: recuerda que no se puede dividir entre 0,1,1,True,False,4.16
+deepseek,Contexto Previo,Resolver la ecuacion |x - 3| = 5; sin y con el contexto: recuerda que |a| = b implica: a = b o a = -b,"-2,8","-5,5",False,False,4.81
+deepseek,Contexto Previo,Resolver la ecuacion log((x+1)/10) = 2; sin y con el contexto: recuerda que log(a/b) = log(a) - log(b),100,3,False,False,4.2
+deepseek,Contexto Previo,Resolver la ecuacion 2 - 3^(-x) + 3^(x+1) = 0; sin y con el contexto: recuerda las propiedades de las potencias y resuelve mediante el cambio de variable t=3^x,-1,0.3333333333,False,False,61.08
+deepseek,Contexto Previo,Derivar la función x^2 * e^x; sin y con el contexto: mediante la regla del producto (fg)' = f'g + fg',"2,2","2,2",True,False,8.29
