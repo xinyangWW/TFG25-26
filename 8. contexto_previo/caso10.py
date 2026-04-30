@@ -14,7 +14,7 @@ from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 
-def caso_10_raiz_contexto_erroneo():
+def caso_10_raiz_contexto():
 
     # Caso base:
     expr = "sqrt(9 + 16)"
