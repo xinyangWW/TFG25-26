@@ -54,7 +54,7 @@ def caso_3_ecuacion_contexto_inutil():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto previo",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_3_ecuacion_contexto_inutil():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto previo",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
