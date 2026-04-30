@@ -14,7 +14,7 @@ from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 
-def caso_3_ecuacion_contexto_inutil():
+def caso_3_ecuacion_contexto():
 
     # Caso base:
     ecuacion = "x^5 + 3*x^4 - 5*x^3 - 15*x^2 + 4*x + 12 = 0"
@@ -76,4 +76,4 @@ if __name__ == "__main__":
 
     preload_model(MODEL)
 
-    caso_3_ecuacion_contexto_inutil()
+    caso_3_ecuacion_contexto()
