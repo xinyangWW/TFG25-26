@@ -14,7 +14,7 @@ from print_results import imprimir_resultados
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 
-def caso_13_logaritmos_contexto_erroneo():
+def caso_13_logaritmos_contexto():
 
     # Caso base:
     expr = "log(2 + 3)"
@@ -76,4 +76,4 @@ if __name__ == "__main__":
 
     preload_model(MODEL)
 
-    caso_13_logaritmos_contexto_erroneo()
+    caso_13_logaritmos_contexto()
