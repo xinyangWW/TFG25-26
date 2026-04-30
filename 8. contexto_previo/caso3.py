@@ -17,8 +17,8 @@ MODEL = sys.argv[1] if len(sys.argv) > 1 else "chatgpt"
 def caso_3_ecuacion_contexto_inutil():
 
     # Caso base:
-    ecuacion = "x + 3 = 7"
-    contexto = "recuerda que la fórmula general para resolver ecuaciones cuadráticas es: x = (-b ± sqrt(b^2 - 4ac)) / (2a)"
+    ecuacion = "x^5 + 3*x^4 - 5*x^3 - 15*x^2 + 4*x + 12 = 0"
+    contexto = "ten en cuenta para resolver ecuaciones polinómicas puedes factorizar antes"
     prompt_base = (
         f"Resuelve: {ecuacion}."
         "Responde SOLO con números, sin texto adicional."
@@ -54,7 +54,7 @@ def caso_3_ecuacion_contexto_inutil():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}, sin y con contexto previo",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto previo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_3_ecuacion_contexto_inutil():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}, sin y con contexto previo",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto previo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

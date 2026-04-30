@@ -54,7 +54,7 @@ def caso_21_sistema_congruencias():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver el sistema {sistema}, sin y con el contexto: {contexto}",
+        caso=f"Resolver el sistema {sistema}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_21_sistema_congruencias():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver el sistema {sistema}, sin y con el contexto: {contexto}",
+        caso=f"Resolver el sistema {sistema}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

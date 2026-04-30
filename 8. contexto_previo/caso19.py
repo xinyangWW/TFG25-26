@@ -54,7 +54,7 @@ def caso_19_derivada_regla_cadena():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular la derivada de {funcion}, sin y con el contexto: {contexto}",
+        caso=f"Calcular la derivada de {funcion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_19_derivada_regla_cadena():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular la derivada de {funcion}, sin y con el contexto: {contexto}",
+        caso=f"Calcular la derivada de {funcion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

@@ -54,7 +54,7 @@ def caso_18_maximo_parabola():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular el valor de x donde la función {funcion} alcanza su máximo, sin y con el contexto: {contexto}",
+        caso=f"Calcular el valor de x donde la función {funcion} alcanza su máximo; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_18_maximo_parabola():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular el valor de x donde la función {funcion} alcanza su máximo, sin y con el contexto: {contexto}",
+        caso=f"Calcular el valor de x donde la función {funcion} alcanza su máximo; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

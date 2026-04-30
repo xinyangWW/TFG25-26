@@ -54,7 +54,7 @@ def caso_25_opti_2a_derivada():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular el mínimo de la función {funcion}, sin y con el contexto: {contexto}",
+        caso=f"Calcular el mínimo de la función {funcion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_25_opti_2a_derivada():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular el mínimo de la función {funcion}, sin y con el contexto: {contexto}",
+        caso=f"Calcular el mínimo de la función {funcion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

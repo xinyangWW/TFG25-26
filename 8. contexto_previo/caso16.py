@@ -56,7 +56,7 @@ def caso_16_probabilidad_condicionada():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Probabilidad tipo Bayes, sin y con contexto",
+        caso=f"Probabilidad tipo Bayes; sin y con contexto",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -66,7 +66,7 @@ def caso_16_probabilidad_condicionada():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Probabilidad tipo Bayes, sin y con contexto",
+        caso=f"Probabilidad tipo Bayes; sin y con contexto",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

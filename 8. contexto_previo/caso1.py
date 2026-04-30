@@ -54,7 +54,7 @@ def caso_1_ecuacion_factorizada():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}, sin y con contexto previo",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto previo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_1_ecuacion_factorizada():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}, sin y con contexto previo",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con contexto previo",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

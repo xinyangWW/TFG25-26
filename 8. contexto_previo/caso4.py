@@ -54,7 +54,7 @@ def caso_4_ecuacion_identidad_notable():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}, sin y con el contexto: {contexto}",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_4_ecuacion_identidad_notable():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Resolver la ecuacion {ecuacion}, sin y con el contexto: {contexto}",
+        caso=f"Resolver la ecuacion {ecuacion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

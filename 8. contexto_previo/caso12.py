@@ -54,7 +54,7 @@ def caso_12_limite_LHôpital():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular la derivada de {expr}, sin y con el contexto: {contexto}",
+        caso=f"Calcular el límite {expr}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_12_limite_LHôpital():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular la derivada de {expr}, sin y con el contexto: {contexto}",
+        caso=f"Calcular el límite {expr}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

@@ -54,7 +54,7 @@ def caso_26_eigenvalores_matriz_3x3():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular los valores propios o eigenvalores de la matriz {matriz}, sin y con el contexto: {contexto}",
+        caso=f"Calcular los valores propios o eigenvalores de la matriz {matriz}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_26_eigenvalores_matriz_3x3():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular los valores propios o eigenvalores de la matriz {matriz}, sin y con el contexto: {contexto}",
+        caso=f"Calcular los valores propios o eigenvalores de la matriz {matriz}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

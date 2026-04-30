@@ -54,7 +54,7 @@ def caso_29_integral_cambio_variable():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular la integral de {funcion}, sin y con el contexto: {contexto}",
+        caso=f"Calcular la integral de {funcion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_29_integral_cambio_variable():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular la integral de {funcion}, sin y con el contexto: {contexto}",
+        caso=f"Calcular la integral de {funcion}; sin y con el contexto: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,

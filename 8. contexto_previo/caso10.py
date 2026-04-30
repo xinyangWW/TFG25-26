@@ -18,7 +18,7 @@ def caso_10_raiz_contexto_erroneo():
 
     # Caso base:
     expr = "sqrt(9 + 16)"
-    contexto = "recuerda que sqrt(a + b) = sqrt(a) + sqrt(b)"
+    contexto = "recuerda que sqrt(a + b) != sqrt(a) + sqrt(b)"
     prompt_base = (
         f"Calcula: {expr}."
         "Responde SOLO con números, sin texto adicional."
@@ -54,7 +54,7 @@ def caso_10_raiz_contexto_erroneo():
     imprimir_resultados(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular {expr}, sin y con el contexto erróneo: {contexto}",
+        caso=f"Calcular {expr}; sin y con el contexto erróneo: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
@@ -64,7 +64,7 @@ def caso_10_raiz_contexto_erroneo():
     guardar_resultado(
         modelo=MODEL,
         tipo="Contexto Previo",
-        caso=f"Calcular {expr}, sin y con el contexto erróneo: {contexto}",
+        caso=f"Calcular {expr}; sin y con el contexto erróneo: {contexto}",
         resultado_base=respuesta_base,
         resultado_transformado=respuesta_transformada,
         cumple_mr=cumple_mr,
