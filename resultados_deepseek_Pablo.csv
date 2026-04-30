@@ -59,33 +59,33 @@ deepseek,Verificación de solución,Evaluación de la solución de la ecuación 
 deepseek,Verificación de solución,Evaluación de la solución de la ecuación sqrt(x - 1) = x - 3,"-1,4",no,True,False,22.33
 deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 5, x - y = 1","2,3",si,True,False,23.64
 deepseek,Verificación de solución,"Evaluación de la solución al sistema de ecuaciones x + y = 1, 2*x - y = -2","-1,1",si,False,False,24.21
-deepseek,Contexto Previo,"Resolver la ecuacion x^2 - 5x + 6 = 0, sin y con contexto previo","2,3","2,3",True,False,20.72
-deepseek,Contexto Previo,"Calcular sqrt(9 + 16), sin y con el contexto erróneo: recuerda que sqrt(a + b) = sqrt(a) + sqrt(b)",5,3.5,False,False,17.06
-deepseek,Contexto Previo,"Calcular la derivada de sin(x^2), sin y con el contexto: recuerda la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x)","2,2","2,2",False,False,23.01
-deepseek,Contexto Previo,"Calcular la derivada de lim_{x->0} (sin(x)/x), sin y con el contexto: recuerda la regla de L'Hôpital: lim_{x->a} = f(x)/g(x) = f'(x)/g'(x)",1,1,True,False,20.56
-deepseek,Contexto Previo,"Calcular log(2 + 3), sin y con el contexto erróneo: recuerda que log(a + b) = log(a) + log(b)","0.69897,2,3,5",1.791759469228055,False,False,28.15
-deepseek,Contexto Previo,"Probabilidad tipo Bayes, sin y con contexto",0.0833,0.091,False,False,35.49
-deepseek,Contexto Previo,"Probabilidad tipo Bayes, sin y con contexto",0.89,0.14,False,False,28.93
-deepseek,Contexto Previo,"Probabilidad tipo Bayes, sin y con contexto",0.0045,0.0045,True,False,24.25
-deepseek,Contexto Previo,"Derivar el límite lim{x->0} ((1 + x)^(1/x)), sin y con el contexto: recuerda la definición del número e",2.718281828459045,2.718281828459045,True,False,27.08
-deepseek,Contexto Previo,"Calcular el valor de x donde la función -x^2 + 6*x alcanza su máximo, sin y con el contexto: ten en cuenta que el vértice de una parábola ax^2 + bx + c se encuentra en x = -b/(2a)",6,6,True,False,21.68
-deepseek,Contexto Previo,"Calcular la derivada de ln(sin(x)), sin y con el contexto: ten en cuenta la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x)","1,1","1,1",False,False,41.74
-deepseek,Contexto Previo,"Resolver la ecuacion x^3 - 4x = 0, sin y con contexto previo","-2,0,2","-2,0,2",True,False,23.05
-deepseek,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 5), x ≡ 3 (mod 7), sin y con el contexto: ten en cuenta el Tª chino del resto","23,35","17,35",False,False,26.49
-deepseek,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7), sin y con el contexto: ten en cuenta el Tª chino del resto",ERROR,"2,2,3,3,3,5,5,7,7,83,105,105",False,True,931.63
-deepseek,Contexto Previo,"Resolver el problema: Sea X ~ Binomial(n=5, p=0.3). Calcula P(X ≤ 2). Sin y con el contexto: Ten en cuenta que P(X ≤ k) = sum_{i=0}^k C(n,i) p^i (1-p)^(n-i)",0.6126,0.6126,True,False,26.65
-deepseek,Contexto Previo,"Resolver el problema: Una pieza puede venir de tres fábricas A (50%), B (30%), C (20%). Sin y con el contexto: Ten en cuenta el Tª de Bayes: P(A|B) = P(B|A)P(A) / P(B). ",0.5,0.5,True,False,26.65
-deepseek,Contexto Previo,"Calcular la integral de e^(-x) entre 0 e infinito, sin y con el contexto: ten en cuenta que la integral converge y se puede calcular como un límite",0.5,1.781070192,False,False,22.96
-deepseek,Contexto Previo,"Calcular el mínimo de la función x^3 - 3x^2 + 2, sin y con el contexto: ten en cuenta que un punto crítico es mínimo si f''(x) > 0 y máximo si f''(x) < 0",-1,1,False,False,30.09
-deepseek,Contexto Previo,"Calcular los valores propios o eigenvalores de la matriz [[4,1,-2],[1,3,0],[-2,0,3]], sin y con el contexto: ten en cuenta que para calcular los eigenvalores de una matriz, debes resolver el polinomio característico det(A - λI) = 0","-1,3,4","3,3,4",False,False,28.19
-deepseek,Contexto Previo,"Simplificar la expresión log(e^(2*x) + e^x), sin y con el contexto: intenta factorizar antes de aplicar logaritmos",2,1,True,False,26.48
-deepseek,Contexto Previo,"Calcular el límite cuando x->0 de (sqrt(1 + x) - 1) / x, sin y con el contexto: intenta racionalizar multiplicando por el conjugado",0.5,0.5,True,False,19.88
-deepseek,Contexto Previo,"Calcular la integral de x * cos(x^2), sin y con el contexto: recuerda que si aparece una función y su derivada, puedes hacer un cambio de variable",∫xcos(x²)dx,0.5,False,False,40.2
-deepseek,Contexto Previo,"Resolver la ecuacion x + 3 = 7, sin y con contexto previo",2,3,False,False,20.9
-deepseek,Contexto Previo,"Calcular la potencia de la matriz [[1, 1], [0, 1]], sin y con el contexto: Ten en cuenta que algunas matrices pueden escribirse como I + N, siendo N una matriz nilpotente (N^2 = 0), lo que simplifica mucho el cálculo de potencias","0,1,1,5","0,1,1,5",True,False,31.2
-deepseek,Contexto Previo,"Resolver la ecuacion x^2 - 4x + 4 = 0, sin y con el contexto: recuerda que (x - 2)^2 = x^2 -4x + 4",4,4,True,False,20.01
-deepseek,Contexto Previo,"Resolver la ecuacion (x^2 - 1)/(x - 1) = 3, sin y con el contexto: recuerda que no se puede dividir entre 0",1,1,True,False,18.43
-deepseek,Contexto Previo,"Resolver la ecuacion |x - 3| = 5, sin y con el contexto: recuerda que |a| = b implica: a = b o a = -b","-2,8","-5,5",False,False,19.76
-deepseek,Contexto Previo,"Resolver la ecuacion log((x+1)/10) = 2, sin y con el contexto: recuerda que log(a/b) = log(a) - log(b)",100,3,False,False,19.43
-deepseek,Contexto Previo,"Resolver la ecuacion 2 - 3^(-x) + 3^(x+1) = 0, sin y con el contexto: recuerda las propiedades de las potencias y resuelve mediante el cambio de variable t=3^x",-1,0.3333333333,False,False,141.7
-deepseek,Contexto Previo,"Derivar la función x^2 * e^x, sin y con el contexto: mediante la regla del producto (fg)' = f'g + fg'","2,2","2,2",True,False,27.19
+deepseek,Contexto Previo,Resolver la ecuacion x^2 - 5x + 6 = 0; sin y con contexto previo,"2,3","2,3",True,False,9.72
+deepseek,Contexto Previo,Calcular sqrt(9 + 16); sin y con el contexto erróneo: recuerda que sqrt(a + b) != sqrt(a) + sqrt(b),5,3.605551275463989,False,False,6.17
+deepseek,Contexto Previo,Calcular la derivada de sin(x^2); sin y con el contexto: recuerda la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),"2,2","2,2",False,False,5.65
+deepseek,Contexto Previo,Calcular el límite lim_{x->0} (sin(x)/x); sin y con el contexto: recuerda la regla de L'Hôpital: lim_{x->a} = f(x)/g(x) = f'(x)/g'(x),1,1,True,False,4.26
+deepseek,Contexto Previo,Calcular log(2 + 3); sin y con el contexto: recuerda que log(a + b) != log(a) + log(b),"0.69897,2,3,5",0.6826,False,False,7.78
+deepseek,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.0833,0.091,False,False,8.97
+deepseek,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.89,0.14,False,False,7.26
+deepseek,Contexto Previo,Probabilidad tipo Bayes; sin y con contexto,0.0045,0.0045,True,False,6.32
+deepseek,Contexto Previo,Derivar el límite lim{x->0} ((1 + x)^(1/x)); sin y con el contexto: recuerda la definición del número e,2.718281828459045,2.718281828459045,True,False,9.08
+deepseek,Contexto Previo,Calcular el valor de x donde la función -x^2 + 6*x alcanza su máximo; sin y con el contexto: ten en cuenta que el vértice de una parábola ax^2 + bx + c se encuentra en x = -b/(2a),6,6,True,False,4.85
+deepseek,Contexto Previo,Calcular la derivada de ln(sin(x)); sin y con el contexto: ten en cuenta la regla de la cadena: f(g(x))' = f'(g(x)) * g'(x),"1,1","1,1",False,False,16.48
+deepseek,Contexto Previo,Resolver la ecuacion x^3 - 4x = 0; sin y con contexto previo,"-2,0,2","-2,0,2",True,False,6.49
+deepseek,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 5), x ≡ 3 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","23,35","17,35",False,False,7.99
+deepseek,Contexto Previo,"Resolver el sistema x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7); sin y con el contexto: ten en cuenta el Tª chino del resto","-1,-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,15,15,15,15,15,15,20,21,21,21,21,21,21,21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,105,105,105,105,105,105,105,105,105,105,105,105,105,105,105","2,2,3,3,3,5,5,7,7,83,105,105",False,False,906.03
+deepseek,Contexto Previo,"Resolver el problema: Sea X ~ Binomial(n=5, p=0.3). Calcula P(X ≤ 2). Sin y con el contexto: Ten en cuenta que P(X ≤ k) = sum_{i=0}^k C(n,i) p^i (1-p)^(n-i)",0.6126,0.6126,True,False,7.61
+deepseek,Contexto Previo,"Resolver el problema: Una pieza puede venir de tres fábricas A (50%), B (30%), C (20%). Sin y con el contexto: Ten en cuenta el Tª de Bayes: P(A|B) = P(B|A)P(A) / P(B). ",0.5,0.5,True,False,6.65
+deepseek,Contexto Previo,Calcular la integral de e^(-x) entre 0 e infinito; sin y con el contexto: ten en cuenta que la integral converge y se puede calcular como un límite,0.5,1.781070192,False,False,6.43
+deepseek,Contexto Previo,Calcular el mínimo de la función x^3 - 3x^2 + 2; sin y con el contexto: ten en cuenta que un punto crítico es mínimo si f''(x) > 0 y máximo si f''(x) < 0,-1,1,False,False,6.03
+deepseek,Contexto Previo,"Calcular los valores propios o eigenvalores de la matriz [[4,1,-2],[1,3,0],[-2,0,3]]; sin y con el contexto: ten en cuenta que para calcular los eigenvalores de una matriz, debes resolver el polinomio característico det(A - λI) = 0","-1,3,4","3,3,4",False,False,8.02
+deepseek,Contexto Previo,Simplificar la expresión log(e^(2*x) + e^x); sin y con el contexto: intenta factorizar antes de aplicar logaritmos,2,1,True,False,8.09
+deepseek,Contexto Previo,Calcular el límite cuando x->0 de (sqrt(1 + x) - 1) / x; sin y con el contexto: intenta racionalizar multiplicando por el conjugado,0.5,0.5,True,False,5.09
+deepseek,Contexto Previo,"Calcular la integral de x * cos(x^2); sin y con el contexto: recuerda que si aparece una función y su derivada, puedes hacer un cambio de variable",∫xcos(x²)dx,0.5,False,False,14.97
+deepseek,Contexto Previo,Resolver la ecuacion x^5 + 3*x^4 - 5*x^3 - 15*x^2 + 4*x + 12 = 0; sin y con contexto previo,"-4,-2,-1,1,3","-3,-3,-2,1,2",False,False,10.79
+deepseek,Contexto Previo,"Calcular la potencia de la matriz [[1, 1], [0, 1]]; sin y con el contexto: Ten en cuenta que algunas matrices pueden escribirse como I + N, siendo N una matriz nilpotente (N^2 = 0), lo que simplifica mucho el cálculo de potencias","0,1,1,5","0,1,1,5",True,False,9.62
+deepseek,Contexto Previo,Resolver la ecuacion x^2 - 4x + 4 = 0; sin y con el contexto: recuerda que (x - 2)^2 = x^2 -4x + 4,4,4,True,False,4.73
+deepseek,Contexto Previo,Resolver la ecuacion (x^2 - 1)/(x - 1) = 3; sin y con el contexto: recuerda que no se puede dividir entre 0,1,1,True,False,4.16
+deepseek,Contexto Previo,Resolver la ecuacion |x - 3| = 5; sin y con el contexto: recuerda que |a| = b implica: a = b o a = -b,"-2,8","-5,5",False,False,4.81
+deepseek,Contexto Previo,Resolver la ecuacion log((x+1)/10) = 2; sin y con el contexto: recuerda que log(a/b) = log(a) - log(b),100,3,False,False,4.2
+deepseek,Contexto Previo,Resolver la ecuacion 2 - 3^(-x) + 3^(x+1) = 0; sin y con el contexto: recuerda las propiedades de las potencias y resuelve mediante el cambio de variable t=3^x,-1,0.3333333333,False,False,61.08
+deepseek,Contexto Previo,Derivar la función x^2 * e^x; sin y con el contexto: mediante la regla del producto (fg)' = f'g + fg',"2,2","2,2",True,False,8.29
