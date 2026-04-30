@@ -1,0 +1,9 @@
+﻿tipo_relacion,aciertos,total,porcentaje_acierto
+Algebraica,42,52,80.77
+Aritmética,10,30,33.33
+Contexto Previo,14,30,46.67
+Generalización,13,30,43.33
+Invariancia estructural,5,30,16.67
+Relaciones funcionales,25,30,83.33
+Transformacion simbolica,18,30,60.0
+Verificación de solución,18,30,60.0
