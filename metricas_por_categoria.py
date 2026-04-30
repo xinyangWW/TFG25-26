@@ -19,9 +19,9 @@ CATEGORIA_NUM = {
     "Relaciones funcionales":   "3",
     "Transformacion simbolica": "4",
     "Invariancia estructural":  "5",
-    "Generalizacion":           "6",
-    "Verificacion solucion":    "7",
-    "Contexto previo":          "8",
+    "Generalización":           "6",
+    "Verificación de solución": "7",
+    "Contexto Previo":          "8",
 }
 
 
