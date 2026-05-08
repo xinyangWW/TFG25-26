@@ -97,8 +97,9 @@ Script encarado de dibujar diagramas de barras con el porcentaje de acierto de l
 
 Uso
 ---
+```
   python graficas_por_MR.py
-
+```
 Salida
 ------
   Te muestra los ocho diagramas de barras.
