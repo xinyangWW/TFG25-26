@@ -92,6 +92,18 @@ Salida
     grafica_<stem>_por_tipo_relacion.png
         Gráfica de barras con el porcentaje de acierto por categoría.
 
+## 8. `graficas_por_MR.py`
+Script encarado de dibujar diagramas de barras con el porcentaje de acierto de las tres IAs para cada relación metamórfica
+
+Uso
+---
+  python graficas_por_MR.py
+
+Salida
+------
+  Te muestra los ocho diagramas de barras.
+  
+
 # Librerías utilizadas
 
 ## Estándar de Python
