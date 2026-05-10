@@ -1,6 +1,6 @@
 ## TFG25-26
 
-A continuación se describen los 7 scripts generales para evaluar los modelos de lenguaje usando testing metamórfico.
+A continuación se describen los 8 scripts generales para evaluar los modelos de lenguaje usando testing metamórfico.
 ## 1. `merge_results.py`
 
 Script encargado de **fusionar los resultados generados por los distintos integrantes del equipo** en un único archivo final por modelo.
