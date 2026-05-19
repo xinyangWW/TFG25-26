@@ -1,5 +1,8 @@
 ## TFG25-26
 
+En este repositorio se encuentra todo lo relacionado con el código desarrollado para nuestro Trabajo de Fin de Grado "Poniendo a prueba a la IA con Matemáticas". La idea general del TFG es evaluar la consistencia y robustez de tres modelos de IA mediante Pruebas Metamórficas. El código está escrito el Pyhton debido a su cercanía con la IA y la disponibilidad de bibliotecas y herramientas que facilitan la interacción con los modelos. También se encuentran en el repositorio los resultados y gráficas generados tras los experimentos.
+
+
 A continuación se describen los 8 scripts generales para evaluar los modelos de lenguaje usando testing metamórfico.
 ## 1. `merge_results.py`
 
